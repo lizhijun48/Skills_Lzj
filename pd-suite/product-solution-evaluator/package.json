@@ -1,0 +1,17 @@
+{
+  "name": "product-solution-evaluator",
+  "version": "1.0.0",
+  "description": "A professional skill for evaluating product proposals, feature ideas, PRDs, MVPs, and commercialization plans through user value, business value, feasibility, risk, ROI, and MVP validation.",
+  "keywords": [
+    "product",
+    "product-evaluation",
+    "product-review",
+    "prd-review",
+    "mvp",
+    "roi",
+    "product-management"
+  ],
+  "author": "office-raccoon",
+  "license": "UNLICENSED",
+  "private": true
+}

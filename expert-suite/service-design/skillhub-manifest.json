@@ -1,0 +1,122 @@
+{
+  "package": "service-design-expert-team",
+  "purpose": "SkillHub-ready service design expert team skill package",
+  "skill_count": 10,
+  "skills": [
+    {
+      "directory": "fwsjtt-chief-consultant",
+      "name": "fwsjtt-chief-consultant",
+      "description": "帮助用户澄清复杂任务的北极星目标、拆解问题结构、制定专家协作路径，并防止任务发散或跳阶段。当用户要求“调用服务设计专家团”但任务目标、边界或交付物尚不清晰时，可先调用本技能完成目标澄清与专家协作路径设计。",
+      "has_skill_md": true,
+      "has_readme": true,
+      "has_tests": true,
+      "has_examples": true,
+      "reference_count": 6
+    },
+    {
+      "directory": "fwsjtt-customer-discovery-expert",
+      "name": "fwsjtt-customer-discovery-expert",
+      "description": "帮助用户从客户事实、访谈证据、JTBD 和假设验证出发识别真实需求，避免把内部判断或销售话术当作客户事实。",
+      "has_skill_md": true,
+      "has_readme": true,
+      "has_tests": true,
+      "has_examples": true,
+      "reference_count": 5
+    },
+    {
+      "directory": "fwsjtt-delivery-qa-reviewer",
+      "name": "fwsjtt-delivery-qa-reviewer",
+      "description": "审查报告、方案或咨询输出是否结论先行、结构清晰、证据边界明确、行动可执行，并触发返工建议。",
+      "has_skill_md": true,
+      "has_readme": true,
+      "has_tests": true,
+      "has_examples": true,
+      "reference_count": 5
+    },
+    {
+      "directory": "fwsjtt-evidence-auditor",
+      "name": "fwsjtt-evidence-auditor",
+      "description": "审查资料、观点和结论的来源强度，标注 L0-L4 证据等级，阻止伪权威、伪引用和未经验证的确定性表达。",
+      "has_skill_md": true,
+      "has_readme": true,
+      "has_tests": true,
+      "has_examples": true,
+      "reference_count": 5
+    },
+    {
+      "directory": "fwsjtt-expert-team",
+      "name": "fwsjtt-expert-team",
+      "description": "服务设计专家团的统一入口与 FWSJTT 专家团总控调度中心。用于识别任务北极星目标，分诊到不同专家技能，协调多专家评审、冲突消解、结论综合与交付物 QA，形成可执行的咨询级输出。当用户提到“调用服务设计专家团”“启用服务设计专家团”“服务设计专家团介入”“请服务设计专家团队评估”“用专家团处理这个问题”，或提出需要多专家协同的复杂服务设计、服务优化、客户体验、增长策略、指标体系、ROI 评估、证据审计与交付 QA 任务时，应优先调用本技能。",
+      "has_skill_md": true,
+      "has_readme": true,
+      "has_tests": true,
+      "has_examples": true,
+      "reference_count": 6
+    },
+    {
+      "directory": "fwsjtt-metrics-architect",
+      "name": "fwsjtt-metrics-architect",
+      "description": "设计北极星指标、指标树、领先/滞后指标、测量口径和验证计划，确保指标能服务业务决策。",
+      "has_skill_md": true,
+      "has_readme": true,
+      "has_tests": true,
+      "has_examples": true,
+      "reference_count": 5
+    },
+    {
+      "directory": "fwsjtt-roi-strategist",
+      "name": "fwsjtt-roi-strategist",
+      "description": "根据输入数据完整度判断 ROI、成本收益、回本周期和商业价值能否量化，并在数据不足时输出假设、区间或测算框架而非伪精确数字。",
+      "has_skill_md": true,
+      "has_readme": true,
+      "has_tests": true,
+      "has_examples": true,
+      "reference_count": 6
+    },
+    {
+      "directory": "fwsjtt-service-designer",
+      "name": "fwsjtt-service-designer",
+      "description": "围绕用户旅程、触点、前后台流程、服务蓝图和关键时刻诊断服务体验问题，避免停留在表层建议。",
+      "has_skill_md": true,
+      "has_readme": true,
+      "has_tests": true,
+      "has_examples": true,
+      "reference_count": 6
+    },
+    {
+      "directory": "fwsjtt-strategy-growth-advisor",
+      "name": "fwsjtt-strategy-growth-advisor",
+      "description": "帮助用户诊断战略问题、增长瓶颈、竞争定位和关键取舍，避免泛泛而谈的增长建议。",
+      "has_skill_md": true,
+      "has_readme": true,
+      "has_tests": true,
+      "has_examples": true,
+      "reference_count": 5
+    },
+    {
+      "directory": "fwsjtt-theory-distiller",
+      "name": "fwsjtt-theory-distiller",
+      "description": "从专家、经典书目和高价值理论中提炼可操作的方法、工作流、QA 规则和测试场景，转化为技能模块输入。",
+      "has_skill_md": true,
+      "has_readme": true,
+      "has_tests": true,
+      "has_examples": true,
+      "reference_count": 5
+    }
+  ],
+  "optimizations": [
+    "cleaned macOS noise files",
+    "validated/repaired YAML front matter for SKILL.md",
+    "enhanced README for each skill",
+    "added boundary-and-routing tests",
+    "added example prompts",
+    "added references index files",
+    "generated release checklist and validation report",
+    "added package-level SKILL.md entry guide"
+  ],
+  "root_skill_md": {
+    "path": "SKILL.md",
+    "purpose": "SkillHub package-level entry guide for service design expert team routing and usage",
+    "status": "added"
+  }
+}
