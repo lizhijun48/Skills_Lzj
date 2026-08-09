@@ -94,7 +94,7 @@
 
 | 文件 | 变更 |
 |------|------|
-| `GOV_SkillGovernance.md` | v3.3→v3.4；新增 §10「Skill架构原则（general-suite补充）」——合并5条原则（质量检查点/动态路由/CIRS闭环/MECE/WBS优化）+ 后续治理计划；修复重复v3.3条目 |
+| `GOV_SkillGovernance.md` | v3.3→v3.4；新增 §10「Skill架构原则（全局）」——合并5条原则（质量检查点/动态路由/CIRS闭环/MECE/WBS优化）+ 后续治理计划；修复重复v3.3条目 |
 | `general-suite/GOV_ArchitecturePrinciples.md` | 已删除（内容合并至 GOV_SkillGovernance.md §10） |
 
 #### 架构决策

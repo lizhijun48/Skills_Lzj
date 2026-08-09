@@ -666,9 +666,9 @@ python meta-suite/governance-system/tools/gen_catalog.py --dry-run
 
 ---
 
-## 10. Skill架构原则（general-suite补充）
+## 10. Skill架构原则（全局）
 
-> 本节定义 general-suite Skill 的架构治理原则，适用于从清华DeepSeek PDF提炼的所有Skill（S-026~S-039）及后续新建Skill。
+> 本节定义全体系 Skill 的架构治理原则，适用于所有套件（pd-suite / pm-suite / general-suite / meta-suite 等）的现有及后续新建 Skill。
 
 ### 原则一：质量检查点（Quality Checkpoints）
 
@@ -731,7 +731,7 @@ Skill内部增加条件分支和回环机制，而非线性执行。采用"诊�
 
 | 版本 | 日期       | 变更内容                                                     | 作者             |
 | :--- | :--------- | :----------------------------------------------------------- | :--------------- |
-| v3.4 | 2026-08-09 | **架构原则合并：** 将 GOV_ArchitecturePrinciples.md 的5条原则（质量检查点/动态路由/CIRS闭环/MECE/WBS优化）合并为 §10；删除独立文件，治理体系统一入口 | QoderWork |
+| v3.4 | 2026-08-09 | **架构原则合并：** 将 GOV_ArchitecturePrinciples.md 的5条原则（质量检查点/动态路由/CIRS闭环/MECE/WBS优化）合并为 §10「Skill架构原则（全局）」；删除独立文件，治理体系统一入口 | QoderWork |
 | v3.3 | 2026-07-07 | **审计工具固化 + 规则基准：** 新增 §9 自动化审计规则基准（每条 QG 的检测方法/判定标准/已知例外，防止自造门禁和假阳性）；固化 gov_audit.py 和 gen_catalog.py 至 `meta-suite/governance-system/tools/`（修复路径过滤 bug / 大小写去重 / QG9 排除 checklist） | System Architect |
 | v3.2 | 2026-07-06 | **操作纪律固化：** 新增 §8 操作纪律与交付标准（增改必同步全局路由/关系表、完成后须交付结果说明）；新增质量门禁 **QG13** 治理联动与交付闭环（引用 §8）；明确 SKILL 增改操作的硬性联动表清单（编号注册表/业务流路由表/PT/JT 关系表）；Last Updated 同步更新 | System Architect |
 | v3.0 | 2026-06-06 | **架构升级：** D/S/E/V 四层 → P1-P6+CX 六阶段 + 双轨(PT/JT/S)；IO 契约升级为完整 ITTO (Input-Tool-Output)；新增子定位(Sub-position)解决同阶段重叠检测；新增 Verify 验证闭环步骤；新增 Knowledge Sources 字段和方法论冲突检测；新增 TEST_LOG 验证日志；新增 meta-suite/governance-system 对齐检测；路由从静态一对一升级为三级(轨道→阶段→Skill)；质量门禁从 6 项扩充至 9 项（QG7 方法论一致性 + QG8 验证闭环 + QG9 可操作交付） | System Architect |
