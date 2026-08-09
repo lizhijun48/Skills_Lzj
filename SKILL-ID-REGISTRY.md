@@ -111,6 +111,20 @@
 | S-023 | meta-suite/skill-refactor | 技能改造方法 | CX | [有效] | 新部署 |
 | S-024 | meta-suite/skill-forge | 技能锻造（面试式创建） | CX | [有效] | 新部署 |
 | S-025 | meta-suite/skill-extraction-sop | 从外部项目提取可复用技能的SOP | CX | [有效] | 2026-07-06 从 ai-pm-exploration-toolkit 提取实践沉淀；判定净增量→净化→落地→同步治理表 |
+| S-026 | general-suite/prompt-engineering-basics | 提示语工程基础 | P1 | [有效] | 2026-08-09 新增；基于清华DeepSeek从入门到精通；DNA元素/六大类型/五大策略/TASTE·ALIGN框架 |
+| S-027 | general-suite/prompt-chain-design | 提示语链设计 | P1 | [有效] | 2026-08-09 新增；CIRS模型/SPECTRA分解/三链融合/任务分解七步骤 |
+| S-028 | general-suite/creative-prompt-techniques | 创意提示语技术 | P1 | [有效] | 2026-08-09 新增；IDEA/FOCUS/BRIDGE/CMM/CGS/EHS/MCS七大创意框架 |
+| S-029 | general-suite/reasoning-model-strategy | 推理模型使用策略 | P1 | [有效] | 2026-08-09 新增；模型选择决策树/提示语差异/可控性原则/认知外化 |
+| S-030 | general-suite/ai-content-quality | AI内容质量管控 | P1 | [有效] | 2026-08-09 新增；幻觉五类识别/三重概率交互/PIA·TFM·DES |
+| S-031 | general-suite/ai-collaboration-mindset | AI人机协作思维 | P1 | [有效] | 2026-08-09 新增；四大核心能力/知识唤醒/三层次突破路径 |
+| S-032 | general-suite/chart-diagram-generator | 图表绘制元技能 | P1 | [有效] | 2026-08-09 新增；SVG/Mermaid/React三引擎选择与生成 |
+| S-033 | general-suite/general-workflow-chains | 通用技能链式工作流索引 | CX | [有效] | 2026-08-09 新增；3条标准链路+2条专项链路，连接AI辅助编程技能与现有通用技能 |
+| S-034 | general-suite/copywriting | 文案写作 | P1 | [有效] | 2026-08-09 新增；文案三要素（信息传递/情感共鸣/行动引导）、诊断式模板选择、六大文案模板、语言风格三件套调用 |
+| S-035 | general-suite/marketing-planning | 营销策划 | P1 | [有效] | 2026-08-09 新增；三大模块（创意概念/传播策略/执行方案）、渠道选择矩阵、传播节奏设计、效果评估框架 |
+| S-036 | general-suite/brand-positioning | 品牌定位 | P1 | [有效] | 2026-08-09 新增；四大关键考量、战略层级分层（企业/产品线/单品）、8组件模板、评估标准 |
+| S-037 | general-suite/value-proposition | 价值主张 | P1 | [有效] | 2026-08-09 新增；四大关键考量、战略层级分层、10组件价值主张画布、功能-情感平衡模型 |
+| S-038 | general-suite/future-vision | 未来愿景 | P1 | [有效] | 2026-08-09 新增；四大关键考量、战略层级分层、12组件愿景模板、远大与可实现平衡 |
+| S-039 | general-suite/three-chain-orchestration | 三链平衡编排（元Skill） | P1 | [有效] | 2026-08-09 新增；跨Skill质量保障层，诊断逻辑链/知识链/创意链偏科并调用对应Skill补强 |
 
 ---
 

@@ -149,6 +149,14 @@
 | — | ultimate-domain-payload | `general-suite/references/ultimate-domain-payload-1.0.0/SKILL.md` | 未治理 | 未治理 | 人类活动全域终极领域负载物。基于 Workflow Refactor 重构（消除学科壁垒/职业壁垒/审批流程 3 类补偿... |
 | — | wealth-manager | `general-suite/wealth-manager-1.0.2/SKILL.md` | 未治理 | 未治理 | 财富管理四阶段系统：财富积累(裂变获客/微利高频) → 财富增值(翻倍周期引擎) → 财富保全(离岸信托/家族办公室/大... |
 | — | web-novel-writing-reference | `general-suite/references/web-novel-writing-reference-1.0.1/SKILL.md` | 未治理 | 未治理 | 网络小说创作知识参考库——Universal Task OS的领域负载物。提供写作任务清单（8域62种任务类型）、结构要... |
+| S-026 | prompt-engineering-basics | `general-suite/prompt-engineering-basics/SKILL.md` | P1 | [有效] | 提示语工程基础——DNA元素模型、六大类型、五大策略、TASTE/ALIGN框架。基于清华DeepSeek从入门到精通提炼。 |
+| S-027 | prompt-chain-design | `general-suite/prompt-chain-design/SKILL.md` | P1 | [有效] | 提示语链设计——CIRS四环节模型、SPECTRA任务分解、六大设计原则、三链融合优化系统。 |
+| S-028 | creative-prompt-techniques | `general-suite/creative-prompt-techniques/SKILL.md` | P1 | [有效] | 创意提示语技术——IDEA发散/FOCUS聚合/BRIDGE跨界/CMM跨域映射/CGS概念嫁接/EHS极端假设/MCS多重约束七大框架。 |
+| S-029 | reasoning-model-strategy | `general-suite/reasoning-model-strategy/SKILL.md` | P1 | [有效] | 推理模型使用策略——模型选择决策树、提示语策略差异、可控性原则、认知外化理念。v1.1含第六章可控性原则。 |
+| S-030 | ai-content-quality | `general-suite/ai-content-quality/SKILL.md` | P1 | [有效] | AI内容质量管控——幻觉五类七特识别、三重概率交互优化、PIA语用意图分析、TFM主题聚焦、DES细节增强。 |
+| S-031 | ai-collaboration-mindset | `general-suite/ai-collaboration-mindset/SKILL.md` | P1 | [有效] | AI人机协作思维——四大核心能力（AI思维/整合力/引导力/判断力）、知识唤醒三层机制、三层次突破路径。 |
+| S-032 | chart-diagram-generator | `general-suite/chart-diagram-generator/SKILL.md` | P1 | [有效] | 图表绘制元技能——SVG/Mermaid/React三引擎选择决策树，覆盖流程图/时序图/类图/折线图/柱状图/饼图等。 |
+| S-033 | general-workflow-chains | `general-suite/general-workflow-chains/SKILL.md` | CX | [有效] | 通用技能链式工作流索引——3条标准链路（学习链/实战链/质量链）+2条专项链路（图表链/数据分析链），连接AI辅助编程技能与现有通用技能。 |
 ### 专家视角 (expert-suite)
 
 | 编号 | 技能名 | 路径 | 阶段 | 状态 | 说明 |
@@ -183,4 +191,4 @@
 
 ---
 
-**总计**：129 个 SKILL.md（含已治理 68 个）
+**总计**：137 个 SKILL.md（含已治理 76 个）
