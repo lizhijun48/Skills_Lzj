@@ -86,6 +86,23 @@
 
 ---
 
+### v0.4.0 — 2026-08-09
+
+**治理体系统一入口：GOV_ArchitecturePrinciples.md 合并至 GOV_SkillGovernance.md**
+
+#### 变更内容
+
+| 文件 | 变更 |
+|------|------|
+| `GOV_SkillGovernance.md` | v3.3→v3.4；新增 §10「Skill架构原则（general-suite补充）」——合并5条原则（质量检查点/动态路由/CIRS闭环/MECE/WBS优化）+ 后续治理计划；修复重复v3.3条目 |
+| `general-suite/GOV_ArchitecturePrinciples.md` | 已删除（内容合并至 GOV_SkillGovernance.md §10） |
+
+#### 架构决策
+
+治理内容统一入口为 `GOV_SkillGovernance.md`，不再拆分为多个治理文件。后续所有架构原则、治理规则均在同一文件中维护。
+
+---
+
 ### v0.3.0 — 2026-08-09
 
 **PM场景参考文档 + 架构治理原则统一落地**

@@ -1,7 +1,7 @@
 # SKILL Definition: GOV_SkillGovernance
 
 > **Status:** `Active`
-> **Last Updated:** 2026-07-07
+> **Last Updated:** 2026-08-09
 > **Owner:** System Architect
 > **Layer:** `CX-8` (Agent 与工具方法 — 元技能，治理其他技能的技能)
 > **Target System:** `meta-suite/governance-system/` (本治理工具的输出与 meta-suite/governance-system 目录结构完全对齐)
@@ -15,7 +15,7 @@
 | **SKILL_ID**         | `GOV_SkillGovernance`                                        | 唯一标识符                            |
 | **Track**            | `S` (共用层)                                                  | 服务于产品和项目两条轨道              |
 | **Phase**            | `CX-8` (Agent 与工具方法)                                     | 元技能，不绑定业务阶段                |
-| **Version**          | `v3.3`                                                       | 升级：新增 §9 自动化审计规则基准 + 固化审计工具至 tools/ |
+| **Version**          | `v3.4`                                                       | 升级：合并架构原则（§10），治理体系统一入口 |
 | **Trigger Keywords** | `["治理SKILL", "整理SKILL", "SKILL体系", "优化提示词", "去重SKILL", "SKILL架构", "Skill Governance"]` | 用户输入包含这些词时激活              |
 | **Standard Source**  | `PMP.Initiating + PMP.Planning + NPDP.Portfolio`              | 治理方法论出处                        |
 | **Dependencies**     | `None`                                                       | 无前置依赖，是体系的起点              |
@@ -666,13 +666,74 @@ python meta-suite/governance-system/tools/gen_catalog.py --dry-run
 
 ---
 
-## 10. Changelog (版本变更)
+## 10. Skill架构原则（general-suite补充）
+
+> 本节定义 general-suite Skill 的架构治理原则，适用于从清华DeepSeek PDF提炼的所有Skill（S-026~S-039）及后续新建Skill。
+
+### 原则一：质量检查点（Quality Checkpoints）
+
+workflow-chains关键衔接点必须定义"交付标准"——上游Skill的输出必须满足什么条件，才能作为下游Skill的输入。
+
+每个Skill在"调用关系"章节中明确定义：输出标准（本Skill输出必须包含哪些要素）、验收条件（调用方如何判断输出质量达标）、回退机制（输出不达标时回到哪个环节修正）。
+
+**当前落地状态**：brand-positioning/value-proposition/future-vision 各含5维评估标准；copywriting 含三要素检查+基础+高级检查；marketing-planning 含创意评估矩阵+分阶段KPI；three-chain-orchestration 含8维度评估框架。
+
+### 原则二：动态路由（Dynamic Routing）
+
+Skill内部增加条件分支和回环机制，而非线性执行。采用"诊断→选路→执行"模式，在诊断阶段根据输入条件动态选择执行路径。
+
+**当前落地状态**：copywriting（6种文案类型路由）、marketing-planning（产品阶段+营销目标路由）、brand-positioning/value-proposition/future-vision（战略层级3层路由）、prompt-engineering-basics（5类需求路由）、prompt-chain-design（7个机制匹配路由）。
+
+### 原则三：Skill内部CIRS闭环
+
+每个Skill内部应实现CIRS（Context→Instruction→Refinement→Synthesis）闭环，而非一次性输出。
+
+| CIRS环节 | 在Skill中的映射 |
+|---------|---------------|
+| Context | 诊断阶段——通过反问获取上下文 |
+| Instruction | 选路+执行阶段——选择模板/路径并执行 |
+| Refinement | 质量检查阶段——用评估清单/矩阵检查输出 |
+| Synthesis | 输出+调用关系——整合输出并声明上下游衔接 |
+
+**当前落地状态**：S-034~S-039 全部6个新建Skill均遵循CIRS闭环。
+
+### 原则四：MECE原则（相互独立、完全穷尽）
+
+任务分解和分类必须满足MECE——子项之间不重叠（Mutually Exclusive），所有子项之和等于父任务100%（Collectively Exhaustive）。
+
+**检查维度**：相互独立（任意两个子项是否有交叉）、完全穷尽（所有子项之和是否覆盖全部情况）、100%规则（子项之和是否恰好等于父任务）。
+
+**当前落地状态**：prompt-chain-design SPECTRA第1步要求MECE；ai-content-quality 五类幻觉模型互斥穷尽；creative-prompt-techniques 九大框架覆盖发散/聚合/跨界/映射/嫁接/极端/约束/迁移/随机。
+
+### 原则五：WBS优化（渐进复杂性+100%规则）
+
+将WBS（工作分解结构）的项目管理思想应用到Skill的任务分解中。WBS分解"交付物"与提示语链分解"认知步骤"本质相同——都是分而治之。
+
+| WBS概念 | 提示语链等价概念 |
+|---------|---------------|
+| 项目总目标 | 提示语链的最终输出目标 |
+| 工作包 | 单个提示语的执行步骤 |
+| WBS字典 | 每个提示语的设计要点 |
+| 依赖关系 | 提示语之间的逻辑衔接 |
+| 里程碑 | 质量检查点 |
+
+**当前落地状态**：prompt-chain-design SPECTRA模型+任务分解七步骤+AIDA框架；marketing-planning 三模块分解（每模块有独立交付物）。
+
+### 后续治理计划
+
+1. **暂不改现有workflow-chains**：等PDF全部内容梳理完成后，统一处理workflow-chains的质量检查点和动态路由
+2. **新建Skills按新标准构建**：以上5条原则作为新建Skill的硬性要求
+3. **定期回顾**：每完成一批Skill构建，回顾原则的落地情况
+
+---
+
+## 11. Changelog (版本变更)
 
 | 版本 | 日期       | 变更内容                                                     | 作者             |
 | :--- | :--------- | :----------------------------------------------------------- | :--------------- |
-| v3.1 | 2026-06-15 | **进阶能力升级：** 质量门禁从 9 项扩充至 12 项（QG10 动态反馈闭环 + QG11 多模态能力覆盖 + QG12 概率风险评估）；Step 4 标准化补全增加三项进阶检查（复盘机制/多模态输入声明/概率性分析能力）；ITTO 模板 Input 表增加多模态输入规范；治理工具自身支持对"AI产品幻觉-落地修正"三类进阶能力的检查 | System Architect |
-| v3.2 | 2026-07-06 | **操作纪律固化：** 新增 §8 操作纪律与交付标准（增改必同步全局路由/关系表、完成后须交付结果说明）；新增质量门禁 **QG13** 治理联动与交付闭环（引用 §8）；明确 SKILL 增改操作的硬性联动表清单（编号注册表/业务流路由表/PT/JT 关系表）；Last Updated 同步更新 | System Architect |
+| v3.4 | 2026-08-09 | **架构原则合并：** 将 GOV_ArchitecturePrinciples.md 的5条原则（质量检查点/动态路由/CIRS闭环/MECE/WBS优化）合并为 §10；删除独立文件，治理体系统一入口 | QoderWork |
 | v3.3 | 2026-07-07 | **审计工具固化 + 规则基准：** 新增 §9 自动化审计规则基准（每条 QG 的检测方法/判定标准/已知例外，防止自造门禁和假阳性）；固化 gov_audit.py 和 gen_catalog.py 至 `meta-suite/governance-system/tools/`（修复路径过滤 bug / 大小写去重 / QG9 排除 checklist） | System Architect |
+| v3.2 | 2026-07-06 | **操作纪律固化：** 新增 §8 操作纪律与交付标准（增改必同步全局路由/关系表、完成后须交付结果说明）；新增质量门禁 **QG13** 治理联动与交付闭环（引用 §8）；明确 SKILL 增改操作的硬性联动表清单（编号注册表/业务流路由表/PT/JT 关系表）；Last Updated 同步更新 | System Architect |
 | v3.0 | 2026-06-06 | **架构升级：** D/S/E/V 四层 → P1-P6+CX 六阶段 + 双轨(PT/JT/S)；IO 契约升级为完整 ITTO (Input-Tool-Output)；新增子定位(Sub-position)解决同阶段重叠检测；新增 Verify 验证闭环步骤；新增 Knowledge Sources 字段和方法论冲突检测；新增 TEST_LOG 验证日志；新增 meta-suite/governance-system 对齐检测；路由从静态一对一升级为三级(轨道→阶段→Skill)；质量门禁从 6 项扩充至 9 项（QG7 方法论一致性 + QG8 验证闭环 + QG9 可操作交付） | System Architect |
 | v2.0 | 2026-06-06 | 元治理优化：补充 P5 痛点；新增 Governance_Depth；强化交互模式为阶段确认；增加决策树；质量门禁量化；边界显性化要求 | System Architect |
 | v1.0 | 2026-06-06 | Initial version. 确立基于 D/S/E/V 的治理框架                 | System Architect |
