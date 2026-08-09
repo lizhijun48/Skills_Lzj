@@ -1,0 +1,12 @@
+# 工具自动生成
+.disable_to_model_invocation_migration.json
+
+# 系统文件
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# 临时文件
+*.tmp
+*.bak
+*.swp
