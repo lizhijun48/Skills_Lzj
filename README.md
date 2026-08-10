@@ -86,6 +86,46 @@
 
 ---
 
+### v0.5.0 — 2026-08-10
+
+**渠道内容策略 + 人机共生能力体系 + 结构化报告写作 + 已有Skill补强**
+
+提交：待推送 | 变更：新建3个Skill + 补强3个Skill + 6个参考文档
+
+#### 一、新增Skill（3个）
+
+| 编号 | Skill | 层级 | 说明 |
+|------|-------|------|------|
+| S-040 | **human-ai-collaboration**（人机共生） | 道·认知层 | 四大核心能力（AI思维/整合力/引导力/判断力）+ AI进阶路径（基础→进阶→创新三层金字塔+四步突破）+ 知识唤醒实践（情感/经验/关联三重唤醒+具身-形式知识桥接）+ 人机协作质量把控（人65% vs 机器35%） |
+| S-041 | **channel-content-strategy**（渠道内容策略） | 术·应用层 | 渠道选择双路径（已知定位→直选/模糊定位→测试收敛）+ 四平台知识库（微信深度阅读/微博短平快/小红书种草/抖音短视频）+ 各渠道内容执行模板 + 传播策略与数据反馈闭环 |
+| S-042 | **structured-report-writing**（结构化报告写作） | 术·应用层 | 覆盖年终总结/季度汇报/项目复盘/晋升述职；三大模块（业绩回顾/成就展示/未来规划）× 九维度提示语模板 + 语言风格调用接口 |
+
+#### 二、补强已有Skill（3个）
+
+| Skill | 版本变化 | 新增内容 |
+|-------|---------|---------|
+| **prompt-chain-design** | v1.4→v1.5 | 提示词工程六步法（目标设定→角色激活→任务拆解→深入推理→参考材料→迭代优化），与SPECTRA形成互补（SPECTRA解决"怎么拆"，六步法解决"怎么写和迭代"） |
+| **prompt-engineering-basics** | v1.1→v1.2 | TASTE框架（Task/Audience/Structure/Tone/Example，侧重输出控制）+ ALIGN框架（Aim/Level/Input/Guidelines/Novelty，侧重难度与创新性控制）+ 框架对比选型指南 |
+| **ai-content-quality** | v1.2→v1.3 | 三重概率模型增强（三维交互空间详解）+ 人机共生质量影响因素分析（人65%主导：输入质量70%人/基础能力80%机器/迭代优化90%人） |
+
+#### 三、参考文档
+
+每个Skill目录下创建 `references/` 子目录，存放原始素材的文本转录，便于追溯内容出处：
+- `human-ai-collaboration/references/source-material.md`（11张图，人机共生能力体系全量内容）
+- `channel-content-strategy/references/source-material.md`（18张图，四平台内容生产全量内容）
+- `structured-report-writing/references/source-material.md`（1张图，年终总结提示语设计）
+- `prompt-chain-design/references/source-material-six-step.md`（六步法）
+- `prompt-engineering-basics/references/source-material-frameworks.md`（TASTE/ALIGN框架）
+- `ai-content-quality/references/source-material-probability.md`（三重概率+人机质量分析）
+
+#### 四、架构决策
+
+- **Skill体系"道-法-术"三层架构确立**：道=认知层（human-ai-collaboration），法=方法层（prompt-engineering等），术=应用层（channel-content等）
+- **渠道内容策略采用方案A**：四平台内容模板作为 channel-content-strategy 内部知识库，不拆分为独立Skill
+- **平台只是工具，目标才是目的**：Skill解决"怎么选渠道+怎么根据渠道适配内容"，而非"在某个平台怎么写"
+
+---
+
 ### v0.4.0 — 2026-08-09
 
 **治理体系统一入口：GOV_ArchitecturePrinciples.md 合并至 GOV_SkillGovernance.md**

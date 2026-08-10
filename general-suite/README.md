@@ -70,6 +70,26 @@ general-suite 是 skills 体系中的**共用基础能力层**，与 pd-suite（
 
 **调用关系**：品牌定位→价值主张→未来愿景（自下而上支撑链）；文案写作/营销策划可向上调用品牌三模块获取战略输入。
 
+### 人机共生与渠道内容技能（2026-08-10 新增）
+
+基于AI辅助编程与内容创作培训材料提炼，构建"道-法-术"三层架构中的应用层与认知层：
+
+| 编号 | 技能名 | 路径 | 层级 | 说明 |
+|------|--------|------|------|------|
+| S-040 | human-ai-collaboration | `human-ai-collaboration/` | 道·认知层 | 人机共生能力体系——四大核心能力（AI思维/整合力/引导力/判断力）+ AI进阶路径 + 知识唤醒实践 + 人机质量把控 |
+| S-041 | channel-content-strategy | `channel-content-strategy/` | 术·应用层 | 渠道内容策略——渠道选择双路径（已知定位直选/模糊定位测试收敛）+ 四平台知识库（微信/微博/小红书/抖音）+ 内容执行模板 |
+| S-042 | structured-report-writing | `structured-report-writing/` | 术·应用层 | 结构化报告写作——年终总结/季度汇报/项目复盘/晋升述职，三大模块九维度提示语模板 |
+
+**调用关系**：human-ai-collaboration 为认知底座，所有 Skill 均可调用；channel-content-strategy 向上调用 brand-positioning/value-proposition 获取战略输入，横向调用 copywriting/creative-prompt-techniques 执行内容创作。
+
+### 已有Skill补强（2026-08-10）
+
+| 技能名 | 版本变化 | 补强内容 |
+|--------|---------|---------|
+| prompt-engineering-basics | v1.1→v1.2 | +TASTE框架（输出控制）+ ALIGN框架（难度与创新性控制）+ 框架对比选型 |
+| prompt-chain-design | v1.4→v1.5 | +提示词工程六步法（完整提示生命周期闭环），与SPECTRA互补 |
+| ai-content-quality | v1.2→v1.3 | +三重概率模型增强（三维交互空间）+ 人机共生质量影响因素分析（人65%主导） |
+
 ## 路由与编排
 
 ### 链式工作流
@@ -99,4 +119,4 @@ general-suite 的链式工作流索引见 `general-workflow-chains/SKILL.md`，�
 
 ---
 
-**更新日期**：2026-08-09
+**更新日期**：2026-08-10

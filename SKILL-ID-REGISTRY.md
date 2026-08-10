@@ -125,6 +125,9 @@
 | S-037 | general-suite/value-proposition | 价值主张 | P1 | [有效] | 2026-08-09 新增；四大关键考量、战略层级分层、10组件价值主张画布、功能-情感平衡模型 |
 | S-038 | general-suite/future-vision | 未来愿景 | P1 | [有效] | 2026-08-09 新增；四大关键考量、战略层级分层、12组件愿景模板、远大与可实现平衡 |
 | S-039 | general-suite/three-chain-orchestration | 三链平衡编排（元Skill） | P1 | [有效] | 2026-08-09 新增；跨Skill质量保障层，诊断逻辑链/知识链/创意链偏科并调用对应Skill补强 |
+| S-040 | general-suite/human-ai-collaboration | 人机共生能力体系（道·认知层） | CX | [有效] | 2026-08-10 新增；四大核心能力（AI思维/整合力/引导力/判断力）+ 知识唤醒 + 进阶路径 + 人机质量分析 |
+| S-041 | general-suite/channel-content-strategy | 渠道内容策略（术·应用层） | P1 | [有效] | 2026-08-10 新增；渠道选择决策（双路径）+ 四平台知识库（微信/微博/小红书/抖音）+ 内容执行模板 |
+| S-042 | general-suite/structured-report-writing | 结构化报告写作（术·应用层） | P1 | [有效] | 2026-08-10 新增；年终总结/季度汇报/项目复盘/晋升述职，三大模块九维度提示语模板 |
 
 ---
 
