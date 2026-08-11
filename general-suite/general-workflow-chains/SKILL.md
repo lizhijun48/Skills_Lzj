@@ -1,7 +1,7 @@
 ---
 name: general-workflow-chains
-version: 1.0.0
-description: 通用技能链式工作流索引——定义AI辅助编程场景下的技能调用顺序、前置条件、输入输出和衔接标志。覆盖3条标准链路（学习链/实战链/质量链）+2条专项链路（图表链/文档链），连接7个AI辅助编程基础技能与现有通用技能。触发词：AI编程工作流、提示语学习路径、技能串联、下一步学什么、AI协作流程。
+version: 1.1.0
+description: 通用技能链式工作流索引——定义AI辅助编程与内容创作场景下的技能调用顺序、前置条件、输入输出和衔接标志。覆盖3条标准链路（学习链/实战链/质量链）+2条专项链路（图表链/数据链），连接24个通用技能。触发词：AI编程工作流、提示语学习路径、技能串联、下一步学什么、AI协作流程。
 governance_id: "S-033"
 
 triggers:
@@ -19,7 +19,7 @@ triggers:
 
 ---
 
-## 技能全景图（15个）
+## 技能全景图（24个）
 
 ### AI辅助编程基础技能（7个）
 
@@ -28,7 +28,7 @@ triggers:
 | S-026 | prompt-engineering-basics | 提示语DNA、六大类型、五类需求识别（含填空模板）、咨询师工作流、TASTE/ALIGN | 基础 |
 | S-027 | prompt-chain-design | CIRS模型、SPECTRA分解（含七步技巧+实战案例）、七大机制（反向诊断+诊断式引导）、三链融合 | 进阶 |
 | S-028 | creative-prompt-techniques | 七大创意框架、PM产品创新场景映射、认知理论基础参考 | 进阶 |
-| S-029 | reasoning-model-strategy | 模型选择、提示语差异、可控性原则 | 基础 |
+| S-029 | reasoning-model-strategy | 模型选择、提示语差异、可控性原则、多模型协同（三种模式）、专用/通用AI决策框架 | 基础 |
 | S-030 | ai-content-quality | 幻觉五类七特、五类×七特映射、三重概率交互、PIA/TFM/DES | 进阶 |
 | S-031 | ai-collaboration-mindset | 四大核心能力、知识唤醒、三层次突破 | 思维 |
 | S-032 | chart-diagram-generator | SVG/Mermaid/React三引擎图表生成 | 应用 |
@@ -45,6 +45,25 @@ triggers:
 | S-009 | tools-monte-carlo | 风险分析工具 |
 | S-010 | meeting-minutes | 会议记录与行动项 |
 | — | cad-editor | 工程制图（与chart-diagram-generator互补） |
+
+### 文案营销与品牌战略技能（6个，2026-08-09 新增）
+
+| 编号 | 技能 | 核心能力 | 在链路中的角色 |
+|------|------|---------|--------------|
+| S-034 | copywriting | 文案三要素、诊断式模板、六大文案模板、语言风格三件套 | 内容输出 |
+| S-035 | marketing-planning | 三大模块（创意/传播/执行）、渠道矩阵、效果评估 | 营销策划 |
+| S-036 | brand-positioning | 四大考量、战略层级分层、8组件模板 | 战略输入 |
+| S-037 | value-proposition | 战略层级、10组件价值主张画布 | 战略输入 |
+| S-038 | future-vision | 战略层级、12组件愿景模板 | 战略输入 |
+| S-039 | three-chain-orchestration | 跨Skill质量保障，诊断逻辑链/知识链/创意链偏科 | 质量元Skill |
+
+### 人机共生与渠道内容技能（3个，2026-08-10 新增）
+
+| 编号 | 技能 | 核心能力 | 在链路中的角色 |
+|------|------|---------|--------------|
+| S-040 | human-ai-collaboration | 四力能力模型、知识唤醒三重机制、进阶路径、人机质量分析 | 认知底座（道层） |
+| S-041 | channel-content-strategy | 渠道选择双路径、四平台知识库、内容执行模板 | 渠道适配 |
+| S-042 | structured-report-writing | 三大模块九维度提示语模板、语言风格接口 | 报告输出 |
 
 ---
 

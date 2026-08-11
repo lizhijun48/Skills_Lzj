@@ -1,6 +1,6 @@
 # SKILL-CATALOG.md — 技能全量目录
 
-> 生成日期：2026-07-07 | 覆盖范围：所有 SKILL.md（含已治理和未治理）
+> 生成日期：2026-08-11 | 覆盖范围：所有 SKILL.md（含已治理和未治理）
 > **已治理编号以 SKILL-ID-REGISTRY.md 为准**，此目录作为全局检索补充。
 > 搬迁历史：2026-07-07 P2 inbox 搬迁后 inbox 清空，去向见 `inbox/`（已存档）。
 
@@ -50,6 +50,7 @@
 | JT-017 | pm-project-closure | `pm-suite/pm-project-closure/SKILL.md` | P6 | [有效] | 项目收尾与知识沉淀——严格对标PMBOK收尾过程组+软考高项收尾管理。覆盖行政收尾（合同关闭/资源释放/资产移交/文档归... |
 | JT-018 | pm-workflow-chains | `pm-suite/pm-workflow-chains/SKILL.md` | CX | [有效] | PM链式工作流索引——5条标准链路+2条专项链路，定义15个PM SKILL之间的调用顺序、前置条件、输入输出和衔接标志... |
 | JT-019 | pm-tender-analysis | `pm-suite/pm-tender-analysis/SKILL.md` | P1 | [有效] | 招标文件智能解析——将招标文件（PDF/Word/文本）转化为结构化竞标支撑报告，覆盖项目概览、资质核查、评分矩阵、风险... |
+| JT-020 | pm-it-governance | `pm-suite/pm-it-governance/SKILL.md` | CX | [有效] | 信息系统治理——对标高项第3章，组织级IT战略对齐评估、价值论证、风险评估、IT审计（骨架版）。 |
 | — | pm-skills-reference | `pm-suite/pm-skills-reference/SKILL.md` | 未治理 | 未治理 | 【产品经理技能索引】65个产品经理(PdM)技能+36个链式工作流+8个领域插件——注意：本索引覆盖的是产品管理(Pro... |
 ### 元技能 (meta-suite)
 
@@ -156,7 +157,16 @@
 | S-030 | ai-content-quality | `general-suite/ai-content-quality/SKILL.md` | P1 | [有效] | AI内容质量管控——幻觉五类七特识别、三重概率交互优化、PIA语用意图分析、TFM主题聚焦、DES细节增强。 |
 | S-031 | ai-collaboration-mindset | `general-suite/ai-collaboration-mindset/SKILL.md` | P1 | [有效] | AI人机协作思维——四大核心能力（AI思维/整合力/引导力/判断力）、知识唤醒三层机制、三层次突破路径。 |
 | S-032 | chart-diagram-generator | `general-suite/chart-diagram-generator/SKILL.md` | P1 | [有效] | 图表绘制元技能——SVG/Mermaid/React三引擎选择决策树，覆盖流程图/时序图/类图/折线图/柱状图/饼图等。 |
-| S-033 | general-workflow-chains | `general-suite/general-workflow-chains/SKILL.md` | CX | [有效] | 通用技能链式工作流索引——3条标准链路（学习链/实战链/质量链）+2条专项链路（图表链/数据分析链），连接AI辅助编程技能与现有通用技能。 |
+| S-033 | general-workflow-chains | `general-suite/general-workflow-chains/SKILL.md` | CX | [有效] | 通用技能链式工作流索引——3条标准链路（学习链/实战链/质量链）+2条专项链路（图表链/数据分析链），连接24个通用技能。 |
+| S-034 | copywriting | `general-suite/copywriting/SKILL.md` | P1 | [有效] | 文案写作——三要素模型（信息传递/情感共鸣/行动引导）、诊断式模板选择、六大文案模板、语言风格三件套。 |
+| S-035 | marketing-planning | `general-suite/marketing-planning/SKILL.md` | P1 | [有效] | 营销策划——三大模块（创意概念/传播策略/执行方案）、渠道矩阵、传播节奏设计、效果评估框架。 |
+| S-036 | brand-positioning | `general-suite/brand-positioning/SKILL.md` | P1 | [有效] | 品牌定位——四大关键考量、战略层级分层（企业/产品线/单品）、8组件模板、评估标准。 |
+| S-037 | value-proposition | `general-suite/value-proposition/SKILL.md` | P1 | [有效] | 价值主张——四大关键考量、战略层级分层、10组件价值主张画布、功能-情感平衡模型。 |
+| S-038 | future-vision | `general-suite/future-vision/SKILL.md` | P1 | [有效] | 未来愿景——四大关键考量、战略层级分层、12组件愿景模板、远大与可实现平衡。 |
+| S-039 | three-chain-orchestration | `general-suite/three-chain-orchestration/SKILL.md` | P1 | [有效] | 三链平衡编排（元Skill）——跨Skill质量保障层，诊断逻辑链/知识链/创意链偏科并调用对应Skill补强。 |
+| S-040 | human-ai-collaboration | `general-suite/human-ai-collaboration/SKILL.md` | CX | [有效] | 人机共生能力体系（道·认知层）——四大核心能力（AI思维/整合力/引导力/判断力）+ 知识唤醒 + 进阶路径 + 人机质量分析。 |
+| S-041 | channel-content-strategy | `general-suite/channel-content-strategy/SKILL.md` | P1 | [有效] | 渠道内容策略（术·应用层）——渠道选择双路径 + 四平台知识库（微信/微博/小红书/抖音）+ 内容执行模板。 |
+| S-042 | structured-report-writing | `general-suite/structured-report-writing/SKILL.md` | P1 | [有效] | 结构化报告写作（术·应用层）——年终总结/季度汇报/项目复盘/晋升述职，三大模块九维度提示语模板。 |
 ### 专家视角 (expert-suite)
 
 | 编号 | 技能名 | 路径 | 阶段 | 状态 | 说明 |
@@ -191,4 +201,4 @@
 
 ---
 
-**总计**：137 个 SKILL.md（含已治理 76 个）
+**总计**：147 个 SKILL.md（含已治理 86 个）

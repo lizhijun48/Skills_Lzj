@@ -1,7 +1,7 @@
 # SKILL Definition: GOV_SkillGovernance
 
 > **Status:** `Active`
-> **Last Updated:** 2026-08-09
+> **Last Updated:** 2026-08-11
 > **Owner:** System Architect
 > **Layer:** `CX-8` (Agent 与工具方法 — 元技能，治理其他技能的技能)
 > **Target System:** `meta-suite/governance-system/` (本治理工具的输出与 meta-suite/governance-system 目录结构完全对齐)
@@ -15,7 +15,7 @@
 | **SKILL_ID**         | `GOV_SkillGovernance`                                        | 唯一标识符                            |
 | **Track**            | `S` (共用层)                                                  | 服务于产品和项目两条轨道              |
 | **Phase**            | `CX-8` (Agent 与工具方法)                                     | 元技能，不绑定业务阶段                |
-| **Version**          | `v3.4`                                                       | 升级：合并架构原则（§10），治理体系统一入口 |
+| **Version**          | `v3.5`                                                       | 新增原则六（Skill章节规范）+ 原则七（分层标注） |
 | **Trigger Keywords** | `["治理SKILL", "整理SKILL", "SKILL体系", "优化提示词", "去重SKILL", "SKILL架构", "Skill Governance"]` | 用户输入包含这些词时激活              |
 | **Standard Source**  | `PMP.Initiating + PMP.Planning + NPDP.Portfolio`              | 治理方法论出处                        |
 | **Dependencies**     | `None`                                                       | 无前置依赖，是体系的起点              |
@@ -719,11 +719,51 @@ Skill内部增加条件分支和回环机制，而非线性执行。采用"诊�
 
 **当前落地状态**：prompt-chain-design SPECTRA模型+任务分解七步骤+AIDA框架；marketing-planning 三模块分解（每模块有独立交付物）。
 
+### 原则六：Skill章节规范（SKILL.md Structure Standard）
+
+每个 SKILL.md 应遵循统一的章节结构，确保可预期、可审计。章节分为必选和可选两类：
+
+**必选章节**：
+
+| 章节 | 位置 | 说明 |
+|------|------|------|
+| YAML frontmatter | 文件开头 | 必须包含 name、version、description；建议包含 layer（见原则七） |
+| 核心原则 | 标题后首个章节 | 3-5条核心原则，用列表形式呈现 |
+| 定位与适用场景 | 前部 | 明确 Skill 解决什么问题、什么场景使用、什么场景不适用 |
+| 使用建议 | 末尾 | 面向使用者的操作建议，通常5-8条 |
+
+**可选章节**（根据 Skill 复杂度和需要选择）：
+
+| 章节 | 适用场景 |
+|------|---------|
+| 调用关系 | Skill 之间存在显式依赖时（推荐有上下游关系的 Skill 必须包含） |
+| 参考来源 | 有 references/ 子目录时，声明素材来源 |
+| 质量评估 | 需要用户自评或输出质量检查时 |
+| 常见陷阱 | 实践中发现的高频错误模式 |
+
+**当前落地状态**：human-ai-collaboration 和 channel-content-strategy 结构最完整（含调用关系+参考来源+质量评估+常见陷阱）；reasoning-model-strategy 等缺少正式的"调用关系"和"参考来源"章节，后续版本补齐。
+
+### 原则七：分层标注（Layer Classification）
+
+在 Track/Phase/Sub-position 分类体系基础上，general-suite 的 Skill 增加 `layer` 维度标注"道-法-术-元"四层，解决认知层与方法层的区分需求：
+
+| 层级 | 含义 | 代表 Skill | 特征 |
+|------|------|-----------|------|
+| **道** | 认知基础层 | human-ai-collaboration (S-040) | 提供认知框架和能力基础，不解决具体问题，决定其他技能的上限 |
+| **法** | 方法论层 | prompt-chain-design (S-027)、ai-collaboration-mindset (S-031) | 提供可复用的方法论和工作模式 |
+| **术** | 应用层 | copywriting (S-034)、channel-content-strategy (S-041) 等 | 面向具体场景的执行技能 |
+| **元** | 跨层质量保障 | three-chain-orchestration (S-039) | 不属于任何单层，横跨所有层做质量诊断和补强 |
+
+**实施方式**：在 YAML frontmatter 中增加 `layer` 字段（值为 `道`/`法`/`术`/`元`），使分类成为可校验的元数据。pd-suite 和 pm-suite 的 Skill 不受此原则影响（它们使用 Track/Phase 分类已足够）。
+
+**当前落地状态**：仅 human-ai-collaboration 的 ASCII 图中非正式地定义了三层架构，尚未在 YAML frontmatter 中落地。后续新建 Skill 须包含 layer 字段，现有 Skill 在下次版本升级时补加。
+
 ### 后续治理计划
 
 1. **暂不改现有workflow-chains**：等PDF全部内容梳理完成后，统一处理workflow-chains的质量检查点和动态路由
-2. **新建Skills按新标准构建**：以上5条原则作为新建Skill的硬性要求
-3. **定期回顾**：每完成一批Skill构建，回顾原则的落地情况
+2. **新建Skills按新标准构建**：以上7条原则作为新建Skill的硬性要求
+3. **现有Skill补齐**：原则六（章节规范）和原则七（分层标注）允许在下次版本升级时逐步落地，不要求一次性全改
+4. **定期回顾**：每完成一批Skill构建，回顾原则的落地情况
 
 ---
 
@@ -731,6 +771,7 @@ Skill内部增加条件分支和回环机制，而非线性执行。采用"诊�
 
 | 版本 | 日期       | 变更内容                                                     | 作者             |
 | :--- | :--------- | :----------------------------------------------------------- | :--------------- |
+| v3.5 | 2026-08-11 | **原则扩展：** §10 新增原则六「Skill章节规范」（必选+可选章节定义）和原则七「分层标注」（道-法-术-元四层分类，YAML layer字段）；后续治理计划更新为7条原则；同步修复4张全局表的版本欠差（SKILL-ID-REGISTRY v1.2.0、BUSINESS-FLOW-MAP v1.1.0、SKILL-CATALOG 2026-08-11、general-workflow-chains v1.1.0） | QoderWork |
 | v3.4 | 2026-08-09 | **架构原则合并：** 将 GOV_ArchitecturePrinciples.md 的5条原则（质量检查点/动态路由/CIRS闭环/MECE/WBS优化）合并为 §10「Skill架构原则（全局）」；删除独立文件，治理体系统一入口 | QoderWork |
 | v3.3 | 2026-07-07 | **审计工具固化 + 规则基准：** 新增 §9 自动化审计规则基准（每条 QG 的检测方法/判定标准/已知例外，防止自造门禁和假阳性）；固化 gov_audit.py 和 gen_catalog.py 至 `meta-suite/governance-system/tools/`（修复路径过滤 bug / 大小写去重 / QG9 排除 checklist） | System Architect |
 | v3.2 | 2026-07-06 | **操作纪律固化：** 新增 §8 操作纪律与交付标准（增改必同步全局路由/关系表、完成后须交付结果说明）；新增质量门禁 **QG13** 治理联动与交付闭环（引用 §8）；明确 SKILL 增改操作的硬性联动表清单（编号注册表/业务流路由表/PT/JT 关系表）；Last Updated 同步更新 | System Architect |

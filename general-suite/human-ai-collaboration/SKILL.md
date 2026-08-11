@@ -515,7 +515,7 @@ description: 人机共生能力培养基础技能（道层）——涵盖人机�
 | `human-ai-collaboration`（本Skill） | 道层 | 核心能力模型、进阶路径、知识唤醒 | — |
 | `ai-collaboration-mindset` | 法层 | 具体的人机协作方法论 | 调用本Skill的能力模型 |
 | `prompt-engineering-basics` | 术层 | 提示词工程的具体技巧 | 调用本Skill的能力评估 |
-| `prompt-chain-design` | 术层 | 多步骤提示链设计 | 调用本Skill的引导力框架 |
+| `prompt-chain-design` | 法层 | 多步骤提示链设计 | 调用本Skill的引导力框架 |
 | `ai-content-quality` | 术层 | AI输出质量检测 | 调用本Skill的判断力框架 |
 
 ## 八、质量评估标准
