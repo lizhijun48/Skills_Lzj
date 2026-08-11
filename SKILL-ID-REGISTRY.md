@@ -114,7 +114,7 @@
 | S-026 | general-suite/prompt-engineering-basics | 提示语工程基础 | P1 | [有效] | 2026-08-09 新增；基于清华DeepSeek从入门到精通；DNA元素/六大类型/五大策略/TASTE·ALIGN框架 |
 | S-027 | general-suite/prompt-chain-design | 提示语链设计 | P1 | [有效] | 2026-08-09 新增；CIRS模型/SPECTRA分解/三链融合/任务分解七步骤 |
 | S-028 | general-suite/creative-prompt-techniques | 创意提示语技术 | P1 | [有效] | 2026-08-09 新增；IDEA/FOCUS/BRIDGE/CMM/CGS/EHS/MCS七大创意框架 |
-| S-029 | general-suite/reasoning-model-strategy | 推理模型使用策略 | P1 | [有效] | 2026-08-09 新增；模型选择决策树/提示语差异/可控性原则/认知外化 |
+| S-029 | general-suite/reasoning-model-strategy | 推理模型使用策略 | P1 | [有效] | 2026-08-09 新增；模型选择决策树/提示语差异/可控性原则/认知外化；2026-08-11 v1.3 新增多模型协同工作模式（三种模式）+ 专用AI vs 通用AI决策框架 |
 | S-030 | general-suite/ai-content-quality | AI内容质量管控 | P1 | [有效] | 2026-08-09 新增；幻觉五类识别/三重概率交互/PIA·TFM·DES |
 | S-031 | general-suite/ai-collaboration-mindset | AI人机协作思维 | P1 | [有效] | 2026-08-09 新增；四大核心能力/知识唤醒/三层次突破路径 |
 | S-032 | general-suite/chart-diagram-generator | 图表绘制元技能 | P1 | [有效] | 2026-08-09 新增；SVG/Mermaid/React三引擎选择与生成 |

@@ -50,7 +50,7 @@ general-suite 是 skills 体系中的**共用基础能力层**，与 pd-suite（
 | prompt-engineering-basics | `prompt-engineering-basics/` | 提示语工程基础——AI咨询师原则、DNA元素模型、五类需求识别（含填空模板）、咨询师工作流、TASTE/ALIGN | S-026 |
 | prompt-chain-design | `prompt-chain-design/` | 提示语链设计——CIRS模型、SPECTRA任务分解（含七步技巧+实战案例）、七大机制（反向诊断+诊断式引导）、三链融合（含8维度评估+PM案例）、AIDA框架（含考虑因素+执行技巧） | S-027 |
 | creative-prompt-techniques | `creative-prompt-techniques/` | 创意提示语技术——九大框架（含KTT知识转移+RCM随机组合）、语言风格三件套（RSM+EIS+RTA）、元叙事框架、PM产品创新场景映射 | S-028 |
-| reasoning-model-strategy | `reasoning-model-strategy/` | 推理模型策略——模型选择、提示语差异、可控性原则、认知外化 | S-029 |
+| reasoning-model-strategy | `reasoning-model-strategy/` | 推理模型策略——模型选择、提示语差异、可控性原则、认知外化、多模型协同（三种模式）、专用/通用AI决策框架 | S-029 |
 | ai-content-quality | `ai-content-quality/` | AI内容质量管控——幻觉五类七特、五类×七特映射、三重概率交互、PIA/TFM/DES（含理论基础+整合案例） | S-030 |
 | ai-collaboration-mindset | `ai-collaboration-mindset/` | AI协作思维——四大核心能力、知识唤醒、三层次突破路径 | S-031 |
 | chart-diagram-generator | `chart-diagram-generator/` | 图表绘制元技能——SVG/Mermaid/React三引擎选择与生成 | S-032 |
@@ -90,6 +90,13 @@ general-suite 是 skills 体系中的**共用基础能力层**，与 pd-suite（
 | prompt-chain-design | v1.4→v1.5 | +提示词工程六步法（完整提示生命周期闭环），与SPECTRA互补 |
 | ai-content-quality | v1.2→v1.3 | +三重概率模型增强（三维交互空间）+ 人机共生质量影响因素分析（人65%主导） |
 
+### 已有Skill补强（2026-08-11）
+
+| 技能名 | 版本变化 | 补强内容 |
+|--------|---------|---------|
+| reasoning-model-strategy | v1.2→v1.3 | +多模型协同工作模式（发散+收敛/创作+分析/教学+学习）+ 专用AI vs 通用AI决策框架（选择决策树+工具生态构建） |
+| human-ai-collaboration | v1.0→v1.0.1 | +整合力章节S-029交叉引用 + 调用关系表更新 |
+
 ## 路由与编排
 
 ### 链式工作流
@@ -119,4 +126,4 @@ general-suite 的链式工作流索引见 `general-workflow-chains/SKILL.md`，�
 
 ---
 
-**更新日期**：2026-08-10
+**更新日期**：2026-08-11
