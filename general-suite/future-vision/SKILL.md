@@ -121,5 +121,5 @@ description: 未来愿景技能——涵盖未来愿景四大关键考量（一�
 
 ## 调用关系
 
-- **被调用**：`marketing-planning`（营销策划获取长期叙事）、`brand-positioning`（品牌定位参考愿景方向）
+- **被调用**：`marketing-planning`（营销策划获取长期叙事）、`brand-positioning`（品牌定位参考愿景方向）、`copywriting`（品牌故事模板获取战略输入）
 - **调用**：`brand-positioning`（愿景与定位一致性检验）、`value-proposition`（愿景与价值主张连贯性检验）

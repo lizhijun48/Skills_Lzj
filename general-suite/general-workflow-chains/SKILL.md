@@ -27,7 +27,7 @@ triggers:
 |------|------|---------|------|
 | S-026 | prompt-engineering-basics | 提示语DNA、六大类型、五类需求识别（含填空模板）、咨询师工作流、TASTE/ALIGN | 基础 |
 | S-027 | prompt-chain-design | CIRS模型、SPECTRA分解（含七步技巧+实战案例）、七大机制（反向诊断+诊断式引导）、三链融合 | 进阶 |
-| S-028 | creative-prompt-techniques | 七大创意框架、PM产品创新场景映射、认知理论基础参考 | 进阶 |
+| S-028 | creative-prompt-techniques | 九大创意框架、PM产品创新场景映射、认知理论基础参考 | 进阶 |
 | S-029 | reasoning-model-strategy | 模型选择、提示语差异、可控性原则、多模型协同（三种模式）、专用/通用AI决策框架 | 基础 |
 | S-030 | ai-content-quality | 幻觉五类七特、五类×七特映射、三重概率交互、PIA/TFM/DES | 进阶 |
 | S-031 | ai-collaboration-mindset | 四大核心能力、知识唤醒、三层次突破 | 思维 |
@@ -103,7 +103,7 @@ prompt-engineering-basics ──→ creative-prompt-techniques ──→ chart-d
 | 环节 | 技能 | 关键输出 | 衔接标志 |
 |------|------|---------|---------|
 | 1 | prompt-engineering-basics | 结构化提示语设计能力 | **能设计清晰的提示语** |
-| 2 | creative-prompt-techniques | 运用七大框架激发创意 | **能用AI进行创新方案设计** |
+| 2 | creative-prompt-techniques | 运用九大框架激发创意 | **能用AI进行创新方案设计** |
 | 3 | chart-diagram-generator | 选择合适引擎生成图表 | **能根据任务选择SVG/Mermaid/React** |
 | 4 | tech-doc-writer | 生成含图表的技术文档 | **能产出完整的技术文档** |
 

@@ -117,5 +117,5 @@ description: 价值主张技能——涵盖价值主张四大关键考量（核�
 
 ## 调用关系
 
-- **被调用**：`copywriting`（文案撰写获取价值输入）、`marketing-planning`（营销策划获取核心卖点）、`future-vision`（未来愿景基于价值主张延伸）
+- **被调用**：`copywriting`（文案撰写获取价值输入）、`marketing-planning`（营销策划获取核心卖点）、`future-vision`（未来愿景基于价值主张延伸）、`channel-content-strategy`（渠道内容策略获取战略输入）
 - **调用**：`brand-positioning`（价值主张需要品牌定位作为输入）

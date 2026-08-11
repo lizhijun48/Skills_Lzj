@@ -108,5 +108,5 @@ description: 品牌定位技能——涵盖品牌定位四大关键考量（目�
 
 ## 调用关系
 
-- **被调用**：`value-proposition`（价值主张基于品牌定位提炼）、`copywriting`（品牌故事模板调用品牌定位）、`marketing-planning`（营销策划获取战略输入）
+- **被调用**：`value-proposition`（价值主张基于品牌定位提炼）、`copywriting`（品牌故事模板调用品牌定位）、`marketing-planning`（营销策划获取战略输入）、`future-vision`（愿景与定位一致性检验）、`channel-content-strategy`（渠道内容策略获取战略输入）
 - **调用**：无（品牌定位是最底层的战略输入，不依赖其他品牌模块）

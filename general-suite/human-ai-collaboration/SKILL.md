@@ -1,7 +1,7 @@
 ---
 name: human-ai-collaboration
 version: 1.0.1
-description: 人机共生能力培养基础技能（道层）——涵盖人机共生核心能力模型（AI思维/整合力/引导力/判断力）、三层次进阶路径（基础→进阶→创新）、知识唤醒三重机制（情感/经验/关联）、人机协作质量影响模型（人65%vs机器35%）、具身知识与形式知识桥接框架。当用户需要评估自身AI协作能力水平、规划AI技能提升路径、理解人机协作核心能力模型、设计知识唤醒流程、或建立个人AI工作方法论时使用此技能。作为基础能力层，被prompt-engineering-basics、ai-collaboration-mindset等技能调用提供能力评估与认知框架输入。
+description: 人机共生能力培养基础技能（道层）——涵盖人机共生核心能力模型（AI思维/整合力/引导力/判断力）、三层次进阶路径（基础→进阶→创新）、知识唤醒三重机制（情感/经验/关联）、人机协作质量影响模型（人65%vs机器35%）、具身知识与形式知识桥接框架。当用户需要评估自身AI协作能力水平、规划AI技能提升路径、理解人机协作核心能力模型、设计知识唤醒流程、或建立个人AI工作方法论时使用此技能。作为基础能力层，为提示语工程、协作思维等技能提供认知框架输入。
 ---
 
 # 人机共生能力培养 (Human-AI Collaboration)
@@ -492,31 +492,31 @@ description: 人机共生能力培养基础技能（道层）——涵盖人机�
 
 本Skill是general-suite中的**"道"层基础**，提供认知框架和能力评估，不直接解决具体问题。
 
-### 7.2 被调用关系
+### 7.2 预期调用关系
 
-其他Skill在以下场景调用本Skill：
+本Skill作为"道"层基础，设计上是其他Skill的认知输入源。以下为设计意图中的调用关系，待各Skill逐步建立实际交叉引用：
 
-| 调用方 | 调用场景 | 调用内容 |
-|-------|---------|---------|
-| `prompt-engineering-basics` | 用户需要评估提示词能力水平时 | 调用三层次模型评估用户的提示词能力层级 |
-| `ai-collaboration-mindset` | 需要能力评估框架时 | 调用四力模型进行能力画像 |
-| 其他领域Skill | 用户需要了解自身AI协作能力时 | 调用诊断工作流进行能力评估 |
+| 预期调用方 | 调用场景 | 调用内容 | 状态 |
+|-----------|---------|---------|------|
+| `prompt-engineering-basics` | 用户需要评估提示词能力水平时 | 调用三层次模型评估用户的提示词能力层级 | 待建立 |
+| `ai-collaboration-mindset` | 需要能力评估框架时 | 调用四力模型进行能力画像 | 待建立 |
+| 其他领域Skill | 用户需要了解自身AI协作能力时 | 调用诊断工作流进行能力评估 | 待建立 |
 
 ### 7.3 调用关系
 
 - **调用**：无（本Skill是最底层的认知基础，不依赖其他Skill）
-- **被调用**：`prompt-engineering-basics`（能力层级评估）、`ai-collaboration-mindset`（能力模型框架）
+- **被调用**：设计意图上为 `prompt-engineering-basics`、`ai-collaboration-mindset` 等提供认知框架输入，待各Skill逐步建立实际交叉引用
 
 ### 7.4 与相关Skill的分工
 
-| Skill | 层级 | 核心职责 | 与本Skill的关系 |
-|-------|------|---------|----------------|
-| `reasoning-model-strategy` | 术层 | 模型选择策略、多模型协同、专用/通用AI决策 | 调用本Skill的AI思维和整合力框架 |
+| Skill | 层级 | 核心职责 | 与本Skill的预期关系 |
+|-------|------|---------|-------------------|
+| `reasoning-model-strategy` | 术层 | 模型选择策略、多模型协同、专用/通用AI决策 | 可调用本Skill的AI思维和整合力框架 |
 | `human-ai-collaboration`（本Skill） | 道层 | 核心能力模型、进阶路径、知识唤醒 | — |
-| `ai-collaboration-mindset` | 法层 | 具体的人机协作方法论 | 调用本Skill的能力模型 |
-| `prompt-engineering-basics` | 术层 | 提示词工程的具体技巧 | 调用本Skill的能力评估 |
-| `prompt-chain-design` | 法层 | 多步骤提示链设计 | 调用本Skill的引导力框架 |
-| `ai-content-quality` | 术层 | AI输出质量检测 | 调用本Skill的判断力框架 |
+| `ai-collaboration-mindset` | 法层 | 具体的人机协作方法论 | 可调用本Skill的能力模型 |
+| `prompt-engineering-basics` | 术层 | 提示词工程的具体技巧 | 可调用本Skill的能力评估 |
+| `prompt-chain-design` | 法层 | 多步骤提示链设计 | 可调用本Skill的引导力框架 |
+| `ai-content-quality` | 术层 | AI输出质量检测 | 可调用本Skill的判断力框架 |
 
 ## 八、质量评估标准
 

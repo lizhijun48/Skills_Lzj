@@ -152,7 +152,7 @@
 | — | web-novel-writing-reference | `general-suite/references/web-novel-writing-reference-1.0.1/SKILL.md` | 未治理 | 未治理 | 网络小说创作知识参考库——Universal Task OS的领域负载物。提供写作任务清单（8域62种任务类型）、结构要... |
 | S-026 | prompt-engineering-basics | `general-suite/prompt-engineering-basics/SKILL.md` | P1 | [有效] | 提示语工程基础——DNA元素模型、六大类型、五大策略、TASTE/ALIGN框架。基于清华DeepSeek从入门到精通提炼。 |
 | S-027 | prompt-chain-design | `general-suite/prompt-chain-design/SKILL.md` | P1 | [有效] | 提示语链设计——CIRS四环节模型、SPECTRA任务分解、六大设计原则、三链融合优化系统。 |
-| S-028 | creative-prompt-techniques | `general-suite/creative-prompt-techniques/SKILL.md` | P1 | [有效] | 创意提示语技术——IDEA发散/FOCUS聚合/BRIDGE跨界/CMM跨域映射/CGS概念嫁接/EHS极端假设/MCS多重约束七大框架。 |
+| S-028 | creative-prompt-techniques | `general-suite/creative-prompt-techniques/SKILL.md` | P1 | [有效] | 创意提示语技术——IDEA发散/FOCUS聚合/BRIDGE跨界/CMM跨域映射/CGS概念嫁接/EHS极端假设/MCS多重约束/KTT知识转移/RCM随机组合九大框架。 |
 | S-029 | reasoning-model-strategy | `general-suite/reasoning-model-strategy/SKILL.md` | P1 | [有效] | 推理模型使用策略——模型选择决策树、提示语策略差异、可控性原则、认知外化理念。v1.1含第六章可控性原则。 |
 | S-030 | ai-content-quality | `general-suite/ai-content-quality/SKILL.md` | P1 | [有效] | AI内容质量管控——幻觉五类七特识别、三重概率交互优化、PIA语用意图分析、TFM主题聚焦、DES细节增强。 |
 | S-031 | ai-collaboration-mindset | `general-suite/ai-collaboration-mindset/SKILL.md` | P1 | [有效] | AI人机协作思维——四大核心能力（AI思维/整合力/引导力/判断力）、知识唤醒三层机制、三层次突破路径。 |
