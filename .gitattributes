@@ -1,0 +1,3 @@
+# 统一换行符为 LF，消除 git add 时的 "LF will be replaced by CRLF" 警告
+# 仓库内与本地均保持 LF（适合脚本 / 技能文件 SKILL.md 等跨平台文本）
+* text=auto eol=lf
