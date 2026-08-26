@@ -1,6 +1,8 @@
 # SKILL-ID-REGISTRY.md — 技能编号注册表
 
-> 版本：v1.2.0 | 最后更新：2026-08-11
+> 版本：v1.5.0 | 最后更新：2026-08-26
+> v1.5.0 变更：剩余40个未治理技能批量纳管——新增 I-/RE- 前缀；S-051~S-069(19)/X-001~X-011(11)/I-001~I-006(6)/RE-001~RE-003(3) 登记；PT-010 复用空号登记 pm-skills-reference
+> v1.4.0 变更：meta-suite 同义簇治理——10个未治理技能折叠合并，8个升基座/独立登记（S-043~S-050）
 > 用途：统一编号规则 + 已用编号清单（含阶段、备注）+ 新编号分配规则
 > 已合并 DEPLOYED_MAPPING.md 的阶段与备注信息
 > 查阅此文件即可知编号→路径→阶段→状态，不需要反复扫描技能目录
@@ -19,6 +21,8 @@
 | R- | reading-os/ | 阅读操作系统 | R-001 ~ R-099 |
 | X- | expert-suite/ | 专家视角 | X-001 ~ X-099 |
 | GX- | gaoxiang-suite/ | 高项备考（Gaoxiang Exam） | GX-000 ~ GX-099 |
+| I- | industry-suite/ | 行业解决方案（Industry） | I-001 ~ I-099 |
+| RE- | research-suite/ | 研究套件（Research） | RE-001 ~ RE-099 |
 
 **编号分配原则**：
 1. 每个技能有且仅有一个 `governance_id`
@@ -42,7 +46,7 @@
 | PT-007 | pd-suite/pd-prd-writing | PRD与需求文档 | P3 | [有效] | — |
 | PT-008 | pd-suite/pd-product-launch | 产品发布与上市管理 | P4 | [有效] | — |
 | PT-009 | pd-suite/pd-lifecycle-management | 产品生命周期管理 | P6 | [有效] | — |
-| PT-010 | （空） | 待分配 | — | [可用] | — |
+| PT-010 | pm-suite/pm-skills-reference | 产品经理技能索引 | PM | [有效] | 2026-08-26 纳管；复用PT-010空号 |
 | PT-011 | pd-suite/pd-product-operations | 产品运营与增长 | P5 | [有效] | — |
 | PT-012 | pd-suite/pd-user-research | 用户研究与需求洞察（含录音/文本洞察抽取子能力 insight-extraction） | P1 | [有效] | 2026-07-06 补充 insight-extraction 子能力 |
 | PT-013 | pd-suite/pd-tools-metrics | 工具与度量体系 | CX | [有效] | — |
@@ -93,16 +97,16 @@
 | S-005 | meta-suite/meta-stakeholder-analysis | 干系人分析通用框架 | CX | [有效] | — |
 | S-006 | expert-suite/high-vision-perspective | 高格局思维视角 | CX | [有效] | — |
 | S-007 | expert-suite/zhou-hongyi-perspective-v2 | 周鸿祎思维视角 | CX | [有效] | — |
-| S-008 | general-suite/tools-bayesian-update | 贝叶斯概率更新工具 | CX | [有效] | 已迁移 |
-| S-009 | general-suite/tools-monte-carlo | 蒙特卡洛模拟工具 | CX | [有效] | 已迁移 |
+| S-008 | general-suite/tools-bayesian-update | 贝叶斯概率更新工具 | CX | [有效] | 已迁移；2026-08-26 清理 meta-suite/tools-suite 旧副本（备份于 ~/.workbuddy/backup/skills-dedup-20260826/），本条为唯一部署 |
+| S-009 | general-suite/tools-monte-carlo | 蒙特卡洛模拟工具 | CX | [有效] | 已迁移；2026-08-26 清理 meta-suite/tools-suite 旧副本（备份于 ~/.workbuddy/backup/skills-dedup-20260826/），本条为唯一部署 |
 | S-010 | general-suite/meeting-minutes | 会议摘要与纪要 | CX | [有效] | — |
 | S-011 | general-suite/doc-versioner | 文档版本化出版工具 | P4 | [有效] | — |
 | S-012 | insurance-policy-analysis | 保险保单分析 | CX | [有效] | 独立部署 |
 | S-013 | （空，原resume-optimizer已合并至S-018） | 已释放 | — | [可用] | — |
-| S-014 | wechat-article-parser | 微信公众号文章解析 | CX | [有效] | 独立部署 |
+| S-014 | （空，原wechat-article-parser磁盘不存在） | 已释放 | — | [已释放] | 2026-08-26 全盘核验无此技能目录，按幽灵条目释放编号，不复用 |
 | S-015 | general-suite/md-to-pdf-cjk | Markdown转PDF（CJK支持） | P4 | [有效] | — |
 | S-016 | general-suite/markitdown-skill | 文档转Markdown | P4 | [有效] | — |
-| S-017 | inbox/meituan-coupon-workbuddy | 美团生活助手 | Domain | [待处理] | 外部商业Skill |
+| S-017 | （空，原inbox/meituan-coupon-workbuddy已随inbox存档清空） | 已释放 | — | [已释放] | 外部商业Skill；2026-08-26 磁盘核验inbox已不存在，释放编号；如需重装需重新部署并重新分配编号 |
 | S-018 | resume-optimizer | 简历优化助手（合并版） | CX | [有效] | — |
 | S-019 | gridman | 财税超级特工（Hyper Agent） | CX | [有效] | — |
 | S-020 | general-suite/excel-xlsx | Excel/XLSX工作簿处理 | CX | [有效] | 新部署 |
@@ -128,6 +132,33 @@
 | S-040 | general-suite/human-ai-collaboration | 人机共生能力体系（道·认知层） | CX | [有效] | 2026-08-10 新增；四大核心能力（AI思维/整合力/引导力/判断力）+ 知识唤醒 + 进阶路径 + 人机质量分析 |
 | S-041 | general-suite/channel-content-strategy | 渠道内容策略（术·应用层） | P1 | [有效] | 2026-08-10 新增；渠道选择决策（双路径）+ 四平台知识库（微信/微博/小红书/抖音）+ 内容执行模板 |
 | S-042 | general-suite/structured-report-writing | 结构化报告写作（术·应用层） | P1 | [有效] | 2026-08-10 新增；年终总结/季度汇报/项目复盘/晋升述职，三大模块九维度提示语模板 |
+| S-043 | meta-suite/universal-task-os-1.0.1 | 通用三轴任务操作系统（基座） | CX | [有效] | 2026-08-26 升基座；吸收 universal-primitives / capability-pipeline-os / ipo-model / cogniexec / compose-methods / identity-primitive-chain-prompt / solopreneur-os 差异化内容至 references/ |
+| S-044 | meta-suite/innovation-os-1.0.1 | 通用创新操作系统 | CX | [有效] | 2026-08-26 独立登记；10个创新元框架有独立价值，同时标注为 UTOS 创新轴来源 |
+| S-045 | meta-suite/adaptive-skill-stack-1.0.0 | 自适应技能叠加 | CX | [有效] | 2026-08-26 独立登记；自积累演化机制，每次使用自动分析需求并叠加/构建新能力实例 |
+| S-046 | meta-suite/self-improving-agent-3.0.21 | 持续学习代理 | CX | [有效] | 2026-08-26 独立登记；捕获错误、纠正与知识缺口，驱动持续改进 |
+| S-047 | meta-suite/comprehensive-knowledge-system-1.0.0 | 综合知识体系 | CX | [有效] | 2026-08-26 独立登记；投资哲学+高级提示词工程+AI编程方法论三域知识库 |
+| S-048 | meta-suite/governance-system/skills/data-analyst | 通用数据分析引擎 | CX | [有效] | 2026-08-26 独立登记；Python处理/统计/图表基础设施级引擎 |
+| S-049 | meta-suite/governance-system/skills/portfolio-rebalancing | 产品组合再平衡 | CX | [有效] | 2026-08-26 独立登记；战略对齐+财务表现+风险分散三维再平衡；补 JT-005 |
+| S-050 | meta-suite/governance-system/skills/product-sunset-assessment | 产品退市评估 | CX | [有效] | 2026-08-26 独立登记；衰退信号检测+财务影响+用户迁移；补 PT-009 |
+| S-051 | general-suite/academic-thesis-workflow-1.0.1/SKILL.md | 学术论文工作流 | CX | [有效] | 2026-08-26 纳管；通用套件 |
+| S-052 | general-suite/ai-dev-workflow-1.0.1/SKILL.md | AI辅助编程工作流 | CX | [有效] | 2026-08-26 纳管；通用套件 |
+| S-053 | general-suite/auto-dealer-ripcas-marketing-1.0.2/SKILL.md | 汽车经销商RIPCAS营销 | CX | [有效] | 2026-08-26 纳管；通用套件 |
+| S-054 | general-suite/bilingual-buddy-1.0.1/SKILL.md | 双语对话 | CX | [有效] | 2026-08-26 纳管；通用套件 |
+| S-055 | general-suite/builtin-tools-1.0.0/SKILL.md | 跨平台基础工具集 | CX | [有效] | 2026-08-26 纳管；通用套件 |
+| S-056 | general-suite/cad-editor-1.0.6/SKILL.md | CAD制图编辑器 | CX | [有效] | 2026-08-26 纳管；通用套件 |
+| S-057 | general-suite/chat-bus-1.0.0/SKILL.md | 共享目录消息总线 | CX | [有效] | 2026-08-26 纳管；通用套件 |
+| S-058 | general-suite/find-skills-0.1.0/SKILL.md | 技能发现安装 | CX | [有效] | 2026-08-26 纳管；通用套件 |
+| S-059 | general-suite/gamebox-1.0.1/SKILL.md | 多人游戏引擎 | CX | [有效] | 2026-08-26 纳管；通用套件 |
+| S-060 | general-suite/knowledge-explainer-1.0.0/SKILL.md | 知识点原子化讲解 | CX | [有效] | 2026-08-26 纳管；通用套件 |
+| S-061 | general-suite/liurun-writing-assistant-1.0.0/SKILL.md | 刘润写作助手 | CX | [有效] | 2026-08-26 纳管；通用套件 |
+| S-062 | general-suite/polymarket-trade-1.0.6/SKILL.md | Polymarket预测市场 | CX | [有效] | 2026-08-26 纳管；通用套件 |
+| S-063 | general-suite/references/singlefile-output-reference-1.0.0/SKILL.md | 单文件产出参考库 | CX | [有效] | 2026-08-26 纳管；参考库（references子文件） |
+| S-064 | general-suite/references/smart-hardware-reference-1.0.0/SKILL.md | 智能硬件参考库 | CX | [有效] | 2026-08-26 纳管；参考库（references子文件） |
+| S-065 | general-suite/style-design-generator-1.0.0/SKILL.md | 风格生成引擎 | CX | [有效] | 2026-08-26 纳管；通用套件 |
+| S-066 | general-suite/thesis-topic-selector-1.0.1/SKILL.md | 选题生成器 | CX | [有效] | 2026-08-26 纳管；通用套件 |
+| S-067 | general-suite/references/ultimate-domain-payload-1.0.0/SKILL.md | 全域领域负载物 | CX | [有效] | 2026-08-26 纳管；参考库（references子文件） |
+| S-068 | general-suite/wealth-manager-1.0.2/SKILL.md | 财富管理四阶段 | CX | [有效] | 2026-08-26 纳管；通用套件 |
+| S-069 | general-suite/references/web-novel-writing-reference-1.0.1/SKILL.md | 网络小说创作参考库 | CX | [有效] | 2026-08-26 纳管；参考库（references子文件） |
 
 ---
 
@@ -160,16 +191,50 @@
 
 | 编号 | 技能路径 | 技能名 | 阶段 | 状态 | 备注 |
 |------|----------|--------|------|------|------|
-| R-001 | reading-os/reading-book-deconstruction | 深度拆书·资产化输出 | CX | [有效] | — |
-| R-002 | reading-os/reading-bookshelf-health | 书架体检·注意力雷达 | CX | [有效] | — |
-| R-003 | reading-os/reading-role-path | 角色适配·三层阅读路径 | CX | [有效] | — |
+| R-001 | reading-os/reading-book-deconstruction.md | 深度拆书·资产化输出 | CX | [有效] | 模块文件（入口：reading-os/SKILL.md）；2026-08-26 口径修正 |
+| R-002 | reading-os/reading-bookshelf-health.md | 书架体检·注意力雷达 | CX | [有效] | 模块文件（入口：reading-os/SKILL.md）；2026-08-26 口径修正 |
+| R-003 | reading-os/reading-role-path.md | 角色适配·三层阅读路径 | CX | [有效] | 模块文件（入口：reading-os/SKILL.md）；2026-08-26 口径修正 |
 
 ---
 
 ### X- 专家视角（expert-suite/）
 
-（已分配 S-006, S-007，暂不需 X- 前缀，保留扩展空间）
+| 编号 | 技能路径 | 技能名 | 阶段 | 状态 | 备注 |
+|------|----------|--------|------|------|------|
+| X-001 | expert-suite/service-design/SKILL.md | 服务设计专家团总控 | Expert | [有效] | 2026-08-26 纳管；专家套件入口 |
+| X-002 | expert-suite/service-design/fwsjtt-chief-consultant/SKILL.md | 服务设计首席顾问 | Expert | [有效] | 2026-08-26 纳管；专家套件 |
+| X-003 | expert-suite/service-design/fwsjtt-customer-discovery-expert/SKILL.md | 客户洞察专家 | Expert | [有效] | 2026-08-26 纳管；专家套件 |
+| X-004 | expert-suite/service-design/fwsjtt-delivery-qa-reviewer/SKILL.md | 交付QA审查 | Expert | [有效] | 2026-08-26 纳管；专家套件 |
+| X-005 | expert-suite/service-design/fwsjtt-evidence-auditor/SKILL.md | 证据审计专家 | Expert | [有效] | 2026-08-26 纳管；专家套件 |
+| X-006 | expert-suite/service-design/fwsjtt-expert-team/SKILL.md | 服务设计专家团 | Expert | [有效] | 2026-08-26 纳管；专家套件 |
+| X-007 | expert-suite/service-design/fwsjtt-metrics-architect/SKILL.md | 指标架构师 | Expert | [有效] | 2026-08-26 纳管；专家套件 |
+| X-008 | expert-suite/service-design/fwsjtt-roi-strategist/SKILL.md | ROI策略师 | Expert | [有效] | 2026-08-26 纳管；专家套件 |
+| X-009 | expert-suite/service-design/fwsjtt-service-designer/SKILL.md | 服务设计师 | Expert | [有效] | 2026-08-26 纳管；专家套件 |
+| X-010 | expert-suite/service-design/fwsjtt-strategy-growth-advisor/SKILL.md | 战略增长顾问 | Expert | [有效] | 2026-08-26 纳管；专家套件 |
+| X-011 | expert-suite/service-design/fwsjtt-theory-distiller/SKILL.md | 理论蒸馏专家 | Expert | [有效] | 2026-08-26 纳管；专家套件 |
 
+---
+
+### I- 行业解决方案（industry-suite/）
+
+| 编号 | 技能路径 | 技能名 | 阶段 | 状态 | 备注 |
+|------|----------|--------|------|------|------|
+| I-001 | industry-suite/bookkeeping-agency/SKILL.md | 代账行业技能体系 | Industry | [有效] | 2026-08-26 纳管；行业套件 |
+| I-002 | industry-suite/c2c-platform/SKILL.md | 本地生活C2C平台技能体系 | Industry | [有效] | 2026-08-26 纳管；行业套件 |
+| I-003 | industry-suite/metabolic-healing/SKILL.md | 代谢慢病非药而愈技能体系 | Industry | [有效] | 2026-08-26 纳管；行业套件 |
+| I-004 | industry-suite/pharma/SKILL.md | 医药行业技能体系 | Industry | [有效] | 2026-08-26 纳管；行业套件 |
+| I-005 | industry-suite/pharma/references/pharma-doc-reference-1.0.1/SKILL.md | 医药行业文档知识参考库 | Industry | [有效] | 2026-08-26 纳管；参考库（pharma子文件） |
+| I-006 | industry-suite/universal-business/SKILL.md | 通用行业业务技能体系 | Industry | [有效] | 2026-08-26 纳管；行业套件 |
+
+---
+
+### RE- 研究套件（research-suite/）
+
+| 编号 | 技能路径 | 技能名 | 阶段 | 状态 | 备注 |
+|------|----------|--------|------|------|------|
+| RE-001 | research-suite/cda/SKILL.md | 因果动力学架构(CDA)领域知识 | Research | [有效] | 2026-08-26 纳管；研究套件 |
+| RE-002 | research-suite/cda/cda-code-lab-1.0.0/SKILL.md | CDA代码工坊 | Research | [有效] | 2026-08-26 纳管；研究套件 |
+| RE-003 | research-suite/cda/cda-data-synth-1.0.0/SKILL.md | CDA因果数据合成器 | Research | [有效] | 2026-08-26 纳管；研究套件 |
 ---
 
 ### GX- 高项备考（gaoxiang-suite/）

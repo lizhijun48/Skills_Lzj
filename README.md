@@ -15,6 +15,8 @@
 | reading-os/ | R- | 阅读操作系统 |
 | expert-suite/ | S- | 专家视角 |
 | gaoxiang-suite/ | GX- | 高项备考 |
+| industry-suite/ | I- | 行业技能（代理记账/C2C/代谢慢病/医药/通用业务） |
+| research-suite/ | RE- | 研究技能（CDA 因果动力学） |
 
 ## 治理文件
 
@@ -27,6 +29,120 @@
 ---
 
 ## 版本变更记录
+
+### v1.5.0 — 2026-08-26
+
+**剩余40个未治理技能批量纳管：新增 I-/RE- 前缀，治理覆盖率达 100%**
+
+提交：待推送 | 变更：SKILL-ID-REGISTRY.md v1.4.0→v1.5.0（新增 I-/RE- 规则+段）、SKILL-CATALOG.md（40行[未治理]→[有效]）+ 10个技能目录无变动
+
+#### 一、纳管范围
+
+- industry-suite（6）→ I-001~I-006（含 I-005 pharma-doc-reference 参考库）
+- research-suite（3）→ RE-001~RE-003
+- expert-suite（11）→ X-001~X-011（启用预留 X- 前缀）
+- general-suite（19）→ S-051~S-069（含 S-063/064/067/069 四个 references 参考库）
+- pm-suite（1）→ PT-010（复用空号登记 pm-skills-reference）
+
+#### 二、治理状态
+
+- 治理前：未治理 40 个
+- 治理后：未治理 0 个，已治理 137 个（覆盖率 100%）
+- 新增前缀：I-（行业）、RE-（研究）；X- 前缀正式启用
+
+#### 三、关键决策（GOV §2.4 保留判定）
+
+- 40 个技能保留判定全部通过（性质清晰、有独立用途），无折叠/废弃项
+- 5 个 references/ 子文件（singlefile/smart-hardware/ultimate-domain/web-novel/pharma-doc-reference）确认为可独立调用技能，归对应套件编号并标注"参考库"
+
+### v0.9.0 — 2026-08-26
+
+**meta-suite 同义簇治理：10技能折叠合并，8新登记**
+
+提交：待推送 | 变更：3 个治理文件更新 + 10 个技能目录删除（已备份）
+
+#### 一、问题诊断
+
+meta-suite 存在 15 个未治理技能，其中 10 个属于"任务执行 OS / 分解编排"同义簇：
+- 7 个讲同一件事（universal-task-os / universal-primitives / capability-pipeline-os / ipo-model / cogniexec / compose-methods / workflow-refactor）
+- 3 个与已治理工具重叠（workflow-refactor + domain-elimination-assessor ⊆ S-023；domain-payload-generator ⊆ S-024）
+
+直接编号 = 把冗余固化进注册表。
+
+#### 二、折叠合并（10 → 0）
+
+| 源技能 | 目标 | 差异化内容保留位置 |
+|--------|------|-------------------|
+| universal-primitives | S-043 UTOS | references/universal-primitives.md（2基元哲学+环境自举策略） |
+| capability-pipeline-os | S-043 UTOS | references/capability-pipeline-os.md（原已存在） |
+| ipo-model | S-043 UTOS | references/ipo-model.md（IPO世界模型+Mode A/B+工具层级） |
+| cogniexec | S-043 UTOS | references/cogniexec-orchestration.md + cogniexec-scripts/（17个Python脚本） |
+| compose-methods | S-043 UTOS | references/compose-methods.md（原已存在） |
+| identity-primitive-chain-prompt | S-043 UTOS | references/identity-primitive-chain-prompt-spec.md（P0消歧+操作钩子） |
+| solopreneur-os | S-043 UTOS + S-023 | references/solopreneur-os.md（一人公司场景参考） |
+| workflow-refactor | S-023 skill-refactor | references/workflow-refactor-method.md（IPO原语+AI自治标注） |
+| domain-elimination-assessor | S-023 skill-refactor | references/domain-elimination-assessor.md（领域特定阈值+DEA模板） |
+| domain-payload-generator | S-024 skill-forge | references/ 4文件（R1-R5分类+三层模板+UTOS接口清单+生成工作流） |
+
+#### 三、新登记（8个）
+
+| 编号 | 技能名 | 定位 |
+|------|--------|------|
+| S-043 | universal-task-os | 通用三轴任务操作系统（基座）——执行轴+内容轴+创新轴 |
+| S-044 | innovation-os | 通用创新操作系统——4种AI模式+10创新元框架 |
+| S-045 | adaptive-skill-stack | 自适应技能叠加——自积累演化机制 |
+| S-046 | self-improving-agent | 持续学习代理——错误/纠正/知识缺口捕获 |
+| S-047 | comprehensive-knowledge-system | 综合知识体系——投资+提示词+AI编程三域 |
+| S-048 | data-analyst | 通用数据分析引擎——Python基础设施级 |
+| S-049 | portfolio-rebalancing | 产品组合再平衡——补 JT-005 |
+| S-050 | product-sunset-assessment | 产品退市评估——补 PT-009 |
+
+#### 四、数字核对
+
+- 磁盘 SKILL.md：147 → **137**（-10）
+- 已治理：89 → **97**（+8）
+- 未治理：58 → **40**（-10折叠-8升基座）
+- 注册表：105 条（99 有效 / 4 可用空号 / 2 已释放）。注：99 有效含 reading-os 的 R-001~R-003 三模块编号（目录合并为 1 行，故目录"已治理"记 97）；10 个折叠项从未编号，不进注册表。
+
+#### 五、备份位置
+
+`~/.workbuddy/backup/meta-suite-pre-v0.9/`（完整 meta-suite 快照）
+
+---
+
+### v0.8.0 — 2026-08-26
+
+**技能库体检与 P0/P1 整改：账实同步 + 去重收尾 + 幽灵条目清理**
+
+提交：待推送 | 变更：3 个治理文件更新 + 2 个重复技能目录删除（已备份）
+
+#### 一、台账同步（P0）
+
+| 文件 | 变更 |
+|------|------|
+| SKILL-CATALOG.md | 补 gaoxiang-suite 章节（GX-000 备考总控 / GX-001 术语句式库）；reading-os 行由"未治理"改为已注册（R-001~003 为模块文件）；总计更新为 147 个（已治理 89 + 未治理 58），与磁盘实测一致 |
+| SKILL-ID-REGISTRY.md | v1.2.0→v1.3.0；S-014（wechat-article-parser，磁盘不存在）与 S-017（inbox 已清空）按幽灵条目释放编号；R-001~R-003 路径补 .md 后缀并标注模块口径 |
+
+#### 二、去重收尾（P1）
+
+- 删除 `meta-suite/tools-suite/` 下 tools-bayesian-update、tools-monte-carlo 旧副本（无 governance_id 的迁移前版本）；保留 general-suite 治理版（S-008/S-009）为唯一部署
+- 备份位置：`~/.workbuddy/backup/skills-dedup-20260826/`；空目录 tools-suite 已移除
+
+#### 三、数字核对
+
+- 磁盘 SKILL.md：149 → **147**（去重后）
+- 已治理：86 → **89**（+gaoxiang 2 + reading-os 1）
+- 未治理：61 → **58**
+- 注册表：97 条（91 有效 / 4 可用空号 / 2 已释放）
+
+#### 四、剩余事项（转入下轮）
+
+- 58 个未治理技能分批纳管（建议首批：industry 6 + research 3 + expert-fwsjtt 11）
+- expert-suite X- 前缀启用决策（fwsjtt 12 个技能归 S- 还是 X-）
+- 超大技能文件瘦身（gridman 84KB / pm-bid-proposal 63KB / law-skills 45KB）
+- 根目录冗余 insurance-policy-analysis.zip 清理
+
+---
 
 ### v0.1.0 — 2026-08-07
 

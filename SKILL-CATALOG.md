@@ -1,6 +1,6 @@
 # SKILL-CATALOG.md — 技能全量目录
 
-> 生成日期：2026-08-11 | 覆盖范围：所有 SKILL.md（含已治理和未治理）
+> 生成日期：2026-08-26（本次同步：meta-suite 同义簇治理，10技能折叠→S-043/S-023/S-024，8新登记 S-043~S-050）| 覆盖范围：所有 SKILL.md（含已治理和未治理）+ 已折叠条目
 > **已治理编号以 SKILL-ID-REGISTRY.md 为准**，此目录作为全局检索补充。
 > 搬迁历史：2026-07-07 P2 inbox 搬迁后 inbox 清空，去向见 `inbox/`（已存档）。
 
@@ -51,50 +51,48 @@
 | JT-018 | pm-workflow-chains | `pm-suite/pm-workflow-chains/SKILL.md` | CX | [有效] | PM链式工作流索引——5条标准链路+2条专项链路，定义15个PM SKILL之间的调用顺序、前置条件、输入输出和衔接标志... |
 | JT-019 | pm-tender-analysis | `pm-suite/pm-tender-analysis/SKILL.md` | P1 | [有效] | 招标文件智能解析——将招标文件（PDF/Word/文本）转化为结构化竞标支撑报告，覆盖项目概览、资质核查、评分矩阵、风险... |
 | JT-020 | pm-it-governance | `pm-suite/pm-it-governance/SKILL.md` | CX | [有效] | 信息系统治理——对标高项第3章，组织级IT战略对齐评估、价值论证、风险评估、IT审计（骨架版）。 |
-| — | pm-skills-reference | `pm-suite/pm-skills-reference/SKILL.md` | 未治理 | 未治理 | 【产品经理技能索引】65个产品经理(PdM)技能+36个链式工作流+8个领域插件——注意：本索引覆盖的是产品管理(Pro... |
+| PT-010 | pm-skills-reference | `pm-suite/pm-skills-reference/SKILL.md` | PM | [有效] | 【产品经理技能索引】65个产品经理(PdM)技能+36个链式工作流+8个领域插件——注意：本索引覆盖的是产品管理(Pro... |
 ### 元技能 (meta-suite)
 
 | 编号 | 技能名 | 路径 | 阶段 | 状态 | 说明 |
 |------|--------|------|------|------|------|
-| S-001 | meta-decision-frameworks | `meta-suite/meta-decision-frameworks/SKILL.md` | CX | [有效] | 决策框架通用工具集——PD/PM共享，覆盖多准则决策、优先级排序、加权评分法、决策树、成对比较法、六顶思考帽。pd-to... |
-| S-002 | meta-development-methodology | `meta-suite/meta-development-methodology/SKILL.md` | CX | [有效] | 开发方法与生命周期选择通用框架——PD/PM共享，覆盖预测型/迭代型/增量型/敏捷型/混合型5种开发方法、生命周期阶段映... |
-| S-003 | meta-professional-ethics | `meta-suite/meta-professional-ethics/SKILL.md` | CX | [有效] | 职业道德与专业行为规范——PD/PM共享，覆盖PMI四大核心价值观(责任/尊重/公正/诚实)、中国相关法规约束、利益冲突... |
-| S-004 | meta-risk-basics | `meta-suite/meta-risk-basics/SKILL.md` | CX | [有效] | 风险管理基础通用框架——PD/PM共享，覆盖风险定义与分类、概率-影响矩阵、4种应对策略(规避/转移/减轻/接受)、风险... |
-| S-005 | meta-stakeholder-analysis | `meta-suite/meta-stakeholder-analysis/SKILL.md` | CX | [有效] | 干系人分析通用框架——PD/PM共享，覆盖干系人识别、权力-利益矩阵、影响力方向、参与度评估、参与策略制定。pd-sta... |
-| S-022 | skill-creator-optimized | `meta-suite/skill-creator-optimized/SKILL.md` | CX | [有效] | AI 驱动的技能包生成与优化专家，用于将自然语言需求、业务流程、已有 SKILL.md/AGENTS.md 或压缩技能包... |
-| S-023 | skill-refactor | `meta-suite/skill-refactor/SKILL.md` | CX | [有效] | 技能改造方法。核心能力：评估技能是否需要存在（领域消除评估）→ 如果需要存在则重构技能内容（工作流重构）。十一步法：边界... |
-| S-024 | skill-forge | `meta-suite/skill-forge/SKILL.md` | CX | [有效] | MANDATORY tool for creating SKILLs - MUST be invoked IMMEDIA... |
-| S-025 | skill-extraction-sop | `meta-suite/skill-extraction-sop/SKILL.md` | CX | [有效] | 从外部项目/代码仓库/文档提取可复用技能的方法 SOP——判定要不要提（框架层/执行层/部署胶水分层）、与现有技能体系比... |
-| — | adaptive-skill-stack | `meta-suite/adaptive-skill-stack-1.0.0/SKILL.md` | 未治理 | 未治理 | 自适应技能叠加技能——一个能够根据用户需求实时演化的元技能。每次使用时自动分析需求，叠加已有能力或构建全新能力实例，完成... |
-| — | capability-pipeline-os | `meta-suite/capability-pipeline-os-1.0.1/SKILL.md` | 未治理 | 未治理 | 通用能力管线操作系统。基于"万物皆可单元化"思想，将任意领域的任意任务分解为可执行、可组合的能力单元，通过管线编排完成。... |
-| — | cogniexec | `meta-suite/cogniexec-1.0.4/SKILL.md` | 未治理 | 未治理 | 认知执行技能 — 整合认知套件与执行框架两大能力层，并配备编排引擎。 认知层：四种思维操作码（直用/改进/迁移/构建）覆... |
-| — | compose-methods | `meta-suite/compose-methods-1.0.1/SKILL.md` | 未治理 | 未治理 | 通用内容构成方法论技能，提供清单法和样本法两种范式来生成任意类型的结构化成品。当用户要求生成文档、方案、代码、报告、演讲... |
-| — | comprehensive-knowledge-system | `meta-suite/comprehensive-knowledge-system-1.0.0/SKILL.md` | 未治理 | 未治理 | 综合知识体系 — 涵盖投资哲学、高级提示词工程、AI编程方法论三大领域的完整知识库。包含价格运动定律、市场几何动力学、技... |
-| — | data-analyst | `meta-suite/governance-system/skills/data-analyst/SKILL.md` | 未治理 | 未治理 | 通用数据分析与可视化引擎。接收任意结构化数据和分析需求，自动执行 Python 数据处理、统计分析和图表生成。支持 CS... |
-| — | domain-elimination-assessor | `meta-suite/domain-elimination-assessor-1.0.0/SKILL.md` | 未治理 | 未治理 | 领域消除评估技能。评估一个领域是否能够被完全消除（被更大领域吸收或不再需要）。适用于：评估业务领域、工作流、组织结构、技... |
-| — | domain-payload-generator | `meta-suite/domain-payload-generator-1.0.2/SKILL.md` | 未治理 | 未治理 | 领域负载物技能制作器（Meta-Skill）——Universal Task OS的技能工厂。独立创建与UTOS完全兼容... |
-| — | identity-primitive-chain-prompt | `meta-suite/identity-primitive-chain-prompt-1.0.1/SKILL.md` | 未治理 | 未治理 | 身份基元链提示词 — 认知操作系统内核。 完整规范与执行协议见 references/身份基元链提示词·技术规范与执行协... |
-| — | innovation-os | `meta-suite/innovation-os-1.0.1/SKILL.md` | 未治理 | 未治理 | 通用创新操作系统——运用四种AI模式处理能力（模式直用、模式改进、模式迁移、模式构建）为任意领域生成创新方案。模式改进内... |
-| — | ipo-model | `meta-suite/ipo-model-1.0.0/SKILL.md` | 未治理 | 未治理 | 输入处理输出结构递归嵌套模型 — 万物基元与世界模型。 一切任务均可分解为 输入→处理→输出 的递归嵌套结构，任意层级的... |
-| — | portfolio-rebalancing | `meta-suite/governance-system/skills/portfolio-rebalancing/SKILL.md` | 未治理 | 未治理 | Evaluate and rebalance a product portfolio using strategic a... |
-| — | product-sunset-assessment | `meta-suite/governance-system/skills/product-sunset-assessment/SKILL.md` | 未治理 | 未治理 | Evaluate whether a product should be retired, downsized, or ... |
-| — | self-improvement | `meta-suite/self-improving-agent-3.0.21/SKILL.md` | 未治理 | 未治理 | Captures learnings, errors, and corrections to enable contin... |
-| — | solopreneur-os | `meta-suite/solopreneur-os-1.0.5/SKILL.md` | 未治理 | 未治理 | 一人公司操作系统。核心能力：工作流重构——将任何领域的复杂工作流重构为AI辅助一人简易完成的方法（拆解人的局限补偿层→消... |
-| — | tools-bayesian-update | `meta-suite/tools-suite/tools-bayesian-update/SKILL.md` | 未治理 | 未治理 | 贝叶斯参数更新通用工具——基于新观测数据，用贝叶斯定理动态更新模型参数（如对手画像的报价分布 μ/σ、博弈系数 K）。适... |
-| — | tools-monte-carlo | `meta-suite/tools-suite/tools-monte-carlo/SKILL.md` | 未治理 | 未治理 | 蒙特卡洛模拟通用工具——基于概率分布进行定量风险分析和决策支持。适用于招投标报价策略（中标概率曲线）、项目成本风险（成本... |
-| — | universal-primitives | `meta-suite/universal-primitives-1.0.0/SKILL.md` | 未治理 | 未治理 | 通用执行器架构原理：大语言模型只需文件增删改查和执行脚本两个基元工具，配合其天然的文字理解能力，就能从"无所不知只能输出... |
-| — | universal-task-os | `meta-suite/universal-task-os-1.0.1/SKILL.md` | 未治理 | 未治理 | 通用三轴任务操作系统。将任意任务沿三个正交轴处理：执行轴（6大元操作+管线编排）管怎么做，内容轴（清单法+样本法）管造什... |
-| — | workflow-refactor | `meta-suite/workflow-refactor-1.0.2/SKILL.md` | 未治理 | 未治理 | 工作流重构方法。核心能力：将任何领域的复杂工作流重构为AI辅助一人简易完成的方法（拆解人的局限补偿层→消除→基于AI能力... |
+| S-001 | meta-decision-frameworks | `meta-suite/meta-decision-frameworks/SKILL.md` | CX | [有效] | 决策框架通用工具集——PD/PM共享，覆盖多准则决策、优先级排序、加权评分法、决策树、成对比较法、六顶思考帽。 |
+| S-002 | meta-development-methodology | `meta-suite/meta-development-methodology/SKILL.md` | CX | [有效] | 开发方法与生命周期选择通用框架——PD/PM共享，覆盖预测型/迭代型/增量型/敏捷型/混合型5种开发方法。 |
+| S-003 | meta-professional-ethics | `meta-suite/meta-professional-ethics/SKILL.md` | CX | [有效] | 职业道德与专业行为规范——PD/PM共享，覆盖PMI四大核心价值观。 |
+| S-004 | meta-risk-basics | `meta-suite/meta-risk-basics/SKILL.md` | CX | [有效] | 风险管理基础通用框架——PD/PM共享，覆盖风险定义与分类、概率-影响矩阵、4种应对策略。 |
+| S-005 | meta-stakeholder-analysis | `meta-suite/meta-stakeholder-analysis/SKILL.md` | CX | [有效] | 干系人分析通用框架——PD/PM共享，覆盖干系人识别、权力-利益矩阵。 |
+| S-022 | skill-creator-optimized | `meta-suite/skill-creator-optimized/SKILL.md` | CX | [有效] | AI 驱动的技能包生成与优化专家。 |
+| S-023 | skill-refactor | `meta-suite/skill-refactor/SKILL.md` | CX | [有效] | 技能改造方法。2026-08-26 吸收 workflow-refactor / domain-elimination-assessor / solopreneur-os 差异化内容至 references/ |
+| S-024 | skill-forge | `meta-suite/skill-forge/SKILL.md` | CX | [有效] | 技能锻造（面试式创建）。2026-08-26 吸收 domain-payload-generator 全量内容至 references/ |
+| S-025 | skill-extraction-sop | `meta-suite/skill-extraction-sop/SKILL.md` | CX | [有效] | 从外部项目提取可复用技能的SOP。 |
+| S-043 | universal-task-os | `meta-suite/universal-task-os-1.0.1/SKILL.md` | CX | [有效] | 通用三轴任务操作系统（基座）——执行轴+内容轴+创新轴。2026-08-26 吸收 7 个同义簇技能差异化内容至 references/ |
+| S-044 | innovation-os | `meta-suite/innovation-os-1.0.1/SKILL.md` | CX | [有效] | 通用创新操作系统——4种AI模式+10创新元框架；同时标注为 UTOS 创新轴来源 |
+| S-045 | adaptive-skill-stack | `meta-suite/adaptive-skill-stack-1.0.0/SKILL.md` | CX | [有效] | 自适应技能叠加——自积累演化机制，每次使用自动分析需求并叠加/构建新能力实例 |
+| S-046 | self-improving-agent | `meta-suite/self-improving-agent-3.0.21/SKILL.md` | CX | [有效] | 持续学习代理——捕获错误、纠正与知识缺口，驱动持续改进 |
+| S-047 | comprehensive-knowledge-system | `meta-suite/comprehensive-knowledge-system-1.0.0/SKILL.md` | CX | [有效] | 综合知识体系——投资哲学+高级提示词工程+AI编程方法论三域知识库 |
+| S-048 | data-analyst | `meta-suite/governance-system/skills/data-analyst/SKILL.md` | CX | [有效] | 通用数据分析引擎——Python处理/统计/图表基础设施级引擎 |
+| S-049 | portfolio-rebalancing | `meta-suite/governance-system/skills/portfolio-rebalancing/SKILL.md` | CX | [有效] | 产品组合再平衡——战略对齐+财务表现+风险分散三维再平衡；补 JT-005 |
+| S-050 | product-sunset-assessment | `meta-suite/governance-system/skills/product-sunset-assessment/SKILL.md` | CX | [有效] | 产品退市评估——衰退信号检测+财务影响+用户迁移；补 PT-009 |
+| — | capability-pipeline-os | `已删除` | — | [已折叠] | → S-043 UTOS 执行轴（references/capability-pipeline-os.md 原已存在） |
+| — | compose-methods | `已删除` | — | [已折叠] | → S-043 UTOS 内容轴（references/compose-methods.md 原已存在） |
+| — | universal-primitives | `已删除` | — | [已折叠] | → S-043 UTOS 基座哲学（references/universal-primitives.md） |
+| — | ipo-model | `已删除` | — | [已折叠] | → S-043 UTOS 范式轴子集（references/ipo-model.md） |
+| — | cogniexec | `已删除` | — | [已折叠] | → S-043 UTOS 编排引擎（references/cogniexec-orchestration.md + scripts/） |
+| — | identity-primitive-chain-prompt | `已删除` | — | [已折叠] | → S-043 UTOS 认知内核规范（references/identity-primitive-chain-prompt-spec.md） |
+| — | solopreneur-os | `已删除` | — | [已折叠] | → S-043 UTOS + S-023 skill-refactor（一人公司场景参考） |
+| — | workflow-refactor | `已删除` | — | [已折叠] | → S-023 skill-refactor 第二阶段（references/workflow-refactor-method.md） |
+| — | domain-elimination-assessor | `已删除` | — | [已折叠] | → S-023 skill-refactor 第一阶段（references/domain-elimination-assessor.md） |
+| — | domain-payload-generator | `已删除` | — | [已折叠] | → S-024 skill-forge 领域负载物工厂（references/ 4文件） |
 ### 行业技能 (industry-suite)
 
 | 编号 | 技能名 | 路径 | 阶段 | 状态 | 说明 |
 |------|--------|------|------|------|------|
-| — | bookkeeping-agency-skill-system | `industry-suite/bookkeeping-agency/SKILL.md` | 未治理 | 未治理 | 代理记账行业十大功能集群技能体系。基于"任务为中心，AI Pipeline驱动"思想，覆盖市场情报、内容获客、增长引擎、... |
-| — | c2c-platform-skill-system | `industry-suite/c2c-platform/SKILL.md` | 未治理 | 未治理 | C2C本地生活服务平台十大功能集群技能体系。基于"任务为中心，AI Pipeline驱动"思想，覆盖市场情报、内容运营、... |
-| — | metabolic-healing-skill-system | `industry-suite/metabolic-healing/SKILL.md` | 未治理 | 未治理 | 代谢慢病"非药而愈"十大功能集群技能体系。基于"任务为中心，AI Pipeline驱动"思想，覆盖健康评估、营养干预、运... |
-| — | pharma-doc-reference | `industry-suite/pharma/references/pharma-doc-reference-1.0.1/SKILL.md` | 未治理 | 未治理 | 医药行业文档知识参考库——Universal Task OS的领域负载物。提供行业文档清单、内容要求清单、范本槽位，由U... |
-| — | pharma-skill-system | `industry-suite/pharma/SKILL.md` | 未治理 | 未治理 | 医药行业十大功能集群技能体系。基于"任务为中心，AI pipeline驱动"思想，覆盖情报采集、内容生产、活动运营、数据... |
-| — | universal-business-skill-system | `industry-suite/universal-business/SKILL.md` | 未治理 | 未治理 | 通用行业业务技能体系。基于"任务为中心，AI Pipeline驱动"思想，适用于任何行业的结构化业务能力框架。覆盖情报采... |
+| I-001 | bookkeeping-agency-skill-system | `industry-suite/bookkeeping-agency/SKILL.md` | Industry | [有效] | 代理记账行业十大功能集群技能体系。基于"任务为中心，AI Pipeline驱动"思想，覆盖市场情报、内容获客、增长引擎、... |
+| I-002 | c2c-platform-skill-system | `industry-suite/c2c-platform/SKILL.md` | Industry | [有效] | C2C本地生活服务平台十大功能集群技能体系。基于"任务为中心，AI Pipeline驱动"思想，覆盖市场情报、内容运营、... |
+| I-003 | metabolic-healing-skill-system | `industry-suite/metabolic-healing/SKILL.md` | Industry | [有效] | 代谢慢病"非药而愈"十大功能集群技能体系。基于"任务为中心，AI Pipeline驱动"思想，覆盖健康评估、营养干预、运... |
+| I-005 | pharma-doc-reference | `industry-suite/pharma/references/pharma-doc-reference-1.0.1/SKILL.md` | Industry | [有效] | 医药行业文档知识参考库——Universal Task OS的领域负载物。提供行业文档清单、内容要求清单、范本槽位，由U... |
+| I-004 | pharma-skill-system | `industry-suite/pharma/SKILL.md` | Industry | [有效] | 医药行业十大功能集群技能体系。基于"任务为中心，AI pipeline驱动"思想，覆盖情报采集、内容生产、活动运营、数据... |
+| I-006 | universal-business-skill-system | `industry-suite/universal-business/SKILL.md` | Industry | [有效] | 通用行业业务技能体系。基于"任务为中心，AI Pipeline驱动"思想，适用于任何行业的结构化业务能力框架。覆盖情报采... |
 ### 经济决策 (economic-suite)
 
 | 编号 | 技能名 | 路径 | 阶段 | 状态 | 说明 |
@@ -118,7 +116,7 @@
 
 | 编号 | 技能名 | 路径 | 阶段 | 状态 | 说明 |
 |------|--------|------|------|------|------|
-| — | reading-os | `reading-os/SKILL.md` | 未治理 | 未治理 | 阅读操作系统——个人知识管理全流程。覆盖从"书籍内容获取→目标收敛→读者反馈收集→知识点映射→深度拆解→资产化输出→技能... |
+| R-001~003 | reading-os | `reading-os/SKILL.md` | CX | [有效] | 阅读操作系统——个人知识管理全流程。R-001~003 为其三个能力模块（.md 模块文件，非独立技能目录）；2026-08-26 口径修正 |
 ### 通用技能 (general-suite)
 
 | 编号 | 技能名 | 路径 | 阶段 | 状态 | 说明 |
@@ -131,25 +129,25 @@
 | S-016 | markitdown-skill | `general-suite/markitdown-skill/SKILL.md` | P4 | [有效] | Convert documents to Markdown using Microsoft's MarkItDown C... |
 | S-020 | Excel / XLSX | `general-suite/excel-xlsx/SKILL.md` | CX | [有效] | Create, inspect, and edit Microsoft Excel workbooks and XLSX... |
 | S-021 | tech-doc-writer | `general-suite/tech-doc-writer/SKILL.md` | CX | [有效] | 根据参考文档目录和给定的大纲/模板，生成中文技术文档（应标/招投标技术方案、产品设计文档、接口文档、系统架构文档等），输... |
-| — | academic-thesis-workflow | `general-suite/academic-thesis-workflow-1.0.1/SKILL.md` | 未治理 | 未治理 | 此技能提供一个标准化、可复现的学术论文生成工作流，通过四个有序步骤将论文主题转化为完整学术论文：主题可行性评估、主题转论... |
-| — | ai-dev-workflow | `general-suite/ai-dev-workflow-1.0.1/SKILL.md` | 未治理 | 未治理 | 此技能提供一个标准化、可复现的AI辅助编程工作流，通过三个有序步骤将模糊想法转化为生产就绪的代码：需求转复杂功能描述、描... |
-| — | auto-dealer-ripcas-marketing | `general-suite/auto-dealer-ripcas-marketing-1.0.2/SKILL.md` | 未治理 | 未治理 | 面向中国大陆、香港、澳门的汽车经销商与区域门店，基于 RIPCAS 增长框架，按问题导向或全流程诊断营销转化主矛盾，并产... |
-| — | bilingual-buddy | `general-suite/bilingual-buddy-1.0.1/SKILL.md` | 未治理 | 未治理 | >- |
-| — | builtin-tools | `general-suite/builtin-tools-1.0.0/SKILL.md` | 未治理 | 未治理 | 跨平台基础工具集 — 16 个独立可组合的 Python 脚本，替代 Agent 平台缺失的基础工具能力。 文件系统（浏... |
-| — | cad-editor | `general-suite/cad-editor-1.0.6/SKILL.md` | 未治理 | 未治理 | CAD制图编辑器 — 用自然语言生成工程图纸（建筑平面图/机械零件/电气布置/管道系统/结构详图）。 支持DXF文件创建... |
-| — | chat-bus | `general-suite/chat-bus-1.0.0/SKILL.md` | 未治理 | 未治理 | 共享目录消息总线 — 让不同用户/Agent 之间通过文件系统实现聊天对话。 支持单聊、群聊、广播、消息历史查询。 纯 ... |
-| — | find-skills | `general-suite/find-skills-0.1.0/SKILL.md` | 未治理 | 未治理 | Helps users discover and install agent skills when they ask ... |
-| — | gamebox | `general-suite/gamebox-1.0.1/SKILL.md` | 未治理 | 未治理 | 多人游戏引擎框架 — 5 款游戏共用一套回合/状态/消息系统。 支持文字冒险、狼人杀、小说接龙、夺旗战、文明模拟。 LL... |
-| — | knowledge-explainer | `general-suite/knowledge-explainer-1.0.0/SKILL.md` | 未治理 | 未治理 | >- |
-| — | liurun-writing-assistant | `general-suite/liurun-writing-assistant-1.0.0/SKILL.md` | 未治理 | 未治理 | 基于用户提供的《刘润详细写作风格清单》蒸馏的商业写作助手。适用于商业洞察文章、管理文章、公众号文章、观点短文、标题优化、... |
-| — | polymarket | `general-suite/polymarket-trade-1.0.6/SKILL.md` | 未治理 | 未治理 | Query Polymarket prediction markets. Check odds, find trendi... |
-| — | singlefile-output-reference | `general-suite/references/singlefile-output-reference-1.0.0/SKILL.md` | 未治理 | 未治理 | 单文件产出知识参考库——Universal Task OS的领域负载物。提供单文件产出类型清单（7域52种产出类型）、结... |
-| — | smart-hardware-reference | `general-suite/references/smart-hardware-reference-1.0.0/SKILL.md` | 未治理 | 未治理 | 智能硬件开发知识参考库——Universal Task OS的领域负载物。提供开发任务清单（9域68种任务类型）、结构要... |
-| — | style-design-generator | `general-suite/style-design-generator-1.0.0/SKILL.md` | 未治理 | 未治理 | 基于100个风格方案的生成引擎。当用户需要生成新风格、混搭现有风格要素、将风格衍生产物到新类型、或将风格应用到漫画/小说... |
-| — | thesis-topic-selector | `general-suite/thesis-topic-selector-1.0.1/SKILL.md` | 未治理 | 未治理 | 运用四种AI模式处理能力（模式直用、模式改进、模式迁移、模式构建）为任意学科领域生成符合学术要求的创新选题。模式改进内置... |
-| — | ultimate-domain-payload | `general-suite/references/ultimate-domain-payload-1.0.0/SKILL.md` | 未治理 | 未治理 | 人类活动全域终极领域负载物。基于 Workflow Refactor 重构（消除学科壁垒/职业壁垒/审批流程 3 类补偿... |
-| — | wealth-manager | `general-suite/wealth-manager-1.0.2/SKILL.md` | 未治理 | 未治理 | 财富管理四阶段系统：财富积累(裂变获客/微利高频) → 财富增值(翻倍周期引擎) → 财富保全(离岸信托/家族办公室/大... |
-| — | web-novel-writing-reference | `general-suite/references/web-novel-writing-reference-1.0.1/SKILL.md` | 未治理 | 未治理 | 网络小说创作知识参考库——Universal Task OS的领域负载物。提供写作任务清单（8域62种任务类型）、结构要... |
+| S-051 | academic-thesis-workflow | `general-suite/academic-thesis-workflow-1.0.1/SKILL.md` | CX | [有效] | 此技能提供一个标准化、可复现的学术论文生成工作流，通过四个有序步骤将论文主题转化为完整学术论文：主题可行性评估、主题转论... |
+| S-052 | ai-dev-workflow | `general-suite/ai-dev-workflow-1.0.1/SKILL.md` | CX | [有效] | 此技能提供一个标准化、可复现的AI辅助编程工作流，通过三个有序步骤将模糊想法转化为生产就绪的代码：需求转复杂功能描述、描... |
+| S-053 | auto-dealer-ripcas-marketing | `general-suite/auto-dealer-ripcas-marketing-1.0.2/SKILL.md` | CX | [有效] | 面向中国大陆、香港、澳门的汽车经销商与区域门店，基于 RIPCAS 增长框架，按问题导向或全流程诊断营销转化主矛盾，并产... |
+| S-054 | bilingual-buddy | `general-suite/bilingual-buddy-1.0.1/SKILL.md` | CX | [有效] | >- |
+| S-055 | builtin-tools | `general-suite/builtin-tools-1.0.0/SKILL.md` | CX | [有效] | 跨平台基础工具集 — 16 个独立可组合的 Python 脚本，替代 Agent 平台缺失的基础工具能力。 文件系统（浏... |
+| S-056 | cad-editor | `general-suite/cad-editor-1.0.6/SKILL.md` | CX | [有效] | CAD制图编辑器 — 用自然语言生成工程图纸（建筑平面图/机械零件/电气布置/管道系统/结构详图）。 支持DXF文件创建... |
+| S-057 | chat-bus | `general-suite/chat-bus-1.0.0/SKILL.md` | CX | [有效] | 共享目录消息总线 — 让不同用户/Agent 之间通过文件系统实现聊天对话。 支持单聊、群聊、广播、消息历史查询。 纯 ... |
+| S-058 | find-skills | `general-suite/find-skills-0.1.0/SKILL.md` | CX | [有效] | Helps users discover and install agent skills when they ask ... |
+| S-059 | gamebox | `general-suite/gamebox-1.0.1/SKILL.md` | CX | [有效] | 多人游戏引擎框架 — 5 款游戏共用一套回合/状态/消息系统。 支持文字冒险、狼人杀、小说接龙、夺旗战、文明模拟。 LL... |
+| S-060 | knowledge-explainer | `general-suite/knowledge-explainer-1.0.0/SKILL.md` | CX | [有效] | >- |
+| S-061 | liurun-writing-assistant | `general-suite/liurun-writing-assistant-1.0.0/SKILL.md` | CX | [有效] | 基于用户提供的《刘润详细写作风格清单》蒸馏的商业写作助手。适用于商业洞察文章、管理文章、公众号文章、观点短文、标题优化、... |
+| S-062 | polymarket | `general-suite/polymarket-trade-1.0.6/SKILL.md` | CX | [有效] | Query Polymarket prediction markets. Check odds, find trendi... |
+| S-063 | singlefile-output-reference | `general-suite/references/singlefile-output-reference-1.0.0/SKILL.md` | CX | [有效] | 单文件产出知识参考库——Universal Task OS的领域负载物。提供单文件产出类型清单（7域52种产出类型）、结... |
+| S-064 | smart-hardware-reference | `general-suite/references/smart-hardware-reference-1.0.0/SKILL.md` | CX | [有效] | 智能硬件开发知识参考库——Universal Task OS的领域负载物。提供开发任务清单（9域68种任务类型）、结构要... |
+| S-065 | style-design-generator | `general-suite/style-design-generator-1.0.0/SKILL.md` | CX | [有效] | 基于100个风格方案的生成引擎。当用户需要生成新风格、混搭现有风格要素、将风格衍生产物到新类型、或将风格应用到漫画/小说... |
+| S-066 | thesis-topic-selector | `general-suite/thesis-topic-selector-1.0.1/SKILL.md` | CX | [有效] | 运用四种AI模式处理能力（模式直用、模式改进、模式迁移、模式构建）为任意学科领域生成符合学术要求的创新选题。模式改进内置... |
+| S-067 | ultimate-domain-payload | `general-suite/references/ultimate-domain-payload-1.0.0/SKILL.md` | CX | [有效] | 人类活动全域终极领域负载物。基于 Workflow Refactor 重构（消除学科壁垒/职业壁垒/审批流程 3 类补偿... |
+| S-068 | wealth-manager | `general-suite/wealth-manager-1.0.2/SKILL.md` | CX | [有效] | 财富管理四阶段系统：财富积累(裂变获客/微利高频) → 财富增值(翻倍周期引擎) → 财富保全(离岸信托/家族办公室/大... |
+| S-069 | web-novel-writing-reference | `general-suite/references/web-novel-writing-reference-1.0.1/SKILL.md` | CX | [有效] | 网络小说创作知识参考库——Universal Task OS的领域负载物。提供写作任务清单（8域62种任务类型）、结构要... |
 | S-026 | prompt-engineering-basics | `general-suite/prompt-engineering-basics/SKILL.md` | P1 | [有效] | 提示语工程基础——DNA元素模型、六大类型、五大策略、TASTE/ALIGN框架。基于清华DeepSeek从入门到精通提炼。 |
 | S-027 | prompt-chain-design | `general-suite/prompt-chain-design/SKILL.md` | P1 | [有效] | 提示语链设计——CIRS四环节模型、SPECTRA任务分解、六大设计原则、三链融合优化系统。 |
 | S-028 | creative-prompt-techniques | `general-suite/creative-prompt-techniques/SKILL.md` | P1 | [有效] | 创意提示语技术——IDEA发散/FOCUS聚合/BRIDGE跨界/CMM跨域映射/CGS概念嫁接/EHS极端假设/MCS多重约束/KTT知识转移/RCM随机组合九大框架。 |
@@ -173,24 +171,30 @@
 |------|--------|------|------|------|------|
 | S-006 | high-vision-perspective | `expert-suite/high-vision-perspective/SKILL.md` | CX | [有效] | 高格局思维视角 v1.0 · 吴军 & 王志纲思想融合 核心心智模型：时空升维、终局倒推、认命改运、三层透视、成事心法、... |
 | S-007 | zhou-hongyi-perspective-v2 | `expert-suite/zhou-hongyi-perspective-v2/SKILL.md` | CX | [有效] | 周鸿祎思维视角 v2.0 · 360 集团创始人 核心心智模型：免费模式、用户思维、颠覆式创新、安全信仰、产品经理文化、... |
-| — | fwsjtt-chief-consultant | `expert-suite/service-design/fwsjtt-chief-consultant/SKILL.md` | 未治理 | 未治理 | 帮助用户澄清复杂任务的北极星目标、拆解问题结构、制定专家协作路径，并防止任务发散或跳阶段。当用户要求“调用服务设计专家团... |
-| — | fwsjtt-customer-discovery-expert | `expert-suite/service-design/fwsjtt-customer-discovery-expert/SKILL.md` | 未治理 | 未治理 | 帮助用户从客户事实、访谈证据、JTBD 和假设验证出发识别真实需求，避免把内部判断或销售话术当作客户事实。 |
-| — | fwsjtt-delivery-qa-reviewer | `expert-suite/service-design/fwsjtt-delivery-qa-reviewer/SKILL.md` | 未治理 | 未治理 | 审查报告、方案或咨询输出是否结论先行、结构清晰、证据边界明确、行动可执行，并触发返工建议。 |
-| — | fwsjtt-evidence-auditor | `expert-suite/service-design/fwsjtt-evidence-auditor/SKILL.md` | 未治理 | 未治理 | 审查资料、观点和结论的来源强度，标注 L0-L4 证据等级，阻止伪权威、伪引用和未经验证的确定性表达。 |
-| — | fwsjtt-expert-team | `expert-suite/service-design/fwsjtt-expert-team/SKILL.md` | 未治理 | 未治理 | 服务设计专家团的统一入口与 FWSJTT 专家团总控调度中心。用于识别任务北极星目标，分诊到不同专家技能，协调多专家评审... |
-| — | fwsjtt-metrics-architect | `expert-suite/service-design/fwsjtt-metrics-architect/SKILL.md` | 未治理 | 未治理 | 设计北极星指标、指标树、领先/滞后指标、测量口径和验证计划，确保指标能服务业务决策。 |
-| — | fwsjtt-roi-strategist | `expert-suite/service-design/fwsjtt-roi-strategist/SKILL.md` | 未治理 | 未治理 | 根据输入数据完整度判断 ROI、成本收益、回本周期和商业价值能否量化，并在数据不足时输出假设、区间或测算框架而非伪精确数... |
-| — | fwsjtt-service-designer | `expert-suite/service-design/fwsjtt-service-designer/SKILL.md` | 未治理 | 未治理 | 围绕用户旅程、触点、前后台流程、服务蓝图和关键时刻诊断服务体验问题，避免停留在表层建议。 |
-| — | fwsjtt-strategy-growth-advisor | `expert-suite/service-design/fwsjtt-strategy-growth-advisor/SKILL.md` | 未治理 | 未治理 | 帮助用户诊断战略问题、增长瓶颈、竞争定位和关键取舍，避免泛泛而谈的增长建议。 |
-| — | fwsjtt-theory-distiller | `expert-suite/service-design/fwsjtt-theory-distiller/SKILL.md` | 未治理 | 未治理 | 从专家、经典书目和高价值理论中提炼可操作的方法、工作流、QA 规则和测试场景，转化为技能模块输入。 |
-| — | service-design-expert-team | `expert-suite/service-design/SKILL.md` | 未治理 | 未治理 | 服务设计专家天团的 SkillHub 总包入口。用于服务设计、客户洞察、增长策略、指标体系、ROI 评估、证据审计、理论... |
+| X-002 | fwsjtt-chief-consultant | `expert-suite/service-design/fwsjtt-chief-consultant/SKILL.md` | Expert | [有效] | 帮助用户澄清复杂任务的北极星目标、拆解问题结构、制定专家协作路径，并防止任务发散或跳阶段。当用户要求“调用服务设计专家团... |
+| X-003 | fwsjtt-customer-discovery-expert | `expert-suite/service-design/fwsjtt-customer-discovery-expert/SKILL.md` | Expert | [有效] | 帮助用户从客户事实、访谈证据、JTBD 和假设验证出发识别真实需求，避免把内部判断或销售话术当作客户事实。 |
+| X-004 | fwsjtt-delivery-qa-reviewer | `expert-suite/service-design/fwsjtt-delivery-qa-reviewer/SKILL.md` | Expert | [有效] | 审查报告、方案或咨询输出是否结论先行、结构清晰、证据边界明确、行动可执行，并触发返工建议。 |
+| X-005 | fwsjtt-evidence-auditor | `expert-suite/service-design/fwsjtt-evidence-auditor/SKILL.md` | Expert | [有效] | 审查资料、观点和结论的来源强度，标注 L0-L4 证据等级，阻止伪权威、伪引用和未经验证的确定性表达。 |
+| X-006 | fwsjtt-expert-team | `expert-suite/service-design/fwsjtt-expert-team/SKILL.md` | Expert | [有效] | 服务设计专家团的统一入口与 FWSJTT 专家团总控调度中心。用于识别任务北极星目标，分诊到不同专家技能，协调多专家评审... |
+| X-007 | fwsjtt-metrics-architect | `expert-suite/service-design/fwsjtt-metrics-architect/SKILL.md` | Expert | [有效] | 设计北极星指标、指标树、领先/滞后指标、测量口径和验证计划，确保指标能服务业务决策。 |
+| X-008 | fwsjtt-roi-strategist | `expert-suite/service-design/fwsjtt-roi-strategist/SKILL.md` | Expert | [有效] | 根据输入数据完整度判断 ROI、成本收益、回本周期和商业价值能否量化，并在数据不足时输出假设、区间或测算框架而非伪精确数... |
+| X-009 | fwsjtt-service-designer | `expert-suite/service-design/fwsjtt-service-designer/SKILL.md` | Expert | [有效] | 围绕用户旅程、触点、前后台流程、服务蓝图和关键时刻诊断服务体验问题，避免停留在表层建议。 |
+| X-010 | fwsjtt-strategy-growth-advisor | `expert-suite/service-design/fwsjtt-strategy-growth-advisor/SKILL.md` | Expert | [有效] | 帮助用户诊断战略问题、增长瓶颈、竞争定位和关键取舍，避免泛泛而谈的增长建议。 |
+| X-011 | fwsjtt-theory-distiller | `expert-suite/service-design/fwsjtt-theory-distiller/SKILL.md` | Expert | [有效] | 从专家、经典书目和高价值理论中提炼可操作的方法、工作流、QA 规则和测试场景，转化为技能模块输入。 |
+| X-001 | service-design-expert-team | `expert-suite/service-design/SKILL.md` | Expert | [有效] | 服务设计专家天团的 SkillHub 总包入口。用于服务设计、客户洞察、增长策略、指标体系、ROI 评估、证据审计、理论... |
 ### 研究技能 (research-suite)
 
 | 编号 | 技能名 | 路径 | 阶段 | 状态 | 说明 |
 |------|--------|------|------|------|------|
-| — | cda | `research-suite/cda/SKILL.md` | 未治理 | 未治理 | 因果动力学架构（Causal Dynamics Architecture, CDA）领域知识参考。 当用户讨论 CDA ... |
-| — | cda-code-lab | `research-suite/cda/cda-code-lab-1.0.0/SKILL.md` | 未治理 | 未治理 | CDA 架构代码工坊——按 Causal Dynamics Architecture 规范生成可执行的 Python 仿... |
-| — | cda-data-synth | `research-suite/cda/cda-data-synth-1.0.0/SKILL.md` | 未治理 | 未治理 | CDA 因果数据合成器——根据领域描述自动生成 CDA 架构可消费的因果数据集。 生成 Entity-State Gra... |
+| RE-001 | cda | `research-suite/cda/SKILL.md` | Research | [有效] | 因果动力学架构（Causal Dynamics Architecture, CDA）领域知识参考。 当用户讨论 CDA ... |
+| RE-002 | cda-code-lab | `research-suite/cda/cda-code-lab-1.0.0/SKILL.md` | Research | [有效] | CDA 架构代码工坊——按 Causal Dynamics Architecture 规范生成可执行的 Python 仿... |
+| RE-003 | cda-data-synth | `research-suite/cda/cda-data-synth-1.0.0/SKILL.md` | Research | [有效] | CDA 因果数据合成器——根据领域描述自动生成 CDA 架构可消费的因果数据集。 生成 Entity-State Gra... |
+### 高项备考 (gaoxiang-suite)
+
+| 编号 | 技能名 | 路径 | 阶段 | 状态 | 说明 |
+|------|--------|------|------|------|------|
+| GX-000 | gx-master-control | `gaoxiang-suite/gx-master-control/SKILL.md` | EX | [有效] | 备考总控（学习枢纽）——学习进度·知识图谱·策略调度·复习节奏；v2.0 |
+| GX-001 | gx-001-terms-sentence | `gaoxiang-suite/gx-001-terms-sentence/SKILL.md` | P0 | [有效] | 术语句式库——经验→考试语言翻译；术语库45+条/句式库26/框架库10；解决"语言贫乏"诊断 |
 ### 独立部署
 
 | 编号 | 技能名 | 路径 | 阶段 | 状态 | 说明 |
@@ -201,4 +205,4 @@
 
 ---
 
-**总计**：147 个 SKILL.md（含已治理 86 个）
+**总计**：137 个 SKILL.md（含已治理 137 个，未治理 0 个）+ 10 个已折叠条目——2026-08-26 磁盘实测 137 个，账实一致
