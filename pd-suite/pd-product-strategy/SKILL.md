@@ -319,6 +319,7 @@ MVP验证        规模化支撑      差异化竞争
 |-----------|------|
 | `product-roadmap-template.md` | 产品路线图模板（主题/目标/功能3种格式） |
 | `business-model-canvas.md` | 商业模式画布（9要素填写指南） |
+| `transaction-structure-analyzer.md` | 交易结构分析器（BMC 填完后的复核工具：逐边三问+结构图+红旗清单；出处《底层逻辑1》p067） |
 
 ---
 

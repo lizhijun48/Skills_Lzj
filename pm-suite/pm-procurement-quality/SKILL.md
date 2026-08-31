@@ -247,6 +247,8 @@ triggers:
 - 软件定制开发 → 可考虑里程碑付款制
 - 运维服务 → T&M（人天单价合同）
 
+> 本表同时是通用的**风险分配结构查询表**：任何合作/定价谈判都可用它回答"风险沿什么条款流向对手方"。完整方法见 `pd-suite/pd-product-strategy/references/transaction-structure-analyzer.md`（交易结构分析器，Step 2 第三问）。
+
 ---
 
 ### A5. 合同管理

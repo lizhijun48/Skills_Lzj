@@ -1,6 +1,11 @@
 # SKILL-ID-REGISTRY.md — 技能编号注册表
 
-> 版本：v1.5.0 | 最后更新：2026-08-26
+> 版本：v1.5.5 | 最后更新：2026-08-31
+> v1.5.5 变更：方案A推广至 pm-project-opportunity（阶段零 8 维评分卡 + references/Go-NoGo评分矩阵.md）和 product-solution-evaluator（6 维评分框架），均已完成概率锚定、期望支付、乘零否决、先验回写四动作；pd-go-nogo 试点口径现扩展为三套评分卡统一语义。
+> v1.5.4 变更：按 C→B→A 顺序落地 business-underlying-logic.md 三方案。**C**：杠杆层级字段+升级规则写入 pm-project-closure 4.1、pm-risk-management 4.2（新增"改模型·系统"行）、pd-product-operations 实验记录及其 growth-experiment-template.md 5.3。**B**：新增 `pd-product-strategy/references/transaction-structure-analyzer.md`（交易结构四步法+红旗清单），并在 pd-product-strategy 参考资料表与 pm-procurement-quality A4 合同类型表挂接。**A（试点）**：pd-go-nogo 1.0.0→1.1.0，得分改为概率锚（复用 pm-risk PIM 五级锚）、D1/D3 强制金额化出期望支付、否决项改为乘零因子、新增 Step 6 先验回写（推广 pm-bid 的 K 回写），references/go-nogo-scorecard.md 同步 v1.1 并对齐权重/阈值。pm-project-opportunity、product-solution-evaluator 两张评分卡待试点经真实项目验证后再推广。
+> v1.5.3 变更：刘润《底层逻辑》两册366页精读交叉验证——新增基座文档 business-underlying-logic.md（pd/pm 缺口映射+三个增强方案草案，未改动任何技能）
+> v1.5.2 变更：perspective-kernel.md 升级 v1.1——经刘润《底层逻辑》交叉检验，补强第1/2/5/6步操作化检验并附来源页码
+> v1.5.1 变更：专家层治理——新增共享决策内核基座文件 perspective-kernel.md（S-006/S-007 接入）；X-001/X-006 双入口分工消解触发词竞争
 > v1.5.0 变更：剩余40个未治理技能批量纳管——新增 I-/RE- 前缀；S-051~S-069(19)/X-001~X-011(11)/I-001~I-006(6)/RE-001~RE-003(3) 登记；PT-010 复用空号登记 pm-skills-reference
 > v1.4.0 变更：meta-suite 同义簇治理——10个未治理技能折叠合并，8个升基座/独立登记（S-043~S-050）
 > 用途：统一编号规则 + 已用编号清单（含阶段、备注）+ 新编号分配规则
@@ -37,10 +42,10 @@
 
 | 编号 | 技能路径 | 技能名 | 阶段 | 状态 | 备注 |
 |------|----------|--------|------|------|------|
-| PT-001 | pd-suite/pd-product-strategy | 产品战略与创新管理 | P1 | [有效] | — |
+| PT-001 | pd-suite/pd-product-strategy | 产品战略与创新管理 | P1 | [有效] | 2026-08-31 新增 references/transaction-structure-analyzer.md（交易结构分析器，方案B交付物） |
 | PT-002 | pd-suite/pd-innovation-process | 新产品开发流程 | P2 | [有效] | — |
 | PT-003 | pd-suite/pd-market-research | 市场研究与竞品分析 | P1 | [有效] | — |
-| PT-004 | pd-suite/pd-go-nogo | 产品机会评估与Go/No-Go决策 | P1 | [有效] | — |
+| PT-004 | pd-suite/pd-go-nogo | 产品机会评估与Go/No-Go决策 | P1 | [有效] | 2026-08-31 v1.1.0 评分卡期望值化试点（概率锚/期望支付/否决项乘零/Step 6 先验回写） |
 | PT-005 | pd-suite/pd-portfolio-management | 产品组合管理 | P6 | [有效] | — |
 | PT-006 | pd-suite/pd-requirements-design | 需求分析与产品设计 | P2 | [有效] | — |
 | PT-007 | pd-suite/pd-prd-writing | PRD与需求文档 | P3 | [有效] | — |
@@ -54,7 +59,7 @@
 | PT-015 | pd-suite/pd-integration | 产品整合管理 | CX | [有效] | — |
 | PT-016 | pd-suite/pd-workflow-chains | PD链式工作流索引 | CX | [有效] | — |
 | PT-017 | pd-suite/工业互联网产品经理 | 工业互联网产品经理 | P2 | [有效] | 领域特化 |
-| PT-018 | pd-suite/product-solution-evaluator | 产品方案评估专家 | P2 | [有效] | 新部署 |
+| PT-018 | pd-suite/product-solution-evaluator | 产品方案评估专家 | P2 | [有效] | 2026-08-31 v1.1.0 评分卡期望值化（概率锚/期望支付/乘零否决/Step X 先验回写） |
 | PT-019 | pd-suite/pd-ai-research-workflow | AI驱动的市场研究编排 | P1 | [有效] | 2026-07-06 从 ai-pm-exploration-toolkit 提取（执行/编排层，框架方法转 PT-003） |
 
 ---
@@ -63,7 +68,7 @@
 
 | 编号 | 技能路径 | 技能名 | 阶段 | 状态 | 备注 |
 |------|----------|--------|------|------|------|
-| JT-001 | pm-suite/pm-project-opportunity | 项目立项管理 | P1 | [有效] | — |
+| JT-001 | pm-suite/pm-project-opportunity | 项目立项管理 | P1 | [有效] | 2026-08-31 v1.1.0 阶段零评分卡期望值化（概率锚/期望支付/乘零否决/Step X 先验回写）；references/Go-NoGo评分矩阵.md 同步升级 |
 | JT-002 | pm-suite/pm-bid-proposal | 招投标方案编制 | P1 | [有效] | 已吸收3个投标技能包 |
 | JT-003 | pm-suite/pm-requirements-scope | 需求管理与范围定义 | P2 | [有效] | — |
 | JT-004 | pm-suite/pm-schedule-cost | 进度管理与成本控制 | P2 | [有效] | — |
@@ -95,8 +100,8 @@
 | S-003 | meta-suite/meta-professional-ethics | 职业道德与专业行为规范 | CX | [有效] | — |
 | S-004 | meta-suite/meta-risk-basics | 风险管理基础通用框架 | CX | [有效] | — |
 | S-005 | meta-suite/meta-stakeholder-analysis | 干系人分析通用框架 | CX | [有效] | — |
-| S-006 | expert-suite/high-vision-perspective | 高格局思维视角 | CX | [有效] | — |
-| S-007 | expert-suite/zhou-hongyi-perspective-v2 | 周鸿祎思维视角 | CX | [有效] | — |
+| S-006 | expert-suite/high-vision-perspective | 高格局思维视角 | CX | [有效] | 2026-08-31 接入共享决策内核 perspective-kernel.md（视角层） |
+| S-007 | expert-suite/zhou-hongyi-perspective-v2 | 周鸿祎思维视角 | CX | [有效] | 2026-08-31 接入共享决策内核 perspective-kernel.md（视角层） |
 | S-008 | general-suite/tools-bayesian-update | 贝叶斯概率更新工具 | CX | [有效] | 已迁移；2026-08-26 清理 meta-suite/tools-suite 旧副本（备份于 ~/.workbuddy/backup/skills-dedup-20260826/），本条为唯一部署 |
 | S-009 | general-suite/tools-monte-carlo | 蒙特卡洛模拟工具 | CX | [有效] | 已迁移；2026-08-26 清理 meta-suite/tools-suite 旧副本（备份于 ~/.workbuddy/backup/skills-dedup-20260826/），本条为唯一部署 |
 | S-010 | general-suite/meeting-minutes | 会议摘要与纪要 | CX | [有效] | — |
@@ -201,17 +206,20 @@
 
 | 编号 | 技能路径 | 技能名 | 阶段 | 状态 | 备注 |
 |------|----------|--------|------|------|------|
-| X-001 | expert-suite/service-design/SKILL.md | 服务设计专家团总控 | Expert | [有效] | 2026-08-26 纳管；专家套件入口 |
+| X-001 | expert-suite/service-design/SKILL.md | 服务设计专家团总控 | Expert | [有效] | 2026-08-26 纳管；包介绍与安装引导层，执行入口为 X-006（2026-08-31 双入口分工） |
 | X-002 | expert-suite/service-design/fwsjtt-chief-consultant/SKILL.md | 服务设计首席顾问 | Expert | [有效] | 2026-08-26 纳管；专家套件 |
 | X-003 | expert-suite/service-design/fwsjtt-customer-discovery-expert/SKILL.md | 客户洞察专家 | Expert | [有效] | 2026-08-26 纳管；专家套件 |
 | X-004 | expert-suite/service-design/fwsjtt-delivery-qa-reviewer/SKILL.md | 交付QA审查 | Expert | [有效] | 2026-08-26 纳管；专家套件 |
 | X-005 | expert-suite/service-design/fwsjtt-evidence-auditor/SKILL.md | 证据审计专家 | Expert | [有效] | 2026-08-26 纳管；专家套件 |
-| X-006 | expert-suite/service-design/fwsjtt-expert-team/SKILL.md | 服务设计专家团 | Expert | [有效] | 2026-08-26 纳管；专家套件 |
+| X-006 | expert-suite/service-design/fwsjtt-expert-team/SKILL.md | 服务设计专家团 | Expert | [有效] | 2026-08-26 纳管；多专家调度唯一执行入口（2026-08-31 双入口分工） |
 | X-007 | expert-suite/service-design/fwsjtt-metrics-architect/SKILL.md | 指标架构师 | Expert | [有效] | 2026-08-26 纳管；专家套件 |
 | X-008 | expert-suite/service-design/fwsjtt-roi-strategist/SKILL.md | ROI策略师 | Expert | [有效] | 2026-08-26 纳管；专家套件 |
 | X-009 | expert-suite/service-design/fwsjtt-service-designer/SKILL.md | 服务设计师 | Expert | [有效] | 2026-08-26 纳管；专家套件 |
 | X-010 | expert-suite/service-design/fwsjtt-strategy-growth-advisor/SKILL.md | 战略增长顾问 | Expert | [有效] | 2026-08-26 纳管；专家套件 |
 | X-011 | expert-suite/service-design/fwsjtt-theory-distiller/SKILL.md | 理论蒸馏专家 | Expert | [有效] | 2026-08-26 纳管；专家套件 |
+
+> **基座文档**：`expert-suite/perspective-kernel.md` v1.1——视角类技能共享的6步决策内核（不占编号，S-006/S-007 及未来视角技能引用；v1.1 经刘润《底层逻辑》交叉检验补强）
+> **基座文档**：`expert-suite/business-underlying-logic.md` v1.1——刘润《底层逻辑》两册 × pd/pm 技能族交叉验证与增强方案（不占编号；方案C、方案B 已实施，方案A 已在 pd-go-nogo 试点，另两张评分卡待真实项目验证后推广）
 
 ---
 
