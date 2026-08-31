@@ -1,6 +1,6 @@
 # SKILL-CATALOG.md — 技能全量目录
 
-> 生成日期：2026-08-31（本次同步：纳管 market-comparable → MT-001 新前缀分节；同步 v1.5.1~v1.5.6 备注级变化）| 覆盖范围：所有 SKILL.md（含已治理和未治理）+ 已折叠条目
+> 生成日期：2026-08-31（本次同步：新建 legal-suite/law-repository 中央法规库基础设施条目（不占编号）+ 4部法规种子入库；上次同步：纳管 market-comparable → MT-001 新前缀分节；同步 v1.5.1~v1.5.6 备注级变化）| 覆盖范围：所有 SKILL.md（含已治理和未治理）+ 已折叠条目
 > **已治理编号以 SKILL-ID-REGISTRY.md 为准**，此目录作为全局检索补充。
 > 搬迁历史：2026-07-07 P2 inbox 搬迁后 inbox 清空，去向见 `inbox/`（已存档）。
 
@@ -117,6 +117,7 @@
 | L-002 | contract-review | `legal-suite/contract-review/SKILL.md` | CX | [有效] | 合同审查技能——覆盖合同类型选择、风险条款识别、合规检查、争议解决条款审查。基于《招标投标法》《政府采购法》《民法典》合... |
 | L-003 | ip-protection | `legal-suite/ip-protection/SKILL.md` | CX | [有效] | 知识产权保护技能——覆盖IP类型识别、IP归属条款审查、IP侵权风险分析、开源协议合规检查。基于《专利法》《商标法》《著... |
 | L-004 | legal-compliance-bundle | `legal-suite/legal-compliance-bundle/SKILL.md` | CX | [有效] | 中国法律合规AI技能包 (Legal Compliance Skill Bundle) |
+| — | law-repository | `legal-suite/law-repository/README.md` | 基础设施 | [有效] | **中央法规库（不占编号，同 perspective-kernel 模式）**——单一事实来源：法条原文快照（laws/，一部法一文件+版本戳frontmatter）+ 原始PDF归档（sources/）+ 清单（law-manifest.md，已入库/待补/待核三区）。更新规程六条：仅人工触发/三粒度/180天阈值/git一更新一commit/级联标记/优先级链。与三层技能架构构成正向蒸馏+反向缺口登记闭环。2026-08-31 建库，4部种子入库（招标投标法2017/政府采购法2014/两实施条例） |
 ### 阅读操作系统 (reading-os)
 
 | 编号 | 技能名 | 路径 | 阶段 | 状态 | 说明 |
