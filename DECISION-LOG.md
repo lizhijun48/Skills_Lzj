@@ -444,6 +444,51 @@ docs: 更新 README.md 版本记录至 v1.6.0
 
 ---
 
+### 2026-08-31：meta-suite-pre-v0.9 备份归档决策
+
+**背景**：
+- v0.9.0 技能折叠合并时产生的历史快照存放在外部 workspace 目录（`~/.qoderworkcn/workspace/.../backup/meta-suite-pre-v0.9`）
+- 该备份包含 10 个被折叠技能的完整代码和文档（adaptive-skill-stack、cogniexec-1.0.4、comprehensive-knowledge-system 等）
+- 需要纳入 skills 仓库的 git 管理，支持云同步和人工追溯
+
+**决策**：
+- 将备份文件夹移动到 `C:\Users\Alex_Lee\.workbuddy\skills\archive\meta-suite-pre-v0.9-backup\`
+- 在 skills 仓库根目录创建 `archive/` 专用归档目录
+- 启用 git `core.longpaths true` 以支持长文件名提交
+- 提交详细 commit message 说明备份来源、内容和目的
+
+**归档内容清单**：
+- adaptive-skill-stack-1.0.0（自适应技能栈框架 + capability-tracker.py）
+- cogniexec-1.0.4（含 17 个 Python 工具脚本：archive_tool、clipboard、code_tools 等）
+- compose-methods-1.0.1（组合方法学）
+- comprehensive-knowledge-system-1.0.0（含投资/编程/提示词三大参考库共 19 个文档）
+- domain-elimination-assessor-1.0.0 / domain-payload-generator-1.0.2（领域分析工具链）
+- governance-system（含 agency-agents-zh 和 genai-agents-tutorials 两个子模块）
+- identity-primitive-chain-prompt-1.0.1（身份基元链提示词技术规范）
+- ipo-model-1.0.0（IPO 估值模型 + examples.md）
+- meta-* 系列（5 个元技能基础框架：meta-decision-frameworks、meta-development-methodology 等）
+- skill-creator-optimized / skill-extraction-sop / skill-forge / skill-refactor（技能创作工具链）
+- universal-primitives-1.0.0（通用基元库）
+
+**Git 提交**：
+```
+commit 8a9926a
+docs: 归档 meta-suite-pre-v0.9 备份到 archive/ 目录
+
+568 files changed, 250143 insertions(+)
+```
+
+**预期收益**：
+- ✅ 保留 v0.9.0 架构设计的历史可追溯性
+- ✅ 纳入 skills 仓库统一管理，支持 GitHub 云同步
+- ✅ 清理外部 workspace 临时备份目录，避免数据孤岛
+
+**后续建议**：
+- 若未来需要回溯 v0.9.0 的某个技能实现，可直接在 `archive/meta-suite-pre-v0.9-backup/` 中查找
+- 不建议修改归档内容（保持只读），如需复用应复制到当前版本目录后修改
+
+---
+
 ## 决策原则
 
 1. **不为了改进而改进**：每项升级必须解决真实痛点（不是臆想的问题）
