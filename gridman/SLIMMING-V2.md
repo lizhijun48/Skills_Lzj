@@ -35,7 +35,7 @@
 
 ## 3. 蒸馏数据 relocation（用户要求③）
 - references/*.md 已是「换地方」形态，使用逻辑不变
-- 更新逻辑按新规则：若财税原文入 law-repository，引用处加快照溯源；当前以 references + MaoDocs 为准
+- **法规库关系**：gridman 财税领域与招投标法库不同域；未来若建财税原文库，蒸馏应引用库原文+溯源（正向闭环），缺口反向登记（反向）；当前以 references + MaoDocs 为准
 
 ## 4. 联网接口（用户要求①②，N2~N7 见 BACKLOG）
 一律原样保留：fgk / MaoDocs / esnai / szse·sse·bse / 巨潮 / MinerU。MaoDocs 外部站点风险仅备注（P6），不改动。
