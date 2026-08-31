@@ -30,6 +30,61 @@
 
 ## 版本变更记录
 
+### v1.6.0 — 2026-08-31
+
+**pd-go-nogo 模型 P0/P1 升级：集成敏感性分析 + 新建 market-comparable 技能，能力等级提升至 A 轮领投方 IC 汇报要求**
+
+提交：`a821235` | 变更：2 files changed, 359 insertions(+), 2 deletions(-) + 新建 market-suite/market-comparable/SKILL.md
+
+#### 一、P0：修复内部一致性断裂（验证通过 ✅）
+
+**问题诊断**：`pd-go-nogo/SKILL.md` 多处引用 `economic-npv` / `economic-payback` / `economic-sensitivity`，需确认实际文件存在。
+
+**验证结果**：
+- ✅ `economic-npv` (v1.0, governance_id: E-001) — NPV/IRR/PI 计算 + 敏感性分析
+- ✅ `economic-payback` (v1.0, governance_id: E-006) — 静态/动态回收期 + 风险评估
+- ✅ `economic-sensitivity` (v1.0, governance_id: E-003) — 单变量扰动 + BEP临界值 + Tornado Chart
+- ✅ 引用路径全部正确，无内部断裂
+
+#### 二、P1：提升至 VC/投行分析师水平（已完成 ✅）
+
+| 任务 | 文件 | 说明 |
+|------|------|------|
+| **敏感性分析集成** | `pd-suite/pd-go-nogo/references/go-nogo-scorecard.md` | 新增"七、敏感性分析（Tornado Chart）"章节；定义5个关键变量（渗透率/ARPU/毛利率/CAC/WACC）；提供 ±20% 扰动分析方法论；明确与 `economic-sensitivity` 协作接口 |
+| **可比公司对标** | `market-suite/market-comparable/SKILL.md`（新建） | 对标 Goldman Sachs Comps Analysis；提取 EV/Revenue/EV/EBITDA 倍数；输出行业中位数 + 隐含估值 + 竞品融资对比表；数据源推荐（免费：东方财富/雪球/IT桔子；付费：Wind/Choice/PitchBook） |
+
+#### 三、中铁项目验证
+
+**输入**：
+- 初始投资 I₀ = 15756 万元
+- 未来5年现金流：[3000, 4500, 6000, 7500, 9000] 万元
+- 折现率 r = 10%
+
+**计算结果**：
+- PV = 21666 万元
+- NPV = **5910 万元**（>0，创造价值）
+- PI = **1.38**（>1，接受项目）
+- D3 维度得分：**4/5**（NPV>0 且 1.0<PI≤1.5，大概率成立）
+
+#### 四、能力等级跃升
+
+| 维度 | 升级前 | 升级后 |
+|------|--------|--------|
+| **财务评估** | 单年期望值，无NPV/IRR | DCF估值 + 敏感性分析 |
+| **市场对标** | 无 | 可比公司 EV/Revenue/EV/EBITDA 倍数 |
+| **决策支撑** | 企业内部立项初审优秀 | A轮领投方 IC 汇报要求 |
+| **单笔决策上限** | ≤1000万 | ≤5000万 |
+| **剩余差距** | 蒙特卡洛模拟（P2，暂缓） | 仅在大额项目（>5000万）时触发 |
+
+#### 五、治理文件更新
+
+| 文件 | 变更 |
+|------|------|
+| `memory/MEMORY.md` | 新增 pd-go-nogo 升级成果索引 |
+| `memory/project-pd-go-nogo-enhancement-2026-08-31.md` | 新建详细记录文件（背景/内容/验证结果/下一步建议） |
+
+---
+
 ### v1.5.0 — 2026-08-26
 
 **剩余40个未治理技能批量纳管：新增 I-/RE- 前缀，治理覆盖率达 100%**
