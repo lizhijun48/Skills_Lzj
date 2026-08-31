@@ -1,6 +1,7 @@
 # SKILL-ID-REGISTRY.md — 技能编号注册表
 
-> 版本：v1.5.5 | 最后更新：2026-08-31
+> 版本：v1.5.6 | 最后更新：2026-08-31
+> v1.5.6 变更：纳管 market-comparable——新增 MT- 前缀（市场估值工具，market-suite/），登记 MT-001；与 E-（经济决策元技能）形成上下游分工（MT- 提供行业倍数与隐含估值基准，E- 做 DCF/时间价值计算）
 > v1.5.5 变更：方案A推广至 pm-project-opportunity（阶段零 8 维评分卡 + references/Go-NoGo评分矩阵.md）和 product-solution-evaluator（6 维评分框架），均已完成概率锚定、期望支付、乘零否决、先验回写四动作；pd-go-nogo 试点口径现扩展为三套评分卡统一语义。
 > v1.5.4 变更：按 C→B→A 顺序落地 business-underlying-logic.md 三方案。**C**：杠杆层级字段+升级规则写入 pm-project-closure 4.1、pm-risk-management 4.2（新增"改模型·系统"行）、pd-product-operations 实验记录及其 growth-experiment-template.md 5.3。**B**：新增 `pd-product-strategy/references/transaction-structure-analyzer.md`（交易结构四步法+红旗清单），并在 pd-product-strategy 参考资料表与 pm-procurement-quality A4 合同类型表挂接。**A（试点）**：pd-go-nogo 1.0.0→1.1.0，得分改为概率锚（复用 pm-risk PIM 五级锚）、D1/D3 强制金额化出期望支付、否决项改为乘零因子、新增 Step 6 先验回写（推广 pm-bid 的 K 回写），references/go-nogo-scorecard.md 同步 v1.1 并对齐权重/阈值。pm-project-opportunity、product-solution-evaluator 两张评分卡待试点经真实项目验证后再推广。
 > v1.5.3 变更：刘润《底层逻辑》两册366页精读交叉验证——新增基座文档 business-underlying-logic.md（pd/pm 缺口映射+三个增强方案草案，未改动任何技能）
@@ -28,6 +29,7 @@
 | GX- | gaoxiang-suite/ | 高项备考（Gaoxiang Exam） | GX-000 ~ GX-099 |
 | I- | industry-suite/ | 行业解决方案（Industry） | I-001 ~ I-099 |
 | RE- | research-suite/ | 研究套件（Research） | RE-001 ~ RE-099 |
+| MT- | market-suite/ | 市场估值工具（Market valuation） | MT-001 ~ MT-099 |
 
 **编号分配原则**：
 1. 每个技能有且仅有一个 `governance_id`
@@ -178,6 +180,14 @@
 | E-005 | economic-suite/economic-ve | 价值工程工具 | CX | [有效] | — |
 | E-006 | economic-suite/economic-payback | 投资回收期工具 | CX | [有效] | — |
 | E-007 | economic-suite/economic-decision | 经济决策元技能 | CX | [有效] | 自动调度E-001~006 |
+
+---
+
+### MT- 市场估值工具（market-suite/）
+
+| 编号 | 技能路径 | 技能名 | 阶段 | 状态 | 备注 |
+|------|----------|--------|------|------|------|
+| MT-001 | market-suite/market-comparable/SKILL.md | 可比公司对标分析工具 | CX | [有效] | 2026-08-31 创建（v1.0.0，投行 Comps Analysis：EV/Revenue、EV/EBITDA）；2026-08-31 纳管补登记；支撑 PT-004/JT-001 市场吸引力评估 |
 
 ---
 

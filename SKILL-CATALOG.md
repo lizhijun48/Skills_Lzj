@@ -1,6 +1,6 @@
 # SKILL-CATALOG.md — 技能全量目录
 
-> 生成日期：2026-08-26（本次同步：meta-suite 同义簇治理，10技能折叠→S-043/S-023/S-024，8新登记 S-043~S-050）| 覆盖范围：所有 SKILL.md（含已治理和未治理）+ 已折叠条目
+> 生成日期：2026-08-31（本次同步：纳管 market-comparable → MT-001 新前缀分节；同步 v1.5.1~v1.5.6 备注级变化）| 覆盖范围：所有 SKILL.md（含已治理和未治理）+ 已折叠条目
 > **已治理编号以 SKILL-ID-REGISTRY.md 为准**，此目录作为全局检索补充。
 > 搬迁历史：2026-07-07 P2 inbox 搬迁后 inbox 清空，去向见 `inbox/`（已存档）。
 
@@ -11,10 +11,10 @@
 
 | 编号 | 技能名 | 路径 | 阶段 | 状态 | 说明 |
 |------|--------|------|------|------|------|
-| PT-001 | pd-product-strategy | `pd-suite/pd-product-strategy/SKILL.md` | P1 | [有效] | 产品战略与创新管理——基于NPDP Ch1战略，覆盖创新战略4类型(迈尔斯-斯诺)、破坏性创新与持续性创新、产品愿景与使... |
+| PT-001 | pd-product-strategy | `pd-suite/pd-product-strategy/SKILL.md` | P1 | [有效] | 产品战略与创新管理——基于NPDP Ch1战略，覆盖创新战略4类型(迈尔斯-斯诺)、破坏性创新与持续性创新、产品愿景与使... 2026-08-31 新增 references/transaction-structure-analyzer.md（交易结构四步法+红旗清单） |
 | PT-002 | pd-innovation-process | `pd-suite/pd-innovation-process/SKILL.md` | P2 | [有效] | 新产品开发流程——基于NPDP Ch3新产品流程，覆盖Stage-Gate门径、开放式创新、精益创业BML、设计思维5步... |
 | PT-003 | pd-market-research | `pd-suite/pd-market-research/SKILL.md` | P1 | [有效] | 市场研究与竞品分析——基于NPDP Ch4市场研究，覆盖市场规模TAM/SAM/SOM、竞品5-7产品对比、12种研究方... |
-| PT-004 | pd-go-nogo | `pd-suite/pd-go-nogo/SKILL.md` | P1 | [有效] | 产品机会评估与Go/No-Go决策——基于NPDP Ch1战略+Ch2组合管理，覆盖8维度量化评估（市场/技术/财务/战... |
+| PT-004 | pd-go-nogo | `pd-suite/pd-go-nogo/SKILL.md` | P1 | [有效] | 产品机会评估与Go/No-Go决策——基于NPDP Ch1战略+Ch2组合管理，覆盖8维度量化评估（市场/技术/财务/战... 2026-08-31 v1.1.0 评分卡期望值化试点（概率锚/期望支付/否决项乘零/Step 6 先验回写）；集成 economic-sensitivity 敏感性分析（Tornado Chart） |
 | PT-005 | pd-portfolio-management | `pd-suite/pd-portfolio-management/SKILL.md` | P6 | [有效] | 产品组合管理——基于NPDP Ch2组合管理，覆盖组合选择4方法(评分法/财务法/战略桶/视觉法)、组合平衡3维度(风险... |
 | PT-006 | pd-requirements-design | `pd-suite/pd-requirements-design/SKILL.md` | P2 | [有效] | 需求分析与产品设计——基于NPDP Ch3实战，覆盖KANO模型、Y模型、5W1H、MoSCoW优先级、用户故事INVE... |
 | PT-007 | pd-prd-writing | `pd-suite/pd-prd-writing/SKILL.md` | P3 | [有效] | PRD与需求文档——基于NPDP Ch3实战，覆盖8模块PRD模板、一页纸PRD、BRD/MRD/PRD分层、需求变更管... |
@@ -27,13 +27,13 @@
 | PT-015 | pd-integration | `pd-suite/pd-integration/SKILL.md` | CX | [有效] | 产品整合管理——基于NPDP全局视角，覆盖产品经理角色定位4大职责、跨阶段协调、产品-项目协同桥接、开发方法选择、职业道... |
 | PT-016 | pd-workflow-chains | `pd-suite/pd-workflow-chains/SKILL.md` | CX | [有效] | PD链式工作流索引——5条标准链路+3条专项链路，定义15个PD SKILL之间的调用顺序、前置条件、输入输出和衔接标志... |
 | PT-017 | 工业互联网产品经理 | `pd-suite/工业互联网产品经理/SKILL.md` | P2 | [有效] | This skill should be used when the user wants to design a pr... |
-| PT-018 | product-solution-evaluator | `pd-suite/product-solution-evaluator/SKILL.md` | P2 | [有效] | 产品方案评估专家。用于对产品概念、功能方案、PRD、MVP、商业化方案、增长方案、AI 产品方案等进行结构化评估，输出是... |
+| PT-018 | product-solution-evaluator | `pd-suite/product-solution-evaluator/SKILL.md` | P2 | [有效] | 产品方案评估专家。用于对产品概念、功能方案、PRD、MVP、商业化方案、增长方案、AI 产品方案等进行结构化评估，输出是... 2026-08-31 v1.1.0 评分卡期望值化（概率锚/期望支付/乘零否决/先验回写） |
 | PT-019 | pd-ai-research-workflow | `pd-suite/pd-ai-research-workflow/SKILL.md` | P1 | [有效] | AI 驱动的市场研究编排——把市场/竞品/用户研究用 AI 工具从"数周"压到"分钟级"。覆盖 3-Tier 研究法（快... |
 ### 项目轨 (pm-suite)
 
 | 编号 | 技能名 | 路径 | 阶段 | 状态 | 说明 |
 |------|--------|------|------|------|------|
-| JT-001 | pm-project-opportunity | `pm-suite/pm-project-opportunity/SKILL.md` | P1 | [有效] | 项目立项管理与前期文档编制——严格对标国家法规与标准，覆盖8维度Go/No-Go量化决策（含评分矩阵、一票否决项）、项目... |
+| JT-001 | pm-project-opportunity | `pm-suite/pm-project-opportunity/SKILL.md` | P1 | [有效] | 项目立项管理与前期文档编制——严格对标国家法规与标准，覆盖8维度Go/No-Go量化决策（含评分矩阵、一票否决项）、项目... 2026-08-31 v1.1.0 阶段零评分卡期望值化（概率锚/期望支付/乘零否决/先验回写）；references/Go-NoGo评分矩阵.md 同步升级 |
 | JT-002 | pm-bid-proposal | `pm-suite/pm-bid-proposal/SKILL.md` | P1 | [有效] | 招投标方案编制——面向政府/国企项目的系统性投标方案编制技能。覆盖投标决策（Go/No-Go）、招标文件解读、技术方案撰... |
 | JT-003 | pm-requirements-scope | `pm-suite/pm-requirements-scope/SKILL.md` | P2 | [有效] | 需求管理与范围定义——严格对标PMBOK第5章范围管理+软考高项第8章+发改委55号令。覆盖需求收集、需求矩阵、WBS创... |
 | JT-004 | pm-schedule-cost | `pm-suite/pm-schedule-cost/SKILL.md` | P2 | [有效] | 进度管理与成本控制——严格对标PMBOK第6章进度管理+第7章成本管理+软考高项第9-10章+发改委55号令。覆盖活动定... |
@@ -104,6 +104,11 @@
 | E-005 | economic-ve | `economic-suite/economic-ve/SKILL.md` | CX | [有效] | economic-ve - 价值工程（VE）工具 |
 | E-006 | economic-payback | `economic-suite/economic-payback/SKILL.md` | CX | [有效] | economic-payback - 投资回收期计算工具 |
 | E-007 | economic-decision | `economic-suite/economic-decision/SKILL.md` | CX | [有效] | economic-decision - 经济决策顾问（元技能） |
+### 市场估值 (market-suite)
+
+| 编号 | 技能名 | 路径 | 阶段 | 状态 | 说明 |
+|------|--------|------|------|------|------|
+| MT-001 | market-comparable | `market-suite/market-comparable/SKILL.md` | CX | [有效] | 可比公司对标分析工具——投行 Comps Analysis 方法，抓取同行业上市公司估值倍数（EV/Revenue、EV/EBITDA），输出行业中位数+隐含估值+竞品融资对比，支撑 PT-004/JT-001 市场吸引力评估。2026-08-31 创建并纳管 |
 ### 法律服务 (legal-suite)
 
 | 编号 | 技能名 | 路径 | 阶段 | 状态 | 说明 |
@@ -169,8 +174,8 @@
 
 | 编号 | 技能名 | 路径 | 阶段 | 状态 | 说明 |
 |------|--------|------|------|------|------|
-| S-006 | high-vision-perspective | `expert-suite/high-vision-perspective/SKILL.md` | CX | [有效] | 高格局思维视角 v1.0 · 吴军 & 王志纲思想融合 核心心智模型：时空升维、终局倒推、认命改运、三层透视、成事心法、... |
-| S-007 | zhou-hongyi-perspective-v2 | `expert-suite/zhou-hongyi-perspective-v2/SKILL.md` | CX | [有效] | 周鸿祎思维视角 v2.0 · 360 集团创始人 核心心智模型：免费模式、用户思维、颠覆式创新、安全信仰、产品经理文化、... |
+| S-006 | high-vision-perspective | `expert-suite/high-vision-perspective/SKILL.md` | CX | [有效] | 高格局思维视角 v1.0 · 吴军 & 王志纲思想融合 核心心智模型：时空升维、终局倒推、认命改运、三层透视、成事心法、... 2026-08-31 接入共享决策内核 perspective-kernel.md v1.1 |
+| S-007 | zhou-hongyi-perspective-v2 | `expert-suite/zhou-hongyi-perspective-v2/SKILL.md` | CX | [有效] | 周鸿祎思维视角 v2.0 · 360 集团创始人 核心心智模型：免费模式、用户思维、颠覆式创新、安全信仰、产品经理文化、... 2026-08-31 接入共享决策内核 perspective-kernel.md v1.1 |
 | X-002 | fwsjtt-chief-consultant | `expert-suite/service-design/fwsjtt-chief-consultant/SKILL.md` | Expert | [有效] | 帮助用户澄清复杂任务的北极星目标、拆解问题结构、制定专家协作路径，并防止任务发散或跳阶段。当用户要求“调用服务设计专家团... |
 | X-003 | fwsjtt-customer-discovery-expert | `expert-suite/service-design/fwsjtt-customer-discovery-expert/SKILL.md` | Expert | [有效] | 帮助用户从客户事实、访谈证据、JTBD 和假设验证出发识别真实需求，避免把内部判断或销售话术当作客户事实。 |
 | X-004 | fwsjtt-delivery-qa-reviewer | `expert-suite/service-design/fwsjtt-delivery-qa-reviewer/SKILL.md` | Expert | [有效] | 审查报告、方案或咨询输出是否结论先行、结构清晰、证据边界明确、行动可执行，并触发返工建议。 |
@@ -205,4 +210,4 @@
 
 ---
 
-**总计**：137 个 SKILL.md（含已治理 137 个，未治理 0 个）+ 10 个已折叠条目——2026-08-26 磁盘实测 137 个，账实一致
+**总计**：138 个 SKILL.md（含已治理 138 个，未治理 0 个）+ 10 个已折叠条目——2026-08-31 磁盘实测 138 个（8-26 后新增 market-suite/market-comparable → MT-001），账实一致；注册表有效 140 与磁盘差额 2 来自 reading-os R-001~003 三模块口径（设计如此）。另有 `archive/meta-suite-pre-v0.9-backup/` 归档快照（27 个 SKILL.md，只读历史版本，不计入统计，决策见 DECISION-LOG.md）
