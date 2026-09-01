@@ -76,6 +76,8 @@ legal-suite/law-repository/                 ← 中央法规库（data 基础设
 - `laws-data`（GitHub: 13098806890/laws-data）：结构化 JSON/SQLite/Markdown 全文（2,377 部，含司法解释 1,157 + 公报案例），源自国家法律法规数据库，MIT 许可。
 - 二者文本均源自官方公开渠道（法律文本属公有领域，见著作权法第5条），维护成本极低（`git pull` 即同步），是法规库补全与待核稿转正的首选数据源。
 
+- **本地镜像落地（2026-09-01）**：已 fork 至 `lizhijun48/laws-data`，本地克隆于 `D:\00_Lee\00-相关资料\00_laws-data`（**独立 git 仓库，不在 skills 治理树内**，避免污染 Skills_Lzj）；上游 `13098806890/laws-data`。同步脚本：`law-repository/sync-laws-data.ps1`（`git pull upstream main && git push origin main`）。
+
 **2. 降级：flk 官方仅人工核验/补漏**
 - 实测：`POST /api/` 返回 405；旧 `GET /api/` 已返回 SPA 空白页（官网改版，无开放 API 契约）。程序化调用随时失效、维护不可控。
 - 故 flk 不再程序化调用，仅作为需要最新/罕见法条时的人工访问核验通道。
