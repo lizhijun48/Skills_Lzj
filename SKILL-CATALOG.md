@@ -1,6 +1,6 @@
 # SKILL-CATALOG.md — 技能全量目录
 
-> 生成日期：2026-08-31（本次同步：新建 legal-suite/law-repository 中央法规库基础设施条目（不占编号）+ 4部法规种子入库；上次同步：纳管 market-comparable → MT-001 新前缀分节；同步 v1.5.1~v1.5.6 备注级变化）| 覆盖范围：所有 SKILL.md（含已治理和未治理）+ 已折叠条目
+> 生成日期：2026-09-03（本次同步：新增 expression-purifier → S-070 表达净化（去 AI 味），对齐 SKILL-ID-REGISTRY v1.5.7；上次同步：新建 legal-suite/law-repository 中央法规库基础设施条目（不占编号）+ 4部法规种子入库；纳管 market-comparable → MT-001 新前缀分节；同步 v1.5.1~v1.5.6 备注级变化）| 覆盖范围：所有 SKILL.md（含已治理和未治理）+ 已折叠条目
 > **已治理编号以 SKILL-ID-REGISTRY.md 为准**，此目录作为全局检索补充。
 > 搬迁历史：2026-07-07 P2 inbox 搬迁后 inbox 清空，去向见 `inbox/`（已存档）。
 
@@ -154,6 +154,7 @@
 | S-067 | ultimate-domain-payload | `general-suite/references/ultimate-domain-payload-1.0.0/SKILL.md` | CX | [有效] | 人类活动全域终极领域负载物。基于 Workflow Refactor 重构（消除学科壁垒/职业壁垒/审批流程 3 类补偿... |
 | S-068 | wealth-manager | `general-suite/wealth-manager-1.0.2/SKILL.md` | CX | [有效] | 财富管理四阶段系统：财富积累(裂变获客/微利高频) → 财富增值(翻倍周期引擎) → 财富保全(离岸信托/家族办公室/大... |
 | S-069 | web-novel-writing-reference | `general-suite/references/web-novel-writing-reference-1.0.1/SKILL.md` | CX | [有效] | 网络小说创作知识参考库——Universal Task OS的领域负载物。提供写作任务清单（8域62种任务类型）、结构要... |
+| S-070 | expression-purifier | `general-suite/expression-purifier/SKILL.md` | P1 | [有效] | 表达净化（去 AI 味）——AI腔/内部策略词/夸张词/机械句式/结构痕迹词表 + 四遍扫描（词汇/句式/信息密度/朗读）+ 四级处置（必改/建议改/人工复核/保留）+ 净化报告模板。**与 S-030 正交分工**：S-030 管事实幻觉（真伪），本技能管风格痕迹（像不像机器写的）。被 pm-bid-proposal B23 调用。 |
 | S-026 | prompt-engineering-basics | `general-suite/prompt-engineering-basics/SKILL.md` | P1 | [有效] | 提示语工程基础——DNA元素模型、六大类型、五大策略、TASTE/ALIGN框架。基于清华DeepSeek从入门到精通提炼。 |
 | S-027 | prompt-chain-design | `general-suite/prompt-chain-design/SKILL.md` | P1 | [有效] | 提示语链设计——CIRS四环节模型、SPECTRA任务分解、六大设计原则、三链融合优化系统。 |
 | S-028 | creative-prompt-techniques | `general-suite/creative-prompt-techniques/SKILL.md` | P1 | [有效] | 创意提示语技术——IDEA发散/FOCUS聚合/BRIDGE跨界/CMM跨域映射/CGS概念嫁接/EHS极端假设/MCS多重约束/KTT知识转移/RCM随机组合九大框架。 |
@@ -211,4 +212,10 @@
 
 ---
 
-**总计**：138 个 SKILL.md（含已治理 138 个，未治理 0 个）+ 10 个已折叠条目——2026-08-31 磁盘实测 138 个（8-26 后新增 market-suite/market-comparable → MT-001），账实一致；注册表有效 140 与磁盘差额 2 来自 reading-os R-001~003 三模块口径（设计如此）。另有 `archive/meta-suite-pre-v0.9-backup/` 归档快照（27 个 SKILL.md，只读历史版本，不计入统计，决策见 DECISION-LOG.md）
+**总计**：139 个目录条目 + 10 个已折叠条目——2026-09-03 账实对齐：
+
+- 磁盘实测 **140** 个 SKILL.md（排除 `archive/` 27 个只读快照）
+- 目录条目 139 = 磁盘 140 **- 1**：根目录 `law-repository-sop`（2026-09-01 建立）尚未纳管，编号归属待拍板（L-005 vs S-071），拍板后补录目录与注册表
+- 注册表 v1.5.7 有效 141 与磁盘 140 差额 1 = reading-os R-001~003 三模块口径（+2，设计如此）- law-repository-sop 未登记（-1）
+
+另有 `archive/meta-suite-pre-v0.9-backup/` 归档快照（27 个 SKILL.md，只读历史版本，不计入统计，决策见 DECISION-LOG.md）
