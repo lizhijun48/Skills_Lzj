@@ -21,9 +21,10 @@ try {
         Write-Host "==> 配置 upstream -> $UPSTREAM"
         git remote add upstream $UPSTREAM
     }
-    Write-Host "==> 拉取上游更新 ..."
-    git fetch upstream
-    git merge upstream/main --no-edit
+    # 注：本机 git 环境无法持久化 upstream/main 远程跟踪引用（git fetch 报建成功但 rev-parse 失败），
+    # 故改用 `git pull upstream main` 直接拉取并合并上游 main，不依赖 upstream/main 引用名解析。
+    Write-Host "==> 拉取并合并上游 main ..."
+    git pull upstream main --no-edit
     Write-Host "==> 推回 fork(lizhijun48/laws-data) ..."
     git push origin main
     Write-Host "==> 同步完成。建议将 law-repository 相关快照日期更新为 $(Get-Date -Format yyyy-MM-dd)"
