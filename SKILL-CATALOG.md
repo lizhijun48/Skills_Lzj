@@ -1,6 +1,6 @@
 # SKILL-CATALOG.md — 技能全量目录
 
-> 生成日期：2026-09-03（本次同步：新增 expression-purifier → S-070 表达净化（去 AI 味），对齐 SKILL-ID-REGISTRY v1.5.7；上次同步：新建 legal-suite/law-repository 中央法规库基础设施条目（不占编号）+ 4部法规种子入库；纳管 market-comparable → MT-001 新前缀分节；同步 v1.5.1~v1.5.6 备注级变化）| 覆盖范围：所有 SKILL.md（含已治理和未治理）+ 已折叠条目
+> 生成日期：2026-09-03（本次同步：纳管 law-repository-sop → S-071（独立部署口径）+ 新增 expression-purifier → S-070 表达净化（去 AI 味），统计行账实对齐，对齐 SKILL-ID-REGISTRY v1.5.8；上次同步：新建 legal-suite/law-repository 中央法规库基础设施条目（不占编号）+ 4部法规种子入库；纳管 market-comparable → MT-001 新前缀分节）| 覆盖范围：所有 SKILL.md（含已治理和未治理）+ 已折叠条目
 > **已治理编号以 SKILL-ID-REGISTRY.md 为准**，此目录作为全局检索补充。
 > 搬迁历史：2026-07-07 P2 inbox 搬迁后 inbox 清空，去向见 `inbox/`（已存档）。
 
@@ -209,13 +209,13 @@
 | S-012 | insurance-policy-analysis | `insurance-policy-analysis/SKILL.md` | CX | [有效] | Comprehensive Chinese life insurance policy analysis and fam... |
 | S-018 | resume-optimizer | `resume-optimizer/SKILL.md` | CX | [有效] | 简历全流程工具：创建、定制、优化、分析、导出PDF。支持从零创建简历，或基于目标岗位JD优化现有简历（关键词匹配、STA... |
 | S-019 | Gridman | `gridman/SKILL.md` | CX | [有效] | >- |
+| S-071 | law-repository-sop | `law-repository-sop/SKILL.md` | CX | [有效] | 中央法规库/权威数据源三层架构建设 SOP——为任意套件搭建"原文SSOT+领域解读+案例引用"基础设施，含蒸馏解耦/反向登记/版本迭代；与 legal-suite/law-repository 为方法与实例配套关系 |
 
 ---
 
-**总计**：139 个目录条目 + 10 个已折叠条目——2026-09-03 账实对齐：
+**总计**：140 个目录条目 + 10 个已折叠条目——2026-09-03 账实对齐（S-071 纳管后）：
 
-- 磁盘实测 **140** 个 SKILL.md（排除 `archive/` 27 个只读快照）
-- 目录条目 139 = 磁盘 140 **- 1**：根目录 `law-repository-sop`（2026-09-01 建立）尚未纳管，编号归属待拍板（L-005 vs S-071），拍板后补录目录与注册表
-- 注册表 v1.5.7 有效 141 与磁盘 140 差额 1 = reading-os R-001~003 三模块口径（+2，设计如此）- law-repository-sop 未登记（-1）
+- 磁盘实测 **140** 个 SKILL.md（排除 `archive/` 27 个只读快照）= 目录条目 **140**，账实一致
+- 注册表 v1.5.8 有效 **142** 与磁盘 140 差额 2 = reading-os R-001~003 三模块口径（设计如此）
 
 另有 `archive/meta-suite-pre-v0.9-backup/` 归档快照（27 个 SKILL.md，只读历史版本，不计入统计，决策见 DECISION-LOG.md）

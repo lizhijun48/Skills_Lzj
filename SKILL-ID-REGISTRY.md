@@ -1,6 +1,7 @@
 # SKILL-ID-REGISTRY.md — 技能编号注册表
 
-> 版本：v1.5.7 | 最后更新：2026-09-03
+> 版本：v1.5.8 | 最后更新：2026-09-03
+> v1.5.8 变更：纳管根目录独立技能 law-repository-sop——登记 S-071（中央法规库/权威数据源三层架构建设 SOP）。归属判定：其 SKILL.md 第十节明确"可平移到其他套件"（经济/pm/gridman），属通用方法论而非法律专属服务，且部署于根目录，故按独立部署口径（参照 S-012/S-018/S-019）归入 S- 前缀，不入 L- 序列；与 legal-suite/law-repository（数据基础设施，不占编号）为方法与实例的配套关系。
 > v1.5.7 变更：纳管新建技能 expression-purifier——登记 S-070（general-suite/，表达净化·去 AI 味）。背景：全库普查确认原无独立去 AI 味技能，唯一相关实现为 pm-bid-proposal B23「表达净化」且仅有流程引用、无词表支撑。本技能统一承载 AI 腔词表/内部策略词表/夸张词表/替换库与四遍扫描流程，pm-bid-proposal B23 通过引用复用，不另建词表副本（GOV v3.6 原则九）。
 > v1.5.6 变更：纳管 market-comparable——新增 MT- 前缀（市场估值工具，market-suite/），登记 MT-001；与 E-（经济决策元技能）形成上下游分工（MT- 提供行业倍数与隐含估值基准，E- 做 DCF/时间价值计算）
 > v1.5.5 变更：方案A推广至 pm-project-opportunity（阶段零 8 维评分卡 + references/Go-NoGo评分矩阵.md）和 product-solution-evaluator（6 维评分框架），均已完成概率锚定、期望支付、乘零否决、先验回写四动作；pd-go-nogo 试点口径现扩展为三套评分卡统一语义。
@@ -168,6 +169,7 @@
 | S-068 | general-suite/wealth-manager-1.0.2/SKILL.md | 财富管理四阶段 | CX | [有效] | 2026-08-26 纳管；通用套件 |
 | S-069 | general-suite/references/web-novel-writing-reference-1.0.1/SKILL.md | 网络小说创作参考库 | CX | [有效] | 2026-08-26 纳管；参考库（references子文件） |
 | S-070 | general-suite/expression-purifier/SKILL.md | 表达净化（去 AI 味） | P1 | [有效] | 2026-09-03 新增；AI腔/内部策略词/夸张词词表 + 四遍扫描流程 + 替换建议库；被 pm-bid-proposal B23 调用；与 S-030(ai-content-quality) 正交分工——S-030 管事实幻觉，本技能管风格痕迹 |
+| S-071 | law-repository-sop/SKILL.md | 中央法规库三层架构建设 SOP | CX | [有效] | 2026-09-03 纳管（2026-09-01 建立，账实核对发现漏登）；根目录独立部署口径；通用数据基础设施建设方法论（L1原文/L2解读/L3案例+蒸馏解耦+反向登记），可平移任意套件；与 legal-suite/law-repository 为方法与实例配套关系 |
 
 ---
 
