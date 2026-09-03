@@ -2,7 +2,7 @@
 
 > 通用技能套件——跨领域、跨轨道的基础能力层，编号前缀 `S-`。覆盖提示语工程、文档处理、数据分析、绘图制图、营销内容、工具集等通用场景。
 
-## 技能清单（已治理，S-008~S-069）
+## 技能清单（已治理，S-008~S-070）
 
 | 编号 | 技能 | 职责 |
 |------|------|------|
@@ -50,6 +50,7 @@
 | S-067 | references/ultimate-domain-payload | 全域领域负载物（参考库） |
 | S-068 | wealth-manager | 财富管理四阶段 |
 | S-069 | references/web-novel-writing-reference | 网络小说创作参考库（参考库） |
+| S-070 | expression-purifier | 表达净化（去 AI 味）：词表 + 四遍扫描 + 替换建议库 |
 
 ## 领域负载物参考库
 
@@ -60,9 +61,9 @@
 | 方向 | 说明 |
 |------|------|
 | → pd-suite | 提示语工程技能支撑 `pd-ai-research-workflow` |
-| → pm-suite | 提示语链设计支撑 `pm-bid-proposal` 方案撰写 |
+| → pm-suite | 提示语链设计支撑 `pm-bid-proposal` 方案撰写；`expression-purifier`（S-070）被其 B23「表达净化」步骤调用 |
 | ← meta-suite | `skill-creator-optimized`/`skill-refactor` 治理本套件 |
 
 ---
 
-**更新日期**：2026-09-03（依据 SKILL-ID-REGISTRY v1.5.6 生成）
+**更新日期**：2026-09-03（依据 SKILL-ID-REGISTRY v1.5.7 生成）

@@ -1,6 +1,7 @@
 # SKILL-ID-REGISTRY.md — 技能编号注册表
 
-> 版本：v1.5.6 | 最后更新：2026-08-31
+> 版本：v1.5.7 | 最后更新：2026-09-03
+> v1.5.7 变更：纳管新建技能 expression-purifier——登记 S-070（general-suite/，表达净化·去 AI 味）。背景：全库普查确认原无独立去 AI 味技能，唯一相关实现为 pm-bid-proposal B23「表达净化」且仅有流程引用、无词表支撑。本技能统一承载 AI 腔词表/内部策略词表/夸张词表/替换库与四遍扫描流程，pm-bid-proposal B23 通过引用复用，不另建词表副本（GOV v3.6 原则九）。
 > v1.5.6 变更：纳管 market-comparable——新增 MT- 前缀（市场估值工具，market-suite/），登记 MT-001；与 E-（经济决策元技能）形成上下游分工（MT- 提供行业倍数与隐含估值基准，E- 做 DCF/时间价值计算）
 > v1.5.5 变更：方案A推广至 pm-project-opportunity（阶段零 8 维评分卡 + references/Go-NoGo评分矩阵.md）和 product-solution-evaluator（6 维评分框架），均已完成概率锚定、期望支付、乘零否决、先验回写四动作；pd-go-nogo 试点口径现扩展为三套评分卡统一语义。
 > v1.5.4 变更：按 C→B→A 顺序落地 business-underlying-logic.md 三方案。**C**：杠杆层级字段+升级规则写入 pm-project-closure 4.1、pm-risk-management 4.2（新增"改模型·系统"行）、pd-product-operations 实验记录及其 growth-experiment-template.md 5.3。**B**：新增 `pd-product-strategy/references/transaction-structure-analyzer.md`（交易结构四步法+红旗清单），并在 pd-product-strategy 参考资料表与 pm-procurement-quality A4 合同类型表挂接。**A（试点）**：pd-go-nogo 1.0.0→1.1.0，得分改为概率锚（复用 pm-risk PIM 五级锚）、D1/D3 强制金额化出期望支付、否决项改为乘零因子、新增 Step 6 先验回写（推广 pm-bid 的 K 回写），references/go-nogo-scorecard.md 同步 v1.1 并对齐权重/阈值。pm-project-opportunity、product-solution-evaluator 两张评分卡待试点经真实项目验证后再推广。
@@ -166,6 +167,7 @@
 | S-067 | general-suite/references/ultimate-domain-payload-1.0.0/SKILL.md | 全域领域负载物 | CX | [有效] | 2026-08-26 纳管；参考库（references子文件） |
 | S-068 | general-suite/wealth-manager-1.0.2/SKILL.md | 财富管理四阶段 | CX | [有效] | 2026-08-26 纳管；通用套件 |
 | S-069 | general-suite/references/web-novel-writing-reference-1.0.1/SKILL.md | 网络小说创作参考库 | CX | [有效] | 2026-08-26 纳管；参考库（references子文件） |
+| S-070 | general-suite/expression-purifier/SKILL.md | 表达净化（去 AI 味） | P1 | [有效] | 2026-09-03 新增；AI腔/内部策略词/夸张词词表 + 四遍扫描流程 + 替换建议库；被 pm-bid-proposal B23 调用；与 S-030(ai-content-quality) 正交分工——S-030 管事实幻觉，本技能管风格痕迹 |
 
 ---
 
