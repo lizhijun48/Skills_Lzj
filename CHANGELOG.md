@@ -3,6 +3,44 @@
 > 从顶层 `README.md` 拆出（2026-09-03，v1.6.3）。
 > 版本规则：每次 git commit 对应一个版本号，格式 v0.X.0。变更记录按版本号倒序排列。
 > 三个文件分工：`README.md`（结构/索引/入口，回答"有什么、怎么找"）· `CHANGELOG.md`（本文件，回答"改了什么"）· `DECISION-LOG.md`（回答"为什么改、下一步"）。
+> commit message 以 `git log` 为唯一落点，不在本文件重复存档。
+
+---
+
+## v1.6.4 — 2026-09-03
+
+**新增 expression-purifier（S-070）表达净化技能 + 方案③ 转为待跟踪 T-001**
+
+提交：`9eef06e`（技能本体）+ `67cabea`（编号纳管）+ `0f14216`（pm-bid-proposal 接入）
+
+### 一、背景：全库「去 AI 味」普查
+
+检索词覆盖 AI味/去AI/AI腔/机器味/降AI/AI率 + 朱雀/GPTZero/Turnitin/降重/查重/禁用词。结论：
+
+- 全库**无独立的去 AI 味技能**，无任何检测类机制（朱雀/GPTZero/Turnitin/AI率 全无）
+- 唯一相关实现在 `pm-bid-proposal` B23，且**只有流程引用、无词表支撑**（空壳）
+- 其余命中均为**文风设定**（表达 DNA / 语言风格调用 / 风格校准），非痕迹清理
+- `ai-content-quality`（S-030）管的是 AI 幻觉（事实真伪），不是 AI 味（风格痕迹）
+
+### 二、新建通用技能 S-070（方案②）
+
+`general-suite/expression-purifier/`：
+
+| 文件 | 内容 |
+|------|------|
+| `SKILL.md` | 文体判定（强/中/弱三档）+ 四遍扫描 + 四级处置 + 净化报告模板 |
+| `references/ai-tone-wordlist.md` | AI 腔词表 / 内部策略词表 / 夸张词表 / 机械句式 / 结构痕迹 / 低密度判定 / 替换库 |
+| `references/purification-workflow.md` | 四遍扫描判定标准 + 分级规则 + 输出模板 + B23 调用约定 |
+
+### 三、pm-bid-proposal B23 接入复用（方案①）
+
+`workflows.md` 第九节 B23 改为调用 S-070（文体=投标/公文、强度=强）并叠加 `forbidden_content.md` 招投标红线；`SKILL.md` 场景 9 与铁律检查清单同步补指针。**词表只维护一份，不另建副本**（GOV v3.6 原则九）。
+
+### 四、方案③ 转为待跟踪 T-001（未执行）
+
+「写作类技能统一接入表达净化」涉及 8 个技能（copywriting / structured-report-writing / tech-doc-writer 等），已按优先级 P0/P1/P2 登记至 `DECISION-LOG.md` 的「全库级待跟踪事项」段，含接入标准写法、验收标准、下一步触发条件。
+
+> 说明：commit message 不单独建文件存档，以 `git log` 为准（本次三个提交的完整 message 见 `git log -3`）。
 
 ---
 
@@ -10,7 +48,7 @@
 
 **顶层 README 瘦身 + 补齐套件级 README 索引（方案A：治理归属维度）**
 
-提交：待推送 | 变更：新增 `CHANGELOG.md` + 顶层 `README.md` 重写（版本历史移出）+ 11 个套件 README 新建 + 3 个套件 README 修正 + gridman README 标注
+提交：`eed0bfc`（README 瘦身 + CHANGELOG 新建）+ `5b7272f`（11 个套件 README 新建 + 3 个修正 + gridman 标注）| 变更：新增 `CHANGELOG.md` + 顶层 `README.md` 重写（版本历史移出）+ 15 个 README 新建/修正
 
 ### 一、顶层 README 瘦身
 
