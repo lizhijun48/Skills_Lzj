@@ -1,5 +1,7 @@
 # 工具自动生成
 .disable_to_model_invocation_migration.json
+.model_invocation_to_override_migration.json
+resume-optimizer/_skillhub_meta.json
 
 # 系统文件
 Thumbs.db
