@@ -124,13 +124,17 @@
 
 ```text
 读取章节初稿
-  -> B23 检查 AI 腔、内部评分策略词、夸张词和不适合政府采购文件的表达
+  -> B23 调用 expression-purifier（S-070，文体=投标/公文、强度=强）执行四遍扫描，
+        检查 AI 腔、内部评分策略词、夸张词和不适合政府采购文件的表达；
+        再叠加 references/forbidden_content.md 的招投标专项红线
   -> 输出替换建议和仍需人工复核的句子
   -> B24 生成图表占位目录
   -> 为技术路线图、工序流程图、进度横道图、组织架构图和响应流程图生成占位说明
 ```
 
 输出：表达净化报告、替换建议、图表目录、图表占位清单。
+
+> **B23 规则来源**：词表与扫描流程统一由 `general-suite/expression-purifier`（S-070）承载，本技能不另建词表副本。调用约定见 `general-suite/expression-purifier/references/purification-workflow.md` 末节。
 
 ## 十、标书审查
 
