@@ -40,7 +40,8 @@
 | `SKILL-CATALOG.md` | 技能全量目录 |
 | `GOV_SkillGovernance.md` | 治理规则（v3.6，含原则一~十） |
 | `BUSINESS-FLOW-MAP.md` | 业务流映射 |
-| `DECISION-LOG.md` | 决策日志（Why it was changed + What's next） |
+| `DECISION-LOG.md` | 决策日志（Why it was changed + What's next + 全库级待跟踪） |
 | `CHANGELOG.md` | **版本变更历史**（v0.1.0~，从本文件拆出） |
+| `SOURCE-REGISTRY.md` | 外部来源引入登记（借鉴了什么、流向哪些技能，来源视角） |
 
-> 三文件分工：`README.md`（有什么/怎么找）· `CHANGELOG.md`（改了什么）· `DECISION-LOG.md`（为什么改/下一步）。
+> 四记录分工：`README.md`（有什么/怎么找）· `CHANGELOG.md`（何时改了什么）· `DECISION-LOG.md`（为什么改/下一步）· `SOURCE-REGISTRY.md`（借鉴了什么/流向哪里）。
