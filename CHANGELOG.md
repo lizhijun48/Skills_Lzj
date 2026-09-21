@@ -7,6 +7,27 @@
 
 ---
 
+## v1.6.6 — 2026-09-21
+
+**新增 JT-021 pm-product-expert 产品经理通用工种专家包（fork SRC-004，融合吸收）**
+
+### 一、背景
+
+外部产品经理 Agent 插件（CodeBuddy Teams `product-management-expert`，SRC-004）引入，经分析评估，6/7 技能与现有 pd/pm/market 套件高度重叠。按 GOV v3.6 原则九（融合），不另起孤立技能，仅建专家包外壳 + 差异化模板库。
+
+### 二、交付物
+
+- 新建 `pm-suite/pm-product-expert/`（JT-021）：SKILL.md（路由表+路径纪律）+ rules（alwaysApply）+ references/（prioritization-frameworks / stakeholder-templates / research-methodology / competitive-frameworks / metrics-dashboard，5 文件）
+- 6 个现有技能注入协同段：pd-prd-writing(PT-007) / pd-product-strategy(PT-001) / pm-stakeholder-management(JT-015) / pd-user-research(PT-012) / pd-market-research(PT-003) / pd-tools-metrics(PT-013)
+- 叠加 S-070 去 AI 味；原插件 6 技能路径已融合，专家包路径全改写指向真实技能 ID（防断链）
+
+### 三、治理同步
+
+- SKILL-ID-REGISTRY.md v1.5.8→v1.5.9（JT-021 行 + 统计）
+- SKILL-CATALOG.md 140→141 目录条目
+- SOURCE-REGISTRY.md SRC-004 版本锚点补全
+- DECISION-LOG.md 新增 fork SRC-004 决策记录
+
 ## v1.6.5 — 2026-09-04
 
 **新建 SOURCE-REGISTRY 外部来源引入登记表（全局第四表）**

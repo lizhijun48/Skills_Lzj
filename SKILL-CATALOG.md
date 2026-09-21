@@ -1,6 +1,6 @@
 # SKILL-CATALOG.md — 技能全量目录
 
-> 生成日期：2026-09-03（本次同步：纳管 law-repository-sop → S-071（独立部署口径）+ 新增 expression-purifier → S-070 表达净化（去 AI 味），统计行账实对齐，对齐 SKILL-ID-REGISTRY v1.5.8；上次同步：新建 legal-suite/law-repository 中央法规库基础设施条目（不占编号）+ 4部法规种子入库；纳管 market-comparable → MT-001 新前缀分节）| 覆盖范围：所有 SKILL.md（含已治理和未治理）+ 已折叠条目
+> 生成日期：2026-09-21（本次同步：新增 pm-product-expert → JT-021 产品经理通用工种专家包（fork SRC-004）；原插件 6 技能融合进现有 PT-/JT-/MT- 技能，差异化模板入库 references/，叠加 S-070 去 AI 味）；对齐 SKILL-ID-REGISTRY v1.5.9 | 覆盖范围：所有 SKILL.md（含已治理和未治理）+ 已折叠条目
 > **已治理编号以 SKILL-ID-REGISTRY.md 为准**，此目录作为全局检索补充。
 > 搬迁历史：2026-07-07 P2 inbox 搬迁后 inbox 清空，去向见 `inbox/`（已存档）。
 
@@ -51,6 +51,7 @@
 | JT-018 | pm-workflow-chains | `pm-suite/pm-workflow-chains/SKILL.md` | CX | [有效] | PM链式工作流索引——5条标准链路+2条专项链路，定义15个PM SKILL之间的调用顺序、前置条件、输入输出和衔接标志... |
 | JT-019 | pm-tender-analysis | `pm-suite/pm-tender-analysis/SKILL.md` | P1 | [有效] | 招标文件智能解析——将招标文件（PDF/Word/文本）转化为结构化竞标支撑报告，覆盖项目概览、资质核查、评分矩阵、风险... |
 | JT-020 | pm-it-governance | `pm-suite/pm-it-governance/SKILL.md` | CX | [有效] | 信息系统治理——对标高项第3章，组织级IT战略对齐评估、价值论证、风险评估、IT审计（骨架版）。 |
+| JT-021 | pm-product-expert | `pm-suite/pm-product-expert/SKILL.md` | CX | [有效] | 产品经理通用工种专家包（fork SRC-004）——产品经理端到端助手外壳；路由到 PT-007/PT-001/PT-005/JT-015/PT-012/PT-003/MT-001 + references 模板库（G/Y/R·ROAM·ADR·RICE·机会规模估算·赢输分析·Dashboard）；不重复实现方法论（原则九融合）；叠加 S-070 去 AI 味 |
 | PT-010 | pm-skills-reference | `pm-suite/pm-skills-reference/SKILL.md` | PM | [有效] | 【产品经理技能索引】65个产品经理(PdM)技能+36个链式工作流+8个领域插件——注意：本索引覆盖的是产品管理(Pro... |
 ### 元技能 (meta-suite)
 
@@ -213,9 +214,9 @@
 
 ---
 
-**总计**：140 个目录条目 + 10 个已折叠条目——2026-09-03 账实对齐（S-071 纳管后）：
+**总计**：141 个目录条目 + 10 个已折叠条目——2026-09-21 账实对齐（JT-021 pm-product-expert 纳管后）：
 
-- 磁盘实测 **140** 个 SKILL.md（排除 `archive/` 27 个只读快照）= 目录条目 **140**，账实一致
-- 注册表 v1.5.8 有效 **142** 与磁盘 140 差额 2 = reading-os R-001~003 三模块口径（设计如此）
+- 磁盘实测 **141** 个 SKILL.md（排除 `archive/` 27 个只读快照）= 目录条目 **141**，账实一致
+- 注册表 v1.5.9 有效 **143** 与磁盘 141 差额 2 = reading-os R-001~003 三模块口径（设计如此）
 
 另有 `archive/meta-suite-pre-v0.9-backup/` 归档快照（27 个 SKILL.md，只读历史版本，不计入统计，决策见 DECISION-LOG.md）

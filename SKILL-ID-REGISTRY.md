@@ -1,6 +1,7 @@
 # SKILL-ID-REGISTRY.md — 技能编号注册表
 
-> 版本：v1.5.8 | 最后更新：2026-09-03
+> 版本：v1.5.9 | 最后更新：2026-09-21
+> v1.5.9 变更：新增 JT-021 pm-product-expert（产品经理通用工种专家包，fork SRC-004）——仅建专家包外壳（SKILL.md+rules+references 模板库），不另起孤立技能；原插件 6 技能已融合进 PT-007/PT-001/PT-005/JT-015/PT-012/PT-003/MT-001，差异化内容以"引用"注入 6 个现有技能（原则九）；叠加 S-070 去 AI 味
 > v1.5.8 变更：纳管根目录独立技能 law-repository-sop——登记 S-071（中央法规库/权威数据源三层架构建设 SOP）。归属判定：其 SKILL.md 第十节明确"可平移到其他套件"（经济/pm/gridman），属通用方法论而非法律专属服务，且部署于根目录，故按独立部署口径（参照 S-012/S-018/S-019）归入 S- 前缀，不入 L- 序列；与 legal-suite/law-repository（数据基础设施，不占编号）为方法与实例的配套关系。
 > v1.5.7 变更：纳管新建技能 expression-purifier——登记 S-070（general-suite/，表达净化·去 AI 味）。背景：全库普查确认原无独立去 AI 味技能，唯一相关实现为 pm-bid-proposal B23「表达净化」且仅有流程引用、无词表支撑。本技能统一承载 AI 腔词表/内部策略词表/夸张词表/替换库与四遍扫描流程，pm-bid-proposal B23 通过引用复用，不另建词表副本（GOV v3.6 原则九）。
 > v1.5.6 变更：纳管 market-comparable——新增 MT- 前缀（市场估值工具，market-suite/），登记 MT-001；与 E-（经济决策元技能）形成上下游分工（MT- 提供行业倍数与隐含估值基准，E- 做 DCF/时间价值计算）
@@ -92,6 +93,7 @@
 | JT-018 | pm-suite/pm-workflow-chains | PM链式工作流索引 | CX | [有效] | — |
 | JT-019 | pm-suite/pm-tender-analysis | 招标文件智能解析 | P1 | [有效] | 2026-07-07 从 JT-003 冲突纠正，分配新编号；pm-bid-proposal (JT-002) 前置解析环节 |
 | JT-020 | pm-suite/pm-it-governance | 信息系统治理 | CX | [有效] | 2026-07-09 新增·组织级 IT 治理入口；对标高项第3章；骨架版待学习填充；下游→JT-001/JT-013/JT-016 |
+| JT-021 | pm-suite/pm-product-expert | 产品经理通用工种专家包（fork SRC-004） | CX | [有效] | 2026-09-21 新增·产品经理端到端助手外壳；路由到 PT-007/PT-001/PT-005/JT-015/PT-012/PT-003/MT-001 + references 模板库；不重复实现方法论（原则九融合）；叠加 S-070 去 AI 味；原插件 6 技能已融合 |
 
 ---
 

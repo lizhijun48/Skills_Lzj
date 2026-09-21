@@ -14,12 +14,13 @@
 | SRC-001 | `DeepSeek-R1从入门到精通_清华.pdf`（本机：`D:\00_Lee\00-Tool\AI_Tools\DeepSeek\`，库外） | PDF | 2026-08-09 | v0.2.0 / `175fced`（主锚）+ v0.1.x | **S-026~S-031**（6个，SKILL.md 声明"基于清华《DeepSeek：从入门到精通》提炼"）+ **S-034~S-039**（6个，v0.2.0 新建）；代表作：S-027「提示语链七大作用机制」、S-028「元叙事提示框架」、S-030「幻觉五类七特」 | 补强 3 + 新建 6（17 files, +3738 行，详见 CHANGELOG v0.2.0） | 体系性融入共 12 技能，是技能库最早的成建制引入；AI辅助编程+文案营销+品牌战略三线均源于此 |
 | SRC-002 | `《DeepSeek 使AI变得简单》`（Yash Jain 著，刘彦辰 译） | 书籍 | 2026-08-11 | v0.6.0 | S-029 reasoning-model-strategy v1.2→v1.3（多模型协同三模式 + 专用AI vs 通用AI决策框架）；原始素材存档 `general-suite/reasoning-model-strategy/references/source-material-deepseek.md`（第2/9章） | 补强 + 素材存档 | 全书约 70% 内容与已有 Skills 重叠（提示工程基础、故障排除等），仅提取 2 个增量知识点——重叠度判定先于融入，避免重复建设 |
 | SRC-003 | `AI辅助编程与内容创作培训材料`（课程配套资料） | 培训材料 | 2026-08-09~10 | v0.1.0~v0.5.0（各技能建立期） | 6 个技能的素材存档：`ai-content-quality`（三重概率模型）、`channel-content-strategy`（四平台知识库）、`human-ai-collaboration`（能力体系）、`prompt-chain-design`（六步法）、`prompt-engineering-basics`（TASTE/ALIGN框架）、`structured-report-writing`（年终总结提示语） | 素材存档 + 新建技能 | 素材文件位于各技能 `references/source-material*.md`（共 6 份），溯源粒度到技能级；与 SRC-001 同期、来源可能同源（课程材料含清华 PDF），未精确区分 |
+| SRC-004 | `product-management-expert`（CodeBuddy Teams PM 插件；本机源：`C:\Users\Alex_Lee\WorkBuddy\2026-09-21-20-56-17\product-management-expert-source\`，库外） | 插件/专家包 | 2026-09-21 | v1.6.6（JT-021 建包完成） | **新建** `pm-product-expert` 专家包（agent+rules+workflow 路由，归入 pm-suite）；**补强** pd-prd-writing / pd-product-strategy / pd-user-research / pd-market-research / pd-tools-metrics / pm-stakeholder-management（注入 G/Y/R、ROAM、ADR、RICE 触发、机会规模估算、赢/输分析、Dashboard 原则等模板）；原版归档 `_external-archive/product-management-expert-source/` | 融合吸收（原则九）：6/7 技能与现有 pd/pm/market 套件高度重叠，未另起孤立技能；仅新增专家包外壳 + 差异化模板库；通用化命名（去 CodeBuddy 标识）；叠加 S-070 去 AI 味 | fork SRC-004，原版归档溯源；专家包已建（JT-021 生效；路由表路径全改写指向融合技能 PT-007/PT-001/PT-005/JT-015/PT-012/PT-003/MT-001，防断链） |
 
 ---
 
 ## 登记统计
 
-- 已登记来源：3 份外部文件/材料组，累计流向 18 个技能（含重复计入：SRC-001 的 12 + SRC-002 的 1 + SRC-003 的 6，去重后约 15 个）
+- 已登记来源：4 份外部文件/材料组（SRC-001~004），累计流向约 25 个技能（SRC-001 的 12 + SRC-002 的 1 + SRC-003 的 6 + SRC-004 已建 1 + 6 补强）
 - 待补录：无（2026-09-04 起新引入即时登记）
 
 ## 登记操作约定

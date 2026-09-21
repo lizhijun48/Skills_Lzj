@@ -24,6 +24,7 @@
 | JT-018 | pm-workflow-chains | CX | PM 链式工作流索引 |
 | JT-019 | pm-tender-analysis | P1 | 招标文件智能解析（JT-002 前置环节） |
 | JT-020 | pm-it-governance | CX | 信息系统治理（高项第3章组织级IT治理） |
+| JT-021 | pm-product-expert | CX | 产品经理通用工种专家包（fork SRC-004，路由 PT-007/PT-001/JT-015/PT-012/PT-003/MT-001 + references 模板库） |
 
 > 链式调用顺序见 `pm-workflow-chains`（JT-018）。JT-007 / JT-013 为空号待分配。
 
@@ -38,4 +39,4 @@
 
 ---
 
-**更新日期**：2026-09-03（依据 SKILL-ID-REGISTRY v1.5.6 生成）
+**更新日期**：2026-09-21（依据 SKILL-ID-REGISTRY v1.5.9 生成；新增 JT-021 pm-product-expert 专家包）

@@ -431,6 +431,28 @@ Q3: 某SaaS公司Churn Rate是否低于5%？
 
 ## 历史决策记录
 
+### 2026-09-21：fork SRC-004 产品经理专家插件 → 建 JT-021 专家包（融合吸收）
+
+**背景**：
+- 用户引入 CodeBuddy Teams 的 `product-management-expert` 插件（13 文件，SRC-004），要求分析优劣并吸收进现有技能体系
+- 分析评估结论：该 Agent「写得好」4 点——①显式防傲慢/防幻觉纪律 ②先问后做/Why 优先 ③受众适配沟通模板库 ④方法论结构化+模板即插即用；现有库 6/7 技能与之高度重叠
+- 治理判定（原则九）：不另起 7 个平行技能，仅新建专家包外壳 + 差异化模板库，原插件 6 技能融合进现有 PT-/JT-/MT- 技能
+
+**决策内容**：
+1. 新建 JT-021 `pm-product-expert` 专家包（pm-suite）：SKILL.md（路由表+路径纪律）+ rules（alwaysApply 强制定向调用）+ references/（5 个通用 PM 模板：prioritization/stakeholder/research/competitive/metrics）
+2. **路径全改写（用户硬要求·防断链）**：专家包内所有"调用某 skill"指令一律改写为指向融合后的真实技能 ID（PT-007/PT-001/PT-005/JT-015/PT-012/PT-003/MT-001）或本包 references/，禁止指向原插件已融合、不再存在的 `feature-spec`/`roadmap-management`/`stakeholder-comms`/`user-research-synthesis`/`competitive-analysis`/`metrics-tracking` 独立路径
+3. 6 个现有技能（PT-007/PT-001/JT-015/PT-012/PT-003/PT-013）各注入"协同 pm-product-expert"段：指向 references/ 具体模板 + 先问后做/防傲慢纪律 + S-070 去 AI 味指针
+4. 通用化（原则十）：去 CodeBuddy 标识；原版归档 `_external-archive/product-management-expert-source/` 保留溯源
+
+**实施结果**：
+- ✅ 专家包 7 文件落盘（SKILL.md + rules + 5 references）
+- ✅ 6 个现有技能补强指针注入完成（路径均指向真实 ID，无断链）
+- ✅ 四表+README 同步（REGISTRY v1.5.9 / CATALOG 141 / SOURCE-REGISTRY SRC-004 / 本日志）
+
+**影响面**：
+- 产品经理类请求可由 JT-021 统一路由，避免重复实现；差异化模板集中在 references/ 单点维护
+- 确立"外部 Agent 注入即路径重写"纪律，后续同类引入（SRC 系列）照此执行
+
 ### 2026-08-31：建立 legal-suite/law-repository 中央法规库（数据基础设施）
 
 **背景**：
