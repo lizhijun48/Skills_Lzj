@@ -38,7 +38,7 @@
 |------|------|
 | `SKILL-ID-REGISTRY.md` | 编号注册表（唯一事实来源） |
 | `SKILL-CATALOG.md` | 技能全量目录 |
-| `GOV_SkillGovernance.md` | 治理规则（v3.6，含原则一~十） |
+| `GOV_SkillGovernance.md` | 治理规则（v3.7，含原则一~十一；原则十一=客观多视角评估·引入前置 + 治理自反触发条款） |
 | `BUSINESS-FLOW-MAP.md` | 业务流映射 |
 | `DECISION-LOG.md` | 决策日志（Why it was changed + What's next + 全库级待跟踪） |
 | `CHANGELOG.md` | **版本变更历史**（v0.1.0~，从本文件拆出） |

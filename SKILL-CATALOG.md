@@ -211,12 +211,13 @@
 | S-018 | resume-optimizer | `resume-optimizer/SKILL.md` | CX | [有效] | 简历全流程工具：创建、定制、优化、分析、导出PDF。支持从零创建简历，或基于目标岗位JD优化现有简历（关键词匹配、STA... |
 | S-019 | Gridman | `gridman/SKILL.md` | CX | [有效] | >- |
 | S-071 | law-repository-sop | `law-repository-sop/SKILL.md` | CX | [有效] | 中央法规库/权威数据源三层架构建设 SOP——为任意套件搭建"原文SSOT+领域解读+案例引用"基础设施，含蒸馏解耦/反向登记/版本迭代；与 legal-suite/law-repository 为方法与实例配套关系 |
+| S-072 | external-source-eval-sop | `external-source-eval-sop/SKILL.md` | CX | [有效] | 外部来源多视角评估 SOP——GOV v3.7 原则十一方法层配套，引入前置强制 8 镜头（技术正确性核验/外部基准/融合二阶风险/使用者价值/生命周期TCO/来源与许可/战略契合PM+PM双轨主线/治理自反），未过评不得入库；与 S-071 为方法论兄弟 |
 
 ---
 
-**总计**：141 个目录条目 + 10 个已折叠条目——2026-09-21 账实对齐（JT-021 pm-product-expert 纳管后）：
+**总计**：142 个目录条目 + 10 个已折叠条目——2026-09-21 账实对齐（S-072 external-source-eval-sop 纳管后）：
 
-- 磁盘实测 **141** 个 SKILL.md（排除 `archive/` 27 个只读快照）= 目录条目 **141**，账实一致
-- 注册表 v1.5.9 有效 **143** 与磁盘 141 差额 2 = reading-os R-001~003 三模块口径（设计如此）
+- 磁盘实测 **142** 个 SKILL.md（排除 `archive/` 27 个只读快照）= 目录条目 **142**，账实一致
+- 注册表 v1.6.0 有效 **144** 与磁盘 142 差额 2 = reading-os R-001~003 三模块口径（设计如此）
 
 另有 `archive/meta-suite-pre-v0.9-backup/` 归档快照（27 个 SKILL.md，只读历史版本，不计入统计，决策见 DECISION-LOG.md）
