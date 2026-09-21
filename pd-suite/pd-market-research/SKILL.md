@@ -440,3 +440,17 @@ pd-market-research                pm-suite
 4. **竞品分析看替代品**——打败你的往往不是同行，而是另一种解决方案
 5. **SWOT没有TOWS就是废纸**——列出优势劣势不是目的，转化为策略才是
 6. **ToG研究看政策**——政策是ToG市场的"天气预报"，不看政策=盲飞
+
+---
+
+## 协同：pm-product-expert（JT-021，fork SRC-004）
+
+本技能已被纳入产品经理通用工种专家包 **pm-product-expert**（JT-021，来源 SRC-004）的能力地图，作为「竞品分析 / 市场对标 / 定位」路由节点。
+
+- **专家包入口**：`pm-suite/pm-product-expert/SKILL.md` 第一节路由表
+- **差异化增量**（专家包 `references/`，非本技能内嵌）：`references/competitive-frameworks.md`（竞争4层集合 / 定位4层 / 赢-输分析 / 趋势信号噪声）+ 关联 `market-comparable`（MT-001）
+- **协同纪律**（专家包强制，跨技能统一）：
+  - 先问后做 / Why 优先——分析前先澄清"对标谁 / 回答什么战略问题"
+  - 防傲慢 / 防幻觉——诚实评估对手优势，不片面贬低；相关≠因果须标置信度
+  - 去 AI 味——对外产出经 `expression-purifier`（S-070）四遍扫描 + 四级处置
+- **路径纪律（防断链）**：专家包内所有"调用某 skill"指令已改写为指向本技能（PT-003）+ `market-comparable`（MT-001）或专家包 `references/` 文件，不再引用原插件 `competitive-analysis` 等已融合、不再存在的独立路径。

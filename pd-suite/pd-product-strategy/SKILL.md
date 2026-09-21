@@ -436,4 +436,18 @@ ToB版本：
 
 ---
 
+---
+
+## 协同：pm-product-expert（JT-021，fork SRC-004）
+
+本技能已被纳入产品经理通用工种专家包 **pm-product-expert**（JT-021，来源 SRC-004）的能力地图，作为「路线图规划 / 优先级排序」路由节点。
+
+- **专家包入口**：`pm-suite/pm-product-expert/SKILL.md` 第一节路由表
+- **差异化增量**（专家包 `references/`，非本技能内嵌）：`references/prioritization-frameworks.md`（RICE/ICE/MoSCoW 触发判定 + 评分量表 + 价值-努力矩阵）
+- **协同纪律**（专家包强制，跨技能统一）：
+  - 先问后做 / Why 优先——定路线图前先澄清产品战略与业务目标，不堆砌功能
+  - 防傲慢 / 防幻觉——优先级判断须有数据支撑（覆盖用户数/收入影响/工程成本），无数据主动提"需先做研究"
+  - 去 AI 味——对外产出经 `expression-purifier`（S-070）四遍扫描 + 四级处置
+- **路径纪律（防断链）**：专家包内所有"调用某 skill"指令已改写为指向本技能（PT-001）+ `pd-portfolio-management`（PT-005）或专家包 `references/` 文件，不再引用原插件 `roadmap-management` 等已融合、不再存在的独立路径。
+
 > **补充框架参考**：PESTLE分析 / 波特五力 / 定价策略(7模型+Van Westendorp) / Startup Canvas(11模块) → 见 [pd-supplementary-frameworks.md](../pd-supplementary-frameworks.md#补充-pt-001-pd-product-strategy)

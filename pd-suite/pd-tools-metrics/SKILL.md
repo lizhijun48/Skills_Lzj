@@ -428,4 +428,18 @@ pd-tools-metrics                   pm-suite
 
 ---
 
+---
+
+## 协同：pm-product-expert（JT-021，fork SRC-004）
+
+本技能已被纳入产品经理通用工种专家包 **pm-product-expert**（JT-021，来源 SRC-004）的能力地图，作为「产品指标 / Dashboard / 指标审查」路由节点。
+
+- **专家包入口**：`pm-suite/pm-product-expert/SKILL.md` 第一节路由表
+- **差异化增量**（专家包 `references/`，非本技能内嵌）：`references/metrics-dashboard.md`（Dashboard 7原则 / 看板布局 / 告警卫生 / 周月季节奏 / 分析纪律）
+- **协同纪律**（专家包强制，跨技能统一）：
+  - 先问后做 / Why 优先——建指标前先澄清"衡量什么决策"，不盲目上虚荣指标
+  - 防傲慢 / 防幻觉——相关≠因果须标置信度（High/Med/Low）；指标审查必须落到行动建议，不导致决策的产物视为未完成
+  - 去 AI 味——对外产出经 `expression-purifier`（S-070）四遍扫描 + 四级处置
+- **路径纪律（防断链）**：专家包内所有"调用某 skill"指令已改写为指向本技能（PT-013）或专家包 `references/` 文件，不再引用原插件 `metrics-tracking` 等已融合、不再存在的独立路径。
+
 > **补充框架参考**：9种优先级框架速查 / 四层指标架构 → 见 [pd-supplementary-frameworks.md](../pd-supplementary-frameworks.md#补充-pt-013-pd-tools-metrics)
