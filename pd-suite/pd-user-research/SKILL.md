@@ -505,4 +505,15 @@ pd-user-research                  pm-suite
   - 先问后做 / Why 优先——综合前先澄清研究目标与决策问题，不堆砌访谈
   - 防傲慢 / 防幻觉——可综合已有访谈，不可杜撰用户原话；诚实标注数据局限；相关≠因果须标置信度
   - 去 AI 味——对外产出经 `expression-purifier`（S-070）四遍扫描 + 四级处置
-- **路径纪律（防断链）**：专家包内所有"调用某 skill"指令已改写为指向本技能（PT-012）或专家包 `references/` 文件，不再引用原插件 `user-research-synthesis` 等已融合、不再存在的独立路径。
+- **路径纪律（防断链）**：专家包内所有“调用某 skill”指令已改写为指向本技能（PT-012）或专家包 `references/` 文件，不再引用原插件 `user-research-synthesis` 等已融合、不再存在的独立路径。
+
+## 来源吸收记录（SRC-004）
+
+> **来源**：`product-management-expert`（CodeBuddy Teams PM 插件），原版归档 `_external-archive/product-management-expert-source/`
+> **评估依据**：`_external-archive/product-management-expert-source/product-management-expert-分析评估.md`（融合判定·原则九）
+> **吸收日期**：2026-09-21 ｜ **治理编号**：JT-021（专家包外壳）+ 本技能补强
+> **基于**：评估报告 §九①④（用户研究综合方法论 + 防傲慢/防幻觉护栏）
+> **本次修改**：注入"协同 pm-product-expert"段 + `references/research-methodology.md`（主题分析6步 / 亲和图 / 三角验证 / 定性-定量循环 / 机会规模估算[影响=用户×频次×严重度] / 置信度标注）+ 防傲慢/防幻觉护栏
+> **解决问题**：原 PT-012 缺用户研究综合方法论下沉（主题分析/三角验证/机会规模估算），且缺 PM 专用"不编造用户声音 / 标置信度"护栏
+> **叠加**：S-070 去 AI 味；路径全改写指向真实技能 ID（防断链）
+> **回填登记**：SOURCE-REGISTRY SRC-004 ｜ CHANGELOG v1.6.6

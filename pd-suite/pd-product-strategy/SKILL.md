@@ -448,6 +448,17 @@ ToB版本：
   - 先问后做 / Why 优先——定路线图前先澄清产品战略与业务目标，不堆砌功能
   - 防傲慢 / 防幻觉——优先级判断须有数据支撑（覆盖用户数/收入影响/工程成本），无数据主动提"需先做研究"
   - 去 AI 味——对外产出经 `expression-purifier`（S-070）四遍扫描 + 四级处置
-- **路径纪律（防断链）**：专家包内所有"调用某 skill"指令已改写为指向本技能（PT-001）+ `pd-portfolio-management`（PT-005）或专家包 `references/` 文件，不再引用原插件 `roadmap-management` 等已融合、不再存在的独立路径。
+- **路径纪律（防断链）**：专家包内所有“调用某 skill”指令已改写为指向本技能（PT-001）+ `pd-portfolio-management`（PT-005）或专家包 `references/` 文件，不再引用原插件 `roadmap-management` 等已融合、不再存在的独立路径。
+
+## 来源吸收记录（SRC-004）
+
+> **来源**：`product-management-expert`（CodeBuddy Teams PM 插件），原版归档 `_external-archive/product-management-expert-source/`
+> **评估依据**：`_external-archive/product-management-expert-source/product-management-expert-分析评估.md`（融合判定·原则九）
+> **吸收日期**：2026-09-21 ｜ **治理编号**：JT-021（专家包外壳）+ 本技能补强
+> **基于**：评估报告 §九④（RICE/ICE/MoSCoW 触发 + 价值-努力矩阵）
+> **本次修改**：注入"协同 pm-product-expert"段 + `references/prioritization-frameworks.md`（RICE/ICE/MoSCoW 触发判定 + 评分量表 + 价值-努力矩阵）
+> **解决问题**：原 PT-001 有路线图/安索夫但缺 RICE/ICE 明确触发判定表（原则九·功能相近须评估融合）
+> **叠加**：S-070 去 AI 味；路径全改写指向真实技能 ID（防断链）
+> **回填登记**：SOURCE-REGISTRY SRC-004 ｜ CHANGELOG v1.6.6
 
 > **补充框架参考**：PESTLE分析 / 波特五力 / 定价策略(7模型+Van Westendorp) / Startup Canvas(11模块) → 见 [pd-supplementary-frameworks.md](../pd-supplementary-frameworks.md#补充-pt-001-pd-product-strategy)

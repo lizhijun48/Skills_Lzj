@@ -442,4 +442,15 @@ triggers:
   - 先问后做 / Why 优先——发更新前先澄清受众与期望决策，再选模板
   - 防傲慢 / 防幻觉——状态用 G/Y/R 反映现实非乐观；不替干系人编造立场
   - 去 AI 味——对外产出经 `expression-purifier`（S-070）四遍扫描 + 四级处置
-- **路径纪律（防断链）**：专家包内所有"调用某 skill"指令已改写为指向本技能（JT-015）或专家包 `references/` 文件，不再引用原插件 `stakeholder-comms` 等已融合、不再存在的独立路径。
+- **路径纪律（防断链）**：专家包内所有“调用某 skill”指令已改写为指向本技能（JT-015）或专家包 `references/` 文件，不再引用原插件 `stakeholder-comms` 等已融合、不再存在的独立路径。
+
+## 来源吸收记录（SRC-004）
+
+> **来源**：`product-management-expert`（CodeBuddy Teams PM 插件），原版归档 `_external-archive/product-management-expert-source/`
+> **评估依据**：`_external-archive/product-management-expert-source/product-management-expert-分析评估.md`（融合判定·原则九）
+> **吸收日期**：2026-09-21 ｜ **治理编号**：JT-021（专家包外壳）+ 本技能补强
+> **基于**：评估报告 §九③（受众适配沟通产物模板库）
+> **本次修改**：注入"协同 pm-product-expert"段 + `references/stakeholder-templates.md`（G/Y/R 状态 + 按受众更新模板[高管/工程/跨职能/客户] + ROAM 风险框架 + ADR 决策记录）
+> **解决问题**：原 JT-015 偏干系人识别/权力-利益矩阵，缺"按受众写更新"的沟通产物模板库
+> **叠加**：S-070 去 AI 味；路径全改写指向真实技能 ID（防断链）
+> **回填登记**：SOURCE-REGISTRY SRC-004 ｜ CHANGELOG v1.6.6

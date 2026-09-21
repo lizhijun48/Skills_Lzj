@@ -614,6 +614,17 @@ pd-prd-writing                   pm-suite
   - 先问后做 / Why 优先——写 PRD 前先澄清用户问题与业务目标，不一次倾倒功能清单
   - 防傲慢 / 防幻觉——不编造用户声音、诚实评估对手、相关≠因果须标置信度（High/Med/Low）
   - 去 AI 味——对外产出经 `expression-purifier`（S-070）四遍扫描（词汇/句式/信息密度/朗读）+ 四级处置
-- **路径纪律（防断链）**：专家包内所有"调用某 skill"指令已改写为指向本技能（PT-007）或专家包 `references/` 文件，不再引用原插件 `feature-spec` / `roadmap-management` / `stakeholder-comms` / `user-research-synthesis` / `competitive-analysis` / `metrics-tracking` 等已融合、不再存在的独立路径。
+- **路径纪律（防断链）**：专家包内所有“调用某 skill”指令已改写为指向本技能（PT-007）或专家包 `references/` 文件，不再引用原插件 `feature-spec` / `roadmap-management` / `stakeholder-comms` / `user-research-synthesis` / `competitive-analysis` / `metrics-tracking` 等已融合、不再存在的独立路径。
+
+## 来源吸收记录（SRC-004）
+
+> **来源**：`product-management-expert`（CodeBuddy Teams PM 插件），原版归档 `_external-archive/product-management-expert-source/`
+> **评估依据**：`_external-archive/product-management-expert-source/product-management-expert-分析评估.md`（融合判定·原则九）
+> **吸收日期**：2026-09-21 ｜ **治理编号**：JT-021（专家包外壳）+ 本技能补强
+> **基于**：评估报告 §九②（先问后做 / Why 优先纪律）
+> **本次修改**：注入"协同 pm-product-expert"段 + 先问后做 / Why 优先纪律（差异化增量无独立模板，核心原则已由本技能覆盖）
+> **解决问题**：原技能层缺统一的"先问后做 / Why 优先"交互协议，需与「AI 辅助不决策」原则显式落地
+> **叠加**：S-070 去 AI 味；路径全改写指向真实技能 ID（防断链）
+> **回填登记**：SOURCE-REGISTRY SRC-004 ｜ CHANGELOG v1.6.6
 
 > **补充框架参考**：Pre-Mortem预验尸法(Tigers/Paper Tigers/Elephants) / Outcome Roadmap成果导向路线图 → 见 [pd-supplementary-frameworks.md](../pd-supplementary-frameworks.md#补充-pt-007-pd-prd-writing)

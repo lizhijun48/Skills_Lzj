@@ -20,6 +20,22 @@
 | 评估文档 | `product-management-expert-分析评估.md`（JT-021 建包前的差距 / 可借鉴点 / 融合判定分析，已一并归档于此目录） |
 | 提交 | 原版归档 `430f5a5`；评估报告 + 溯源补记 `ae80e61` |
 
+### SRC-004 评估与本地 skill 优化映射
+
+- **评估报告**：`product-management-expert-分析评估.md`（同目录；JT-021 建包前的差距 / 可借鉴点 / 融合判定分析，含 Section 九「写得好四点 + 改进映射」）
+- **融合判定**：原插件 6/7 技能与现有库高度重叠，按原则九不另起孤立技能，改为「1 专家包 JT-021 + 5 references 模板库 + 6 技能补强 + S-070」
+
+| 本地 skill | 编号 | 吸收的增量（references/） | 解决的我方短板 | 评估依据 |
+|-----------|------|--------------------------|---------------|----------|
+| pd-prd-writing | PT-007 | 协同段 + 先问后做/Why 优先纪律 | 缺统一"先问后做"交互协议（§九②） | 评估报告 §九② |
+| pd-product-strategy | PT-001 | prioritization-frameworks.md（RICE/ICE/MoSCoW 触发+价值-努力） | 缺 RICE/ICE 明确触发（§九④） | 评估报告 §九④ |
+| pm-stakeholder-management | JT-015 | stakeholder-templates.md（G/Y/R+ROAM+ADR+按受众模板） | 偏识别，缺沟通产物模板（§九③） | 评估报告 §九③ |
+| pd-user-research | PT-012 | research-methodology.md（主题分析6步/三角验证/机会规模估算）+ 防傲慢护栏 | 缺用户研究综合方法论（§九①④） | 评估报告 §九①④ |
+| pd-market-research | PT-003 | competitive-frameworks.md（竞争4层/定位4层/赢-输/趋势信号噪声）+ 防傲慢护栏 | 缺产品视角竞品分析（§五） | 评估报告 §五 |
+| pd-tools-metrics | PT-013 | metrics-dashboard.md（Dashboard 7原则/告警/周月季节奏） | 缺 Dashboard 原则+审查节奏（§九④） | 评估报告 §九④ |
+
+> 各 skill 的"版本/基于什么/何时/改了什么/解决什么问题"见其 SKILL.md 末尾「来源吸收记录（SRC-004）」段（双向溯源：本表 → skill，skill → 本报告 + SRC-004）。
+
 ## 维护约定
 
 1. 新增外部来源：在此根 README 追加一条归档清单（来源 / 日期 / 原版结构 / SRC 编号 / 融合落点 / commit）。
