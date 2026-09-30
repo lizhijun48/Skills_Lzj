@@ -45,7 +45,7 @@
 | JT-011 | pm-performance-tracking | `pm-suite/pm-performance-tracking/SKILL.md` | P5 | [有效] | 绩效跟踪与状态报告——严格对标PMBOK监控过程组+软考高项。覆盖绩效数据收集（工作绩效数据WPD→工作绩效信息WPI→... |
 | JT-012 | pm-quality-assurance | `pm-suite/pm-quality-assurance/SKILL.md` | P4 | [有效] | 质量保证与过程改进——严格对标PMBOK第8章质量管理（QA部分）+软考高项第15章+软考高项第14章配置管理+一建实务... |
 | JT-014 | pm-team-communication | `pm-suite/pm-team-communication/SKILL.md` | CX | [有效] | 团队管理与沟通协调——严格对标PMBOK第9章资源管理+第10章沟通管理+软考高项第11章+一建项目管理实务。覆盖资源规... |
-| JT-015 | pm-stakeholder-management | `pm-suite/pm-stakeholder-management/SKILL.md` | CX | [有效] | 干系人管理——严格对标PMBOK第13章干系人管理+软考高项第12章（干系人部分）+一级建造师项目管理实务。覆盖干系人识... |
+| JT-015 | pm-stakeholder-management | `pm-suite/pm-stakeholder-management/SKILL.md` | CX | [有效] | 干系人管理——严格对标PMBOK第13章干系人管理+软考高项第17章（项目干系人管理）+第18章（干系人绩效域·监督）+一级建造师项目管理实务。覆盖干系人识... |
 | JT-016 | pm-gov-acceptance | `pm-suite/pm-gov-acceptance/SKILL.md` | P6 | [有效] | 政府项目验收管理——严格对标政府投资条例+发改委55号令+一建实务竣工验收规范+软考高项收尾管理。覆盖政府投资项目四大验... |
 | JT-017 | pm-project-closure | `pm-suite/pm-project-closure/SKILL.md` | P6 | [有效] | 项目收尾与知识沉淀——严格对标PMBOK收尾过程组+软考高项收尾管理。覆盖行政收尾（合同关闭/资源释放/资产移交/文档归... |
 | JT-018 | pm-workflow-chains | `pm-suite/pm-workflow-chains/SKILL.md` | CX | [有效] | PM链式工作流索引——5条标准链路+2条专项链路，定义15个PM SKILL之间的调用顺序、前置条件、输入输出和衔接标志... |
