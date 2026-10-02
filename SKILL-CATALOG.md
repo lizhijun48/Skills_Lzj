@@ -42,7 +42,7 @@
 | JT-008 | pm-procurement-quality | `pm-suite/pm-procurement-quality/SKILL.md` | P3 | [有效] | 采购管理与质量规划——严格对标PMBOK第12章采购管理+第8章质量管理（质量规划部分）+软考高项第14-15章+招标投... |
 | JT-009 | pm-project-delivery | `pm-suite/pm-project-delivery/SKILL.md` | P4 | [有效] | 项目交付管理——严格对标PMBOK执行过程组+一建项目管理实务+软考高项。覆盖项目启动会（Kick-off）、工作包执行... |
 | JT-010 | pm-risk-management | `pm-suite/pm-risk-management/SKILL.md` | P2 | [有效] | 风险与不确定性管理——严格对标PMBOK第11章风险管理+软考高项第15章项目风险管理+第18章项目绩效域(不确定性绩效域)+一建实务风险篇。覆盖风险识别（SWOT/德尔菲/头脑风... 2026-09-30 v1.1.0 补不确定性扩展（模糊性/复杂性/韧性）·章节号修正（第18章→第15章风险+第18章绩效域）；对齐第四版 18.8 不确定性绩效域；原则八判定=特殊情况偏离（边界扩展，已获用户授权方向） |
-| JT-011 | pm-performance-tracking | `pm-suite/pm-performance-tracking/SKILL.md` | P5 | [有效] | 绩效跟踪与状态报告——严格对标PMBOK监控过程组+软考高项。覆盖绩效数据收集（工作绩效数据WPD→工作绩效信息WPI→... |
+| JT-011 | pm-performance-tracking | `pm-suite/pm-performance-tracking/SKILL.md` | P5 | [有效] | 绩效跟踪与状态报告——严格对标PMBOK监控过程组+软考高项第8章（监控项目工作）+第10章（进度）+第11章（成本）+第18章（度量绩效域）。覆盖绩效数据收集（工作绩效数据WPD→工作绩效信息WPI→... |
 | JT-012 | pm-quality-assurance | `pm-suite/pm-quality-assurance/SKILL.md` | P4 | [有效] | 质量保证与过程改进——严格对标PMBOK第8章质量管理（QA部分）+软考高项第15章+软考高项第14章配置管理+一建实务... |
 | JT-014 | pm-team-communication | `pm-suite/pm-team-communication/SKILL.md` | CX | [有效] | 团队管理与沟通协调——严格对标PMBOK第9章资源管理+第10章沟通管理+软考高项第13章（项目资源管理·团队）+第14章（项目沟通管理）+第18章（团队绩效域）+一建项目管理实务。覆盖资源规... |
 | JT-015 | pm-stakeholder-management | `pm-suite/pm-stakeholder-management/SKILL.md` | CX | [有效] | 干系人管理——严格对标PMBOK第13章干系人管理+软考高项第17章（项目干系人管理）+第18章（干系人绩效域·监督）+一级建造师项目管理实务。覆盖干系人识... |
