@@ -41,6 +41,36 @@ triggers:
 
 ## 标准链路详细定义
 
+### 入口0：产品统一入口（JT-021 pm-product-expert，跨链）
+
+```
+用户/ PM 侧的产品经理类请求
+        │
+        ▼
+pm-product-expert (JT-021) ── 专家包外壳 + alwaysApply 强制路由
+        │
+        ├──► pd-product-strategy      （路线图规划 / 优先级排序，引 prioritization-frameworks）
+        ├──► pd-prd-writing           （PRD / 功能规格，引 prioritization-frameworks）
+        ├──► pd-user-research         （用户研究综合 / Persona，引 research-methodology）
+        ├──► pd-market-research       （竞品分析 / 市场对标，引 competitive-frameworks）
+        ├──► pd-tools-metrics         （指标 / Dashboard，引 metrics-dashboard）
+        ├──► pm-stakeholder-management（G/Y/R 状态 + ROAM + ADR，引 stakeholder-templates）
+        └──► 其余路由节点 PT-003 / MT-001（无独立模板，原则九·融合不重复实现）
+```
+
+**定位（2026-10-02 补挂 T-002 时确认）**：`pm-product-expert`（JT-021，fork SRC-004）在 PD 链中是
+**上游统一入口 + 下游模板库**，不是 PD 链内部的一环。它归入 pm-suite 编号体系（因其家在 pm-suite），
+但**能力落在 PD 侧**，故在 PD 链只登记为入口，不重复定义流程（原则九·融合）。
+
+**衔接标志**：
+- 入口触发：请求命中产品经理语义（PRD / 路线图 / 优先级排序 / 用户研究 / 竞品 / 指标看板）→ 直接由 JT-021 接单
+- 路由完成：由 JT-021 路由到上表对应 PD 技能后，按该技能原有链路（链路1 发现链 / 链路2 规划链）继续
+- 反向：PM 侧项目类请求不经过本入口，走 `pm-suite/pm-workflow-chains/SKILL.md` 的 5 条标准 PM 链
+
+**调用纪律**：JT-021 的 `rules/product_management_rules.md` 为 alwaysApply，**禁止**再按原插件路径
+（`feature-spec` / `roadmap-management` / `stakeholder-comms` / `user-research-synthesis` /
+`competitive-analysis` / `metrics-tracking`）直接调用——这些已融合，独立路径不存在。
+
 ### 链路1：发现链
 
 ```

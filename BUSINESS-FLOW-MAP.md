@@ -133,6 +133,23 @@
 | 2 | 产品需求转项目范围 | `pd-requirements-design` (PT-006) → `pm-requirements-scope` (JT-003) | 范围基准 |
 | 3 | 产品发布转项目交付 | `pd-product-launch` (PT-008) → `pm-project-delivery` (JT-009) | 交付计划 |
 
+### 流程2：产品经理类请求统一入口（PT-JT-FLOW-002）
+
+| 步骤 | 业务动作 | 所需技能 | 输出物 |
+|------|---------|---------|--------|
+| 1 | 产品经理语义识别 | `pm-product-expert` (**JT-021**，fork SRC-004) | 路由判定（命中→接单；未命中→按原域路由） |
+| 2a | 优先级/路线图/PRD | JT-021 → `pd-product-strategy` (PT-007) / `pd-prd-writing` (PT-001) | 优先级清单、PRD |
+| 2b | 用户研究/洞察 | JT-021 → `pd-user-research` (PT-012) | Persona、需求池 |
+| 2c | 竞品/市场对标 | JT-021 → `pd-market-research` (PT-003) | 竞品报告、定位 |
+| 2d | 指标与看板 | JT-021 → `pd-tools-metrics` (PT-013) | 指标体系、Dashboard |
+| 2e | 干系人状态/风险/决策记录 | JT-021 → `pm-stakeholder-management` (JT-015) | G/Y/R 状态、ROAM、ADR |
+
+> [定位·2026-10-02 补挂 T-002 确认] `pm-product-expert` (JT-021) 归档在 **pm-suite 编号体系**（家在 pm-suite），
+> 但**下游能力全落在 PD 链**，故在本跨轨映射中登记为**产品经理侧统一入口**：命中产品经理语义时先由
+> JT-021 接单（rules 为 alwaysApply），再路由到上表 PD/PM 技能，不重复实现流程（原则九·融合）。
+> 与 PT-JT-FLOW-001「产品→项目衔接」的分界：FLOW-001 是**产品已决策、要转成项目执行**（产品→项目），
+> FLOW-002 是**请求本身是产品语义**（产品工作本身），前者入口在 PT-004/pd-*，后者入口在 JT-021。
+
 ---
 
 ## 4. 通用工具调用映射
@@ -150,9 +167,12 @@
 | 需要快速用 AI 编排做市场/竞品/用户研究（产出结构化报告） | `pd-ai-research-workflow` (PT-019) | 任何PT/JT技能→识别需快速产出研究报告→调用PT-019（框架方法转 PT-003） |
 | 需要从外部项目/代码仓库/文档提取可复用技能（判定净增量→净化→落地） | `skill-extraction-sop` (S-025) | 用户给出外部项目+提取意图→调用S-025（真正锻造技能包时 handoff 给 S-024/S-022） |
 | 需要可比公司估值对标（EV/Revenue、EV/EBITDA 倍数、隐含估值） | `market-comparable` (MT-001) | `pd-go-nogo`(PT-004)/`pm-project-opportunity`(JT-001) → 完成 NPV/期望支付后需市场公允估值交叉验证 → 调用MT-001（融资/并购/退出情景必做） |
+| 需要产品经理能力（PRD/路线图/优先级/用户研究/竞品/指标/干系人状态） | `pm-product-expert` (**JT-021**) | 任何PT/JT技能→识别请求属"产品经理语义"→先由 JT-021 接单，再由其路由到对应 PD/PM 技能 + references 模板库（原则九·融合，不重复实现） |
 
 > **[边界·QG4] 会议纪要类需求路由**：若输入为**录音转写文本且需按PM维度（痛点/决策/行动项/风险/竞品）抽取** → `pd-user-research.insight-extraction`；若输入为**已有会议纯文本、仅需通用纪要/摘要** → `meeting-minutes` (S-010)。两者触发词不重叠，避免重复调用。
 > **[路由·QG4] 市场/竞品研究类需求路由**（PT-003 / PT-019 / PT-012 语义相邻，按"框架 vs AI编排 vs 真实转写抽取"区分）：若问"用什么**框架/方法**做市场研究（TAM/SWOT/五力…）" → `pd-market-research` (PT-003)；若问"怎么用 **AI 快速产出**竞品情报/研究报告" → `pd-ai-research-workflow` (PT-019)；若输入是"真实访谈/会议**录音转写文本**需按PM维度抽取" → `pd-user-research.insight-extraction` (PT-012)。三者触发词已加 AI/自动化前缀避免字面重叠，按此路由消除实战歧义。
+
+> **[路由·QG4] 产品经理类需求路由**（JT-021 与直接调 pd-* 语义相邻，按"入口壳 vs 单点能力"区分）：若请求是**链式/完整的产品经理工作**（"帮我做PRD+优先级+指标"）或**不确定该用哪个 PD 技能** → `pm-product-expert` (JT-021)，由它统一接单再路由；若已明确知道只需**单个 PD 技能的单点能力**（如只要 TAM 测算、只要竞品表格）→ 直接调 `pd-market-research` (PT-003) 等对应技能，**不必绕经 JT-021**。JT-021 的 `rules` 为 alwaysApply，一旦触发则强制走入口路由，故此处仅在"多能力/不确定"场景推荐。
 
 > **[路由·QG4] 估值类需求路由**（MT-001 与 E- 语义相邻，按"市场倍数 vs 时间价值"区分）：若需**行业公允估值基准**（可比公司倍数、隐含估值、竞品融资对比） → `market-comparable` (MT-001)；若需**本项目财务测算**（NPV/IRR/回收期/敏感性分析） → `economic-npv`(E-001)/`economic-payback`(E-006)/`economic-sensitivity`(E-003)。典型协作链：PT-004/JT-001 先用 E- 系完成 DCF，再调 MT-001 交叉验证，偏差 >±30% 回查市场假设（上下游分工，不重复计算）。
 

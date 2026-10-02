@@ -51,7 +51,7 @@
 | JT-018 | pm-workflow-chains | `pm-suite/pm-workflow-chains/SKILL.md` | CX | [有效] | PM链式工作流索引——5条标准链路+2条专项链路，定义15个PM SKILL之间的调用顺序、前置条件、输入输出和衔接标志... |
 | JT-019 | pm-tender-analysis | `pm-suite/pm-tender-analysis/SKILL.md` | P1 | [有效] | 招标文件智能解析——将招标文件（PDF/Word/文本）转化为结构化竞标支撑报告，覆盖项目概览、资质核查、评分矩阵、风险... |
 | JT-020 | pm-it-governance | `pm-suite/pm-it-governance/SKILL.md` | CX | [有效] | 信息系统治理——对标高项第3章，组织级IT战略对齐评估、价值论证、风险评估、IT审计（骨架版）。 |
-| JT-021 | pm-product-expert | `pm-suite/pm-product-expert/SKILL.md` | CX | [有效] | 产品经理通用工种专家包（fork SRC-004）——产品经理端到端助手外壳；路由到 PT-007/PT-001/PT-005/JT-015/PT-012/PT-003/MT-001 + references 模板库（G/Y/R·ROAM·ADR·RICE·机会规模估算·赢输分析·Dashboard）；不重复实现方法论（原则九融合）；叠加 S-070 去 AI 味 |
+| JT-021 | pm-product-expert | `pm-suite/pm-product-expert/SKILL.md` | CX | [有效] | 产品经理通用工种专家包（fork SRC-004，定位=跨链专家包入口）——已挂接 3 张路由表（pm-workflow-chains 跨链行 / pd-workflow-chains 入口0 / BUSINESS-FLOW-MAP 流程2 PT-JT-FLOW-002）；路由到 PT-007/PT-001/PT-005/JT-015/PT-012/PT-003/MT-001 + references 模板库（G/Y/R·ROAM·ADR·RICE·机会规模估算·赢输分析·Dashboard）；不重复实现方法论（原则九融合）；叠加 S-070 去 AI 味 |
 | PT-010 | pm-skills-reference | `pm-suite/pm-skills-reference/SKILL.md` | PM | [有效] | 【产品经理技能索引】65个产品经理(PdM)技能+36个链式工作流+8个领域插件——注意：本索引覆盖的是产品管理(Pro... |
 ### 元技能 (meta-suite)
 
