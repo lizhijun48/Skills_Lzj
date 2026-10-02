@@ -105,6 +105,16 @@
 
 **下一步触发条件**：用户确认后，按 `pm-suite 5 文件` → `pd/meta/legal 3 文件` 两批修复。
 
+**执行结果（2026-10-02 同日，用户选"两件都做"）**：✅ **已修复并归档**
+
+1. **精查纠偏**：逐行精查 24 个受影响行后确认，**实际缺陷仅 5 个文件 / 19 行**（全部为 Markdown 表格与 ASCII 框图被压成单行）；其余 3 文件为**误报**——`self-improving-agent` L17-19（shell `printf "...\n..."`）、`pd-user-research` L358（YAML 双引号串内转义）、`law-skills` L895（Python 字面量 `"……\n"`）均为**有意换行转义**，未改动
+2. **实际修复**：`pm-integration`(85) / `pm-team-communication`(52) / `pm-quality-assurance`(45) / `pm-risk-management`(24) / `pm-procurement-quality`(21) → 全部归零；恢复表格渲染与 Ctrl+F 检索
+3. **安全措施**：改前全量备份至 `_t003_backup/`；校验无双反斜杠（`\\n`）风险；改后复查 5 文件归零 + 3 文件计数不变
+4. **原则八判定**：严格符合（格式还原，无内容变更）
+5. **提交**：见 CHANGELOG v1.6.13
+
+**状态**：✅ 已关闭（T-003 登记 → 已执行）
+
 ---
 
 ## 最新状态（2026-08-31）

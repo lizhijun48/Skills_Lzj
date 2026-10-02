@@ -7,6 +7,24 @@
 
 ---
 
+## v1.6.13 — 2026-09-30
+
+**T-003 修复：5 个 pm-suite SKILL.md 字面 `\n` 转义缺陷（表格/框图还原为真换行）**
+
+- **背景**：P2-① 执行中发现（详见 DECISION-LOG T-003，v1.6.12 登记）。精查 24 受影响行后确认实际缺陷范围为 **5 个文件 / 19 行**，另 3 文件为误报
+- **实际修复（5 文件，字面 `\n` 85/52/45/24/21 → 全部归零）**：
+  - `pm-integration`（85）、`pm-team-communication`（52）、`pm-quality-assurance`（45）、`pm-risk-management`（24）、`pm-procurement-quality`（21）
+  - 受影响内容均为 Markdown 表格与 ASCII 框图（被压成单行），还原为真换行后恢复可渲染、可 Ctrl+F 检索
+- **误报排除（3 文件，有意转义，未改动）**：
+  - `meta-suite/self-improving-agent` L17-19：shell `printf "...\n..."` 的换行转义
+  - `pd-suite/pd-user-research` L358：YAML 双引号字符串内的转义
+  - `legal-suite/law-skills` L895：Python 字面量 `"……\n"` 的转义
+- **安全措施**：修改前全量备份至 `_t003_backup/`（5 个原文件）；替换前校验无双反斜杠（`\\n`）风险；替换后复查 5 文件归零 + 3 文件不变
+- **四表同步**：本 CHANGELOG / DECISION-LOG T-003 状态更新（登记 → 已执行，范围修正为 5 文件）
+- **原则八判定**：严格符合（格式还原，无内容变更）
+
+---
+
 ## v1.6.12 — 2026-09-30
 
 **JT-005 pm-integration 内容补强：补"交付节奏"段（对标开发方法和生命周期绩效域）+ 章节号修正**
