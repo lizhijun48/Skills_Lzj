@@ -1,7 +1,12 @@
 # 工具自动生成
 .disable_to_model_invocation_migration.json
 .model_invocation_to_override_migration.json
-resume-optimizer/_skillhub_meta.json
+_bm_skillid_migration.json
+**/_skillhub_meta.json
+
+# Python 编译缓存
+__pycache__/
+*.pyc
 
 # 系统文件
 Thumbs.db
