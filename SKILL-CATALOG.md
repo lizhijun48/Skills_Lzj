@@ -37,7 +37,7 @@
 | JT-002 | pm-bid-proposal | `pm-suite/pm-bid-proposal/SKILL.md` | P1 | [有效] | 招投标方案编制——面向政府/国企项目的系统性投标方案编制技能。覆盖投标决策（Go/No-Go）、招标文件解读、技术方案撰... |
 | JT-003 | pm-requirements-scope | `pm-suite/pm-requirements-scope/SKILL.md` | P2 | [有效] | 需求管理与范围定义——严格对标PMBOK第5章范围管理+软考高项第8章+发改委55号令。覆盖需求收集、需求矩阵、WBS创... |
 | JT-004 | pm-schedule-cost | `pm-suite/pm-schedule-cost/SKILL.md` | P2 | [有效] | 进度管理与成本控制——严格对标PMBOK第6章进度管理+第7章成本管理+软考高项第9-10章+发改委55号令。覆盖活动定... |
-| JT-005 | pm-integration | `pm-suite/pm-integration/SKILL.md` | CX | [有效] | 项目整合管理——严格对标PMBOK第4章整合管理+软考高项整体变更控制+发改委55号令。覆盖项目章程制定、项目管理计划编... |
+| JT-005 | pm-integration | `pm-suite/pm-integration/SKILL.md` | CX | [有效] | 项目整合管理——严格对标PMBOK第4章整合管理+软考高项第8章（整合管理·含变更控制）+第18章（开发方法和生命周期绩效域）+发改委55号令。覆盖项目章程制定、项目管理计划编... |
 | JT-006 | pm-change-management | `pm-suite/pm-change-management/SKILL.md` | P5 | [有效] | 变更管理——严格对标PMBOK第4章整体变更控制+软考高项第16章+发改委55号令第13条（变更>10%重报）。覆盖变更... |
 | JT-008 | pm-procurement-quality | `pm-suite/pm-procurement-quality/SKILL.md` | P3 | [有效] | 采购管理与质量规划——严格对标PMBOK第12章采购管理+第8章质量管理（质量规划部分）+软考高项第14-15章+招标投... |
 | JT-009 | pm-project-delivery | `pm-suite/pm-project-delivery/SKILL.md` | P4 | [有效] | 项目交付管理——严格对标PMBOK执行过程组+一建项目管理实务+软考高项。覆盖项目启动会（Kick-off）、工作包执行... |
