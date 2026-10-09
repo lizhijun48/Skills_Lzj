@@ -34,7 +34,7 @@
 | 编号 | 技能名 | 路径 | 阶段 | 状态 | 说明 |
 |------|--------|------|------|------|------|
 | JT-001 | pm-project-opportunity | `pm-suite/pm-project-opportunity/SKILL.md` | P1 | [有效] | 项目立项管理与前期文档编制——严格对标国家法规与标准，覆盖8维度Go/No-Go量化决策（含评分矩阵、一票否决项）、项目... 2026-08-31 v1.1.0 阶段零评分卡期望值化（概率锚/期望支付/乘零否决/先验回写）；references/Go-NoGo评分矩阵.md 同步升级 |
-| JT-002 | pm-bid-proposal | `pm-suite/pm-bid-proposal/SKILL.md` | P1 | [有效] | 招投标方案编制——面向政府/国企项目的系统性投标方案编制技能。覆盖投标决策（Go/No-Go）、招标文件解读、技术方案撰... |
+| JT-002 | pm-bid-proposal | `pm-suite/pm-bid-proposal/SKILL.md` | P1 | [有效] | 招投标方案编制——面向政府/国企项目的系统性投标方案编制技能。覆盖投标决策（Go/No-Go）、招标文件解读、技术方案撰（2026-10-09 新增"执行纪律·展示执行"：先亮编排名册→用户确认→关键决策点停下，SRC-005 理念吸收）
 | JT-003 | pm-requirements-scope | `pm-suite/pm-requirements-scope/SKILL.md` | P2 | [有效] | 需求管理与范围定义——严格对标PMBOK第5章范围管理+软考高项第9章（项目范围管理）+发改委55号令。覆盖需求收集、需求矩阵、WBS创... |
 | JT-004 | pm-schedule-cost | `pm-suite/pm-schedule-cost/SKILL.md` | P2 | [有效] | 进度管理与成本控制——严格对标PMBOK第6章进度管理+第7章成本管理+软考高项第10章（项目进度管理）+第11章（项目成本管理）+第18章（18.4 规划绩效域）+发改委55号令。覆盖活动定... |
 | JT-005 | pm-integration | `pm-suite/pm-integration/SKILL.md` | CX | [有效] | 项目整合管理——严格对标PMBOK第4章整合管理+软考高项第8章（整合管理·含变更控制）+第18章（开发方法和生命周期绩效域）+发改委55号令。覆盖项目章程制定、项目管理计划编... |
@@ -93,7 +93,7 @@
 | I-003 | metabolic-healing-skill-system | `industry-suite/metabolic-healing/SKILL.md` | Industry | [有效] | 代谢慢病"非药而愈"十大功能集群技能体系。基于"任务为中心，AI Pipeline驱动"思想，覆盖健康评估、营养干预、运... |
 | I-005 | pharma-doc-reference | `industry-suite/pharma/references/pharma-doc-reference-1.0.1/SKILL.md` | Industry | [有效] | 医药行业文档知识参考库——Universal Task OS的领域负载物。提供行业文档清单、内容要求清单、范本槽位，由U... |
 | I-004 | pharma-skill-system | `industry-suite/pharma/SKILL.md` | Industry | [有效] | 医药行业十大功能集群技能体系。基于"任务为中心，AI pipeline驱动"思想，覆盖情报采集、内容生产、活动运营、数据... |
-| I-006 | universal-business-skill-system | `industry-suite/universal-business/SKILL.md` | Industry | [有效] | 通用行业业务技能体系。基于"任务为中心，AI Pipeline驱动"思想，适用于任何行业的结构化业务能力框架。覆盖情报采... |
+| I-006 | universal-business-skill-system | `industry-suite/universal-business/SKILL.md` | Industry | [有效] | 通用行业业务技能体系。基于"任务为中心，AI Pipeline驱动"思想，适用于任何行业的结构化业务能力框架。覆盖情报采（2026-10-09 执行规则新增第 8 条"展示执行"：先亮名册后开跑+🟨半自动单元节点确认，SRC-005 理念吸收）
 ### 经济决策 (economic-suite)
 
 | 编号 | 技能名 | 路径 | 阶段 | 状态 | 说明 |
