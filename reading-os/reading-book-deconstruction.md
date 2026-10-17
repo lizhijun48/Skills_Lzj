@@ -220,7 +220,7 @@ trigger_words:
    - Checklist / 模板 / SOP（可直接用）
    - 内部规范草案（SKILL 结构 / 评审流程 / 指标口径…）
    - 代码/配置/Prompt 改动记录
-   - **SQ3R 知识卡墙（MD + HTML 卡片墙 + JSON 唯一数据源）**：按 SQ3R 四步（Survey/Question/Read/Recite/Review）把入选知识点拆成卡片；**JSON 为唯一真相源**（存全部卡片结构化数据，改卡片只改 JSON），HTML 按四色带渲染卡片墙（速记 / 检索友好），MD 用于版本管理与可搜；交付默认三件套同出，边界字段（不适用场景≥2）为每张卡的必填项
+   - **SQ3R 知识卡墙（MD + HTML 卡片墙 + JSON 唯一数据源）**：按 SQ3R 五步（Survey/Question/Read/Recite/Review）把入选知识点拆成卡片；**JSON 为唯一真相源**（存全部卡片结构化数据，改卡片只改 JSON），HTML 按五色带渲染卡片墙（速记 / 检索友好），MD 用于版本管理与可搜；交付默认三件套同出，边界字段（不适用场景≥2）为每张卡的必填项
 
 2. **技能建立建议**（新增）
 

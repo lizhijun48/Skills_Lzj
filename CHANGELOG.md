@@ -7,6 +7,14 @@
 
 ---
 
+## v1.6.21 — 2026-10-17
+
+**reading-os v1.1 注册笔误修正：SQ3R「四步 / 四色带」→「五步 / 五色带」**
+
+- **背景**：v1.6.20 吸收 SRC-006 时，注册文字将 SQ3R 误写为"四步"（实为 5 阶段 Survey/Question/Read/Recite/Review）、知识卡墙误写为"四色带"（实为 5 色带 S/Q/R/Rc/Rv，与已产出的 ch12 卡墙 demo 一致）。
+- **改动**：`reading-os/reading-book-deconstruction.md`（R-001）"SQ3R 四步"→"五步"、"四色带"→"五色带"；`reading-os/SKILL.md` 两处"四色带"→"五色带"。
+- **四表同步**：属注册笔误修正、未新增能力，仅补本 CHANGELOG；不触 REGISTRY / CATALOG / SOURCE-REGISTRY / DECISION-LOG。
+
 ## v1.6.20 — 2026-10-09
 
 **SRC-006 理念吸收：reading-os 子技能 A 补「三重验证漏斗 + 反例 + 边界字段」+ Step 4 新增 SQ3R 知识卡墙第四种资产化输出（凯西拆书微信公众号文章，S-072 八镜头过评）**
