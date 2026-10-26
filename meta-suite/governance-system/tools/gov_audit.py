@@ -20,7 +20,7 @@ import os, re, sys, json, pathlib
 from datetime import date
 
 # ── 配置 ────────────────────────────────────────────────
-SKILLS_ROOT = pathlib.Path(r"C:\Users\Lee\.workbuddy\skills")
+SKILLS_ROOT = pathlib.Path(__file__).resolve().parents[3]
 REGISTRY_PATH = SKILLS_ROOT / "SKILL-ID-REGISTRY.md"
 BFM_PATH = SKILLS_ROOT / "BUSINESS-FLOW-MAP.md"
 PT_PATH = SKILLS_ROOT / "pd-suite" / "pd-workflow-chains" / "SKILL.md"
@@ -207,7 +207,7 @@ def main():
 
     catalog_skill_count = catalog.count("| `") if catalog else 0
     diff = abs(catalog_skill_count - len(skills))
-    results.append(f"- Catalog 列数({catalog_skill_count}) vs 扫描数({len(skills)): 差异={diff} {'✅' if diff < 5 else '⚠️ 需重新运行 gen_catalog.py'}")
+    results.append(f"- Catalog 列数({catalog_skill_count}) vs 扫描数({len(skills)}): 差异={diff} {'✅' if diff < 5 else '⚠️ 需重新运行 gen_catalog.py'}")
 
     # ════════════════════════════════════════
     # QG1: 同 Track+Phase 密度

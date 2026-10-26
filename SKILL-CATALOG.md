@@ -212,12 +212,14 @@
 | S-019 | Gridman | `gridman/SKILL.md` | CX | [有效] | >- |
 | S-071 | law-repository-sop | `law-repository-sop/SKILL.md` | CX | [有效] | 中央法规库/权威数据源三层架构建设 SOP——为任意套件搭建"原文SSOT+领域解读+案例引用"基础设施，含蒸馏解耦/反向登记/版本迭代；与 legal-suite/law-repository 为方法与实例配套关系 |
 | S-072 | external-source-eval-sop | `external-source-eval-sop/SKILL.md` | CX | [有效] | 外部来源多视角评估 SOP——GOV v3.7 原则十一方法层配套，引入前置强制 8 镜头（技术正确性核验/外部基准/融合二阶风险/使用者价值/生命周期TCO/来源与许可/战略契合PM+PM双轨主线/治理自反），未过评不得入库；与 S-071 为方法论兄弟 |
+| S-073 | doc-insight | `doc-insight/SKILL.md` | CX | [有效] | 资料深度解读——把可研/初设/批复/监理月报/验收资料/政策文件/尽调材料等非结构化资料，按六步流程（立靶→清点→扫红线→七维提取→交叉校验→决策输出）转成**带原文出处的决策要素矩阵 + 决策简报**；七维维度库（时间·金额·义务·权限·风险·凭证·口径）+ 确定性检查器 `check_brief.py` 校验结构与出处；无出处不算提取、不做通读摘要、矛盾必暴露；不替代 JT-019/PT-012/L-002/L-001/reading-os/data-analyst |
 
 ---
 
-**总计**：142 个目录条目 + 10 个已折叠条目——2026-09-21 账实对齐（S-072 external-source-eval-sop 纳管后）：
+**总计**：143 个目录条目 + 10 个已折叠条目——2026-10-26 实测（S-073 doc-insight 新增后）：
 
-- 磁盘实测 **142** 个 SKILL.md（排除 `archive/` 27 个只读快照）= 目录条目 **142**，账实一致
-- 注册表 v1.6.0 有效 **144** 与磁盘 142 差额 2 = reading-os R-001~003 三模块口径（设计如此）
+- **CATALOG 实际条目 143**（本条为表格行数实测，非推算）
+- **磁盘实际 SKILL.md 144**（排除 `archive/` 27 个只读快照与 `_external-archive/` 7 个）；**差额 1 = `transcript-asr-clean` 从未登记**（历史账实漂移，见 DECISION-LOG T-014）
+- **注册表实测有效编号 134**（139 个编号行 − 5 个已释放/待分配）。注册表与磁盘**不作一对一强等式**：reading-os 单目录占 R-001~003 三号（多 2），另有未治理技能与多副本登记口径差异
 
 另有 `archive/meta-suite-pre-v0.9-backup/` 归档快照（27 个 SKILL.md，只读历史版本，不计入统计，决策见 DECISION-LOG.md）
