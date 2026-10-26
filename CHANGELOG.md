@@ -7,6 +7,22 @@
 
 ---
 
+## v1.6.22 — 2026-10-26
+
+**技能治理能力收敛：4 个元能力专家合并为 `skill-governance-hub` + `suite-dispatcher` 扩多候选裁决与外部兜底 + 新增技能治理轨 SK-FLOW-001/002 + 7 个源插件按「功能全提取即删除」原则清理**
+
+- **背景**：用户提出两项需求——① 让调度器「先理解 → 判断自家库有没有 → 没有则推荐平台库存」；② 把与技能相关的多个 Agent 合并为一个，并把「治理」纳入生命周期。同时拍板新原则：**多个 skill/Agent 合并后功能全部提取的，原件删除**（理由：入口越多选择成本越高，与"降低选择困难"的初衷相悖）。
+- **新增专家** `skill-governance-hub`（`my-experts` 市场，`expertType=agent`）：全生命周期七段「找→判→造→验→测→治→引」，内置 5 个技能 + 9 份规范 references。`validate_expert.py` 通过；`audit.py --profile upload` 等级 **A/97，BLOCKER 0，UPLOAD GATE PASS**。
+- **技能融合**（取两家之长，非并列）：`skill-authoring` v2.0.0 由两份来源合并——
+  - 取自「技能开发大厂标准」：5 大铁律、Step 0–7、Step 4.5 收敛关卡、H3 A/B ≥20%
+  - 取自「Skill 制作方法」：三态确认闸口、`skill_ops.py` 确定性操作、环境就绪路由、五阶段自检
+  - 修掉源包一处平台级缺陷：`assets/dependency-kit/` 为三级目录（触发 S7 目录层级超限），已扁平化到 `scripts/`
+- **调度器扩展**（`suite-dispatcher`）：新增 §4.0 需求解析（意图/领域/关键词）、§4.4 多候选裁决（四层优先级 + 同能力去重 + 同层择近 + 理由与备胎 + 两道成本闸门 + L4 外部资源引入必须显式提示）；路由回执增「理由 / 备胎」两字段；执行纪律 8→11 条。
+- **新增流程轨**：`BUSINESS-FLOW-MAP.md` 新增 §7.5 技能治理轨（SK-FLOW-001 沉淀技能 / SK-FLOW-002 外部资源引入），**不改动既有编号**。
+- **原件清理**：7 个源插件按新原则删除——`skill-finder`、`baixiaosheng`、`skill-dev-advisor`、`skill-smith`、`info-project-manager`、`ruankao-integration-pm-coach`、`gaoxiang-essay-tutor`。删前全量备份 `_archive_plugins_20261026.zip`（**3371.4 KB / 73 files**），并核验备份内含全部 7 个插件，证明功能提取发生在源存在期间。
+- **顺带消除一处错误传播**：源「中项」考点段将 `CV` 误写为 `EV−PV`（应为 `EV−AC`）；自有产物 `exam-formulas.md` 经核验公式全部正确，删除源插件同时消除了该错误扩散风险。
+- **四表同步**：本 CHANGELOG v1.6.21→**v1.6.22**、DECISION-LOG 新增 **T-010**、SOURCE-REGISTRY 新增 **SRC-007**、BUSINESS-FLOW-MAP 新增 §7.5；`SKILL-CATALOG` / `SKILL-ID-REGISTRY` **不触**——本次新增物是**专家包**（登记于 `marketplace.json`），不是 `~/.workbuddy/skills/` 下的技能资产。
+
 ## v1.6.21 — 2026-10-17
 
 **reading-os v1.1 注册笔误修正：SQ3R「四步 / 四色带」→「五步 / 五色带」**

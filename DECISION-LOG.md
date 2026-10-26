@@ -1118,6 +1118,20 @@ P0-①（软考章节号修正）在 JT-004 / JT-005 之后剩余 JT-003 / JT-00
 | 建议落点 | pm-bid-proposal 的 Multi-Agent 审核环节（Master+3 子 Agent 改造时合批）；组团判定可作为"何时走 Multi-Agent vs 单技能"的通用判据 |
 | 状态 | ⏳ 待办（本轮只吸收展示执行，本项另立避免范围蔓延） |
 
+### T-010 · 技能治理能力收敛与「功能全提取即删除」原则（2026-10-26 登记）
+
+| 项 | 内容 |
+| --- | --- |
+| 来源 | 用户 2026-10-26 拍板三项：① 调度器扩展为「先理解 → 判断自家库有无 → 无则推荐平台库存」；② 把与技能相关的多个 Agent 合并为一个并把「治理」纳入生命周期；③ **新原则**——多个 skill/Agent 合并后功能全部提取的，原件删除 |
+| 决策 | **已执行**（本轮落地，见 CHANGELOG v1.6.22） |
+| 落地内容 | 新建 `skill-governance-hub` 专家（七段：找→判→造→验→测→治→引；内置 5 技能 + 9 references）；`skill-authoring` v2.0.0 融合两份来源；`suite-dispatcher` 增 §4.0／§4.4 + 回执加理由备胎；`BUSINESS-FLOW-MAP` 增 §7.5 SK-FLOW-001/002 |
+| 清理 | 删除 7 个源插件（skill-finder / baixiaosheng / skill-dev-advisor / skill-smith / info-project-manager / ruankao-integration-pm-coach / gaoxiang-essay-tutor），删前备份 `_archive_plugins_20261026.zip`（3371.4 KB / 73 files） |
+| **新原则（通用）** | **「功能全提取即删除」**：合并类改造完成后，若源件功能已被新载体完整覆盖（**逐项核验，非凭印象**），原件必须删除，不得以"留着备用"为由双份并存。理由：入口越多选择成本越高，与"降低选择困难"的初衷相悖。**例外仅两类**：① 源件含新载体未覆盖的独有能力（须先补）；② 已上架/在售资产（按资产冻结纪律处理） |
+| 验证要求 | 删前三项必查：① 全量备份且核验备份**确实含全部源件**；② 逐项对照功能是否已提取（含脚本、references、独有章节）；③ 清单登记项同步撤销，**不留悬空引用** |
+| ⚠️ 已知风险 | **平台按 `marketplace.json` 清单清理目录**：本轮期间 `skill-finder` / `baixiaosheng` / `skill-dev-advisor` 三个目录在未被主动删除的情况下消失，与清单同步行为一致（删前备份 mtime 22:06 时三者仍在）。→ 今后凡在 `marketplaces/*/plugins/` 下放置专家，**必须同步登记进对应 marketplace.json**，否则随时可能被清理 |
+| ⏳ 待跟踪 | `experts/plugins/` 下 `qingyan-screenwriter`、`stock-partner-team`、`weima-video-director` 3 个插件**目录存在但不在清单中**，有被清理风险。待用户确认：补登记保留 / 主动移除 |
+| 状态 | ✅ 已执行（待跟踪项 ⏳ 待用户确认） |
+
 ### T-008 — S-006 / S-007 PROPRIETARY 许可风险：用户裁决=保持现状（2026-10-02 结清）
 
 | 项 | 内容 |
