@@ -17,3 +17,7 @@ desktop.ini
 *.tmp
 *.bak
 *.swp
+
+# 明确不纳入版本管理的技能（用户 2026-10-27 拍板，见 DECISION-LOG T-014）
+# 说明：本目录为在用的备考工具技能，但用户决定不进 git；如需纳入须 git add -f
+transcript-asr-clean/

@@ -7,6 +7,17 @@
 
 ---
 
+## v1.6.28 — 2026-10-27
+
+**`transcript-asr-clean` 裁决为不纳入 git 管理**
+
+- **用户裁决**：该技能不进版本管理。处置为在 skills 仓 `.gitignore` 显式排除 `transcript-asr-clean/`（附决策注释），而非放任其以 `??` 悬空。
+- **两个目的**：① `git status` 恢复干净，真实改动不被 untracked 噪音掩盖；② 防止后续 `git add -A` / `git add .` 误将该目录提交入库。
+- **核验**：`git check-ignore -v` 命中 `.gitignore:23`；`git ls-files | git check-ignore --stdin` 输出为空，无已跟踪文件被误伤；改后 `git status` 仅剩 `.gitignore` 本身一处改动。
+- **连带风险（已在 `T-014` 明示）**：该目录 2 个文件（`SKILL.md`、`references/scanner.py`）此后**无任何版本兜底**，磁盘损坏或误删即不可恢复；如需保险可另做非 git 备份（zip），与本裁决不冲突。
+- **未解决部分**：**编号归属仍待定**（分配 `S-074` 作通用转写工具，或归入 `gaoxiang-suite` 走 GX- 序列）。本条只裁「进不进版控」，不涉及编号。
+- **原则八判定**：**符合**——纯版控规则变更，无技能正文改动、无新建载体、未改变任何技能的运行行为。
+
 ## v1.6.27 — 2026-10-27
 
 **插件仓换根完成：UI 清单进版本管理，R1 / R2 结案**
