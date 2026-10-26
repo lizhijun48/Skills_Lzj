@@ -7,6 +7,19 @@
 
 ---
 
+## v1.6.27 — 2026-10-27
+
+**插件仓换根完成：UI 清单进版本管理，R1 / R2 结案**
+
+- **仓库根上移**：`my-experts/plugins` → **`my-experts/`**。原布局使驱动 UI「我的专家」可见性的 `my-experts/.codebuddy-plugin/marketplace.json` 落在版本管理之外（`T-022` R1），本次一并纳入。
+- **远端迁移**：用户将远端改为 `https://github.com/lizhijun48/my-experts.git`（原仓名变更，远端 HEAD 为 `75e9561`，插件目录位于**根级**）。新旧树无共同路径，普通推送必被拒 ⇒ 采用 force push。
+- **执行与核验**：旧仓 `git bundle` 备份全量历史（`git bundle verify` → **"The bundle records a complete history"**，248 KB）→ 清理 `plugins/.git` → `my-experts/` 下 `git init -b master` → 新基线提交 **`0d6f60b`** → `+ 75e9561...0d6f60b master -> master (forced update)`。核验结果：`ls-remote` 远端 HEAD 与本地 HEAD 一致、`ls-files` **58 文件**、`marketplace.json` 已跟踪、工作区干净、`plugins/.git` 无残留。
+- **文件账（实测）**：58 = 根级 2（`.gitignore`、`marketplace.json`）+ `plugins/` 56（软考 11 / hub 41 / 调度器 4）。`.gitignore` 上移仓库根后规则全递归，一份管全仓，不留双份。
+- **UI 零影响**：平台读取路径 `.codebuddy-plugin/marketplace.json` + `plugins/<插件名>` 一字未动，三个 `plugin.json` 版本（1.0.0 / 1.0.0 / 1.2.0）与清单声明一致。
+- **R2 结案**：新基线 message 合规（`type(scope)` + 正文，中文零损坏已核验），原 `first commit` 已不在 `master` 历史中；原历史内容无损失，bundle 可随时还原。
+- **新增 `T-023`（观察项）**：清理时发现 `plugins/.gitignore` 在约 2 分钟内静默消失，三项观测互证（bundle 内 `75e9561` 含该文件 / 00:02 该仓工作区干净 / 00:04 文件已不存在），**原因未明**；内容已重建于新仓根，无信息损失。换根后该文件不再位于 `plugins/` 根级，风险自然规避。
+- **原则八判定**：**符合**——纯仓库布局与治理记录，无技能正文改动、无新建载体、三个插件版本未变。
+
 ## v1.6.26 — 2026-10-26
 
 **插件仓纳入 git：原 P0「打基线 zip」作废，另登记两项遗留风险**

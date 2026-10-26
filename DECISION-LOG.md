@@ -1212,7 +1212,21 @@ P0-①（软考章节号修正）在 JT-004 / JT-005 之后剩余 JT-003 / JT-00
 | 结论二：补 `.gitignore` | 新增提交 `75e9561` 并推送（`e44ecde..75e9561  master -> master`，message 中文零损坏已核验）。理由：hub 内置 `audit.py` 及各 skill 的 test 脚本，运行必生 `__pycache__` 与 `*.pyc`，skills 仓上一轮已实际踩过并靠手删清理。**刻意排除 `_*.py` / `_*.log` 模式**——`_*.py` 会连带命中 `__init__.py`（同样以下划线开头），属静默误伤。验证：`git ls-files \| git check-ignore --stdin` 输出为空，临时构造的 `__pycache__/*.pyc`、`*.zip`、`*.tmp` 均被正确忽略。 |
 | 风险 R1（待拍板） | **清单在仓外**：`my-experts/.codebuddy-plugin/marketplace.json` 是驱动 UI「我的专家」可见性的唯一清单，却位于仓库根**上一层**，未被版本管理。丢失后果＝三个专家全部从 UI 消失（同源实证：清单外目录不显示、且会被平台按清单清理）。**三选一**：① **换根**——在 `my-experts/` 重建仓库把清单纳入，因历史仅 1 commit 代价极小，但需 force push 覆盖远端 `master`；② **镜像备份**——仓内放副本 + 漂移校验脚本（**注意**：不可在 `plugins/` 下新建目录存放，平台会清理清单外目录，风险转移而非消除）；③ **保持现状**，仅接受该单点风险。 |
 | 风险 R2（待拍板） | 基线提交 message 为 `first commit`，不符合本工程 `type(scope): 主题` + 正文规范，且**已推送远端**，修正需 `--amend` + force push。选项：① 与 R1 合并处理（换根时一次性重写为规范基线提交）；② 单独 amend 仅改 message；③ 保留，视为不可变历史起点。 |
-| 状态 | ✅ git 事实已核实、P0 zip 待办已撤销、`.gitignore` 已提交并推送；⏳ R1 / R2 待用户拍板 |
+| R1 结案（2026-10-27） | 用户拍板采用**换根**，并同时把远端迁到新仓 `https://github.com/lizhijun48/my-experts.git`。执行链：① 旧仓 `plugins/.git` 清理前先以 `git bundle create --all` 备份全量历史，`git bundle verify` 输出 **"The bundle records a complete history"**（248 KB，含 `master` 与 `origin` 追踪引用）；② `my-experts/` 下 `git init -b master`；③ `.gitignore` 由 `plugins/` 上移仓库根（规则全递归，一份管全仓，不留双份）；④ 暂存核验 **58 文件**＝根级 2（`.gitignore`、`marketplace.json`）＋ `plugins/` 56（软考 11、hub 41、调度器 4），无 `__pycache__` / `*.zip` / `*.log` / 运行元数据；⑤ 提交 **`0d6f60b`**；⑥ `push -f -u origin master` → `+ 75e9561...0d6f60b master -> master (forced update)`。核验：`ls-remote` 远端 HEAD 与本地 HEAD 逐字符一致、`ls-files` 58、`marketplace.json` 已跟踪、工作区干净、`plugins/.git` 已无残留。 |
+| R2 结案（2026-10-27） | 随 R1 的基线重建一并解决：新提交用 `type(scope): 主题` + 正文规范 message（中文零损坏已核验），远端原 `e44ecde`「first commit」与 `75e9561` 已不在 `master` 历史中。**原历史无内容损失**——bundle 完整保留，`git clone <bundle>` 可随时还原。 |
+| UI 影响判定 | **零影响**。平台读取路径为 `my-experts/.codebuddy-plugin/marketplace.json` + `my-experts/plugins/<插件名>`（`source` 字段为 `./plugins/<名>`），本次重构只改变 git 仓库根位置与多出一个 `my-experts/.git`，磁盘读取路径一字未动；三个 `plugin.json` 版本（1.0.0 / 1.0.0 / 1.2.0）与清单声明一致。 |
+| 状态 | ✅ **R1 / R2 全部结案**，P0「打基线 zip」待办已撤销；⚠️ 清理过程中发现一项未解释现象，另立 `T-023` 跟踪 |
+
+### T-023 · `plugins/.gitignore` 在工作区静默消失（2026-10-27 登记，原因未明）
+
+| 项 | 内容 |
+| --- | --- |
+| 现象 | 换根执行时脚本报 `plugins/.gitignore 不存在（跳过）`，即待上移的源文件在清理动作之前已消失。 |
+| 三项证据 | ① bundle 回查 `75e9561` 的树含根级 `.gitignore`，该提交共 **57 文件**——说明它确曾被提交入库；② 00:02 创建 bundle 前在旧仓执行 `git status --short` 输出**为空**（工作区干净 ⇒ 当时文件在）；③ 00:04 换根脚本 `os.path.exists('plugins/.gitignore')` 返回 **False**。**两次观测相隔约 2 分钟，中间未执行任何删除该路径的命令。** |
+| 影响 | **无信息损失**。内容已按原样重建于新仓根 `my-experts/.gitignore`，且旧版本完整存于 bundle 的 `75e9561` 树中。 |
+| 推测（未证实，不作结论） | 可能与平台对 `plugins/` 根级非插件条目的清理行为有关（本工程既有实证：不在 `marketplace.json` 清单中的目录会被平台清理）。但无直接日志佐证，**仅登记现象，不写成结论**。 |
+| 处置 | 换根后 `.gitignore` 已位于 `my-experts/.gitignore`，**不在 `plugins/` 根级**，该风险自然规避。后续若需在 `plugins/` 下放置任何非插件文件，须先做存活验证。 |
+| 状态 | ⏳ 观察项，不阻塞任何任务 |
 
 ### T-008 — S-006 / S-007 PROPRIETARY 许可风险：用户裁决=保持现状（2026-10-02 结清）
 
