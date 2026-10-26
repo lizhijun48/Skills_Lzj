@@ -1202,6 +1202,18 @@ P0-①（软考章节号修正）在 JT-004 / JT-005 之后剩余 JT-003 / JT-00
 | 性质与纪律 | **笔误级 + 硬化路径级修正**，不改变审计逻辑与判定标准，故未单独开技能版本号，仅在本条 + CHANGELOG 补记。 |
 | 状态 | ✅ 已修并实跑通过 |
 
+### T-022 · 插件仓纳入 git：事实核实、P0 zip 待办撤销与两项遗留风险（2026-10-26）
+
+| 项 | 内容 |
+| --- | --- |
+| 来源 | 用户告知「`C:\Users\Alex_Lee\.workbuddy\plugins\marketplaces\my-experts\plugins` 已经用 git 管理起来了」，直接纠正本工程此前「插件目录不是 git 仓库、改动无法 commit」的记录。 |
+| 事实（实测，非推算） | ① 仓库根 = `my-experts/plugins/`（**非** `my-experts/`），由 `git rev-parse --show-toplevel` 确认；② 仅 **1 个 commit** `e44ecde`（message 为 `first commit`），**56 文件 / 3 插件**；③ **已推送**：remote `Agent_Lzj` → `https://github.com/lizhijun48/Agent_Lzj.git`，`master` 追踪 `Agent_Lzj/master`，推送前远端 commit 与本地一致（`e44ecde`）；④ 工作区干净，无 `__pycache__` / `*.zip` / `*.log` / `_skillhub_meta.json` 等元数据入库；⑤ `suite-dispatcher` 的 `plugin.json` 与 `marketplace.json` 版本**双处均为 1.2.0**，一致；⑥ 入库结构：`skill-governance-hub` 41 文件（9 references + 28 skills 文件 + agent + avatar + README + plugin.json）、`ruankao-pm-system-coach` 11、`suite-dispatcher` 4。 |
+| 结论一：P0 待办撤销 | 此前「dispatcher / hub 改动无法 commit，只能靠 zip 兜底」**已失效**。P0 待办「给 dispatcher / hub 打基线 zip」**撤销**——git 已提供版本兜底，再打 zip 属重复载体，违反「不建平行」原则；基线职责改由 git 承担。 |
+| 结论二：补 `.gitignore` | 新增提交 `75e9561` 并推送（`e44ecde..75e9561  master -> master`，message 中文零损坏已核验）。理由：hub 内置 `audit.py` 及各 skill 的 test 脚本，运行必生 `__pycache__` 与 `*.pyc`，skills 仓上一轮已实际踩过并靠手删清理。**刻意排除 `_*.py` / `_*.log` 模式**——`_*.py` 会连带命中 `__init__.py`（同样以下划线开头），属静默误伤。验证：`git ls-files \| git check-ignore --stdin` 输出为空，临时构造的 `__pycache__/*.pyc`、`*.zip`、`*.tmp` 均被正确忽略。 |
+| 风险 R1（待拍板） | **清单在仓外**：`my-experts/.codebuddy-plugin/marketplace.json` 是驱动 UI「我的专家」可见性的唯一清单，却位于仓库根**上一层**，未被版本管理。丢失后果＝三个专家全部从 UI 消失（同源实证：清单外目录不显示、且会被平台按清单清理）。**三选一**：① **换根**——在 `my-experts/` 重建仓库把清单纳入，因历史仅 1 commit 代价极小，但需 force push 覆盖远端 `master`；② **镜像备份**——仓内放副本 + 漂移校验脚本（**注意**：不可在 `plugins/` 下新建目录存放，平台会清理清单外目录，风险转移而非消除）；③ **保持现状**，仅接受该单点风险。 |
+| 风险 R2（待拍板） | 基线提交 message 为 `first commit`，不符合本工程 `type(scope): 主题` + 正文规范，且**已推送远端**，修正需 `--amend` + force push。选项：① 与 R1 合并处理（换根时一次性重写为规范基线提交）；② 单独 amend 仅改 message；③ 保留，视为不可变历史起点。 |
+| 状态 | ✅ git 事实已核实、P0 zip 待办已撤销、`.gitignore` 已提交并推送；⏳ R1 / R2 待用户拍板 |
+
 ### T-008 — S-006 / S-007 PROPRIETARY 许可风险：用户裁决=保持现状（2026-10-02 结清）
 
 | 项 | 内容 |

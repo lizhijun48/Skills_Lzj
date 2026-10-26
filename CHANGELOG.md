@@ -7,6 +7,18 @@
 
 ---
 
+## v1.6.26 — 2026-10-26
+
+**插件仓纳入 git：原 P0「打基线 zip」作废，另登记两项遗留风险**
+
+- **事实纠正**：此前记录的「`~/.workbuddy/plugins/marketplaces/my-experts/` 不是 git 仓库 ⇒ dispatcher / hub 改动无法 commit」**已失效**。实测 git 仓库根下沉一层在 `my-experts/plugins/`，已由用户纳入管理并推送 GitHub（remote `Agent_Lzj` → `lizhijun48/Agent_Lzj`）。
+- **入库存量**：基线提交 `e44ecde`（message 为 `first commit`）含 **56 文件 / 3 插件**——`ruankao-pm-system-coach`(11)、`skill-governance-hub`(41)、`suite-dispatcher`(4)；工作区干净，无 `__pycache__` / `*.zip` / `*.log` 等垃圾入库。调度器 **1.2.0**（含 `doc-insight` 三处路由）与 hub 的 9 个 references + 28 个 skills 文件**全部在库**。
+- **新增提交 `75e9561`**：补 `plugins/.gitignore`。因 hub 内置 Python 脚本（`audit.py` 及各 skill 的 test 脚本）运行必生 `__pycache__`，上一轮在 skills 仓已实际踩过并靠手工删除清理，本次从源头阻断。**刻意不加 `_*.py` / `_*.log`**——`_*.py` 会连带命中 `__init__.py`（同样以下划线开头），属静默误伤。已用 `git ls-files | git check-ignore --stdin` 复核为空，确认无已跟踪文件被误伤。
+- **P0 待办关闭**：「给 dispatcher / hub 打基线 zip」——git 已提供版本兜底，zip 属重复载体，按「不建平行」原则**撤销该项**，基线职责改由 git 承担。
+- **遗留风险 R1（待在 `T-022` 拍板）**：驱动 UI「我的专家」可见性的清单 `my-experts/.codebuddy-plugin/marketplace.json` **位于仓库根之外**，未纳入版本管理。该文件一旦丢失，三个专家会全部从 UI 消失（与本工程实测过的「清单外目录不显示 / 被平台清理」同源）。
+- **遗留风险 R2（待拍板）**：基线提交 message 为 `first commit`，不符合本工程 `type(scope): 主题` + 正文规范，且**已推送远端**，修正需 `--amend` + force push。
+- **原则八判定**：**符合**——纯仓库卫生与治理记录，无技能正文改动、无新建载体、无版本语义变更（三个 `plugin.json` 版本均未动）。
+
 ## v1.6.25 — 2026-10-26
 
 **新增 S-073 `doc-insight` 资料深度解读：把"深入理解模块"从模式落成通用技能**
