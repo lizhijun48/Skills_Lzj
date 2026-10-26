@@ -1230,6 +1230,21 @@ P0-①（软考章节号修正）在 JT-004 / JT-005 之后剩余 JT-003 / JT-00
 | 处置 | 换根后 `.gitignore` 已位于 `my-experts/.gitignore`，**不在 `plugins/` 根级**，该风险自然规避。后续若需在 `plugins/` 下放置任何非插件文件，须先做存活验证。 |
 | 状态 | ⏳ 观察项，不阻塞任何任务 |
 
+### T-024 · 两处失效 gitlink 使 293 个文件对版本控制隐形（2026-10-27 发现并修复）
+
+| 项 | 内容 |
+| --- | --- |
+| 来源 | 执行「除 `transcript-asr-clean` 外其他技能是否全部入库」盘点时发现，非用户提出。 |
+| 现象 | `git status` 报告 working tree clean，但同时磁盘有 **2024** 文件、`git ls-files` 仅 **1701**。 |
+| 根因 | 索引存在两处 `mode 160000`（gitlink）：`meta-suite/governance-system/agent-reference/agency-agents-zh`（记录 SHA `e5b0c77a`，**278 文件**）与 `meta-suite/skill-forge`（记录 SHA `71df8cca`，**15 文件含 SKILL.md**）。但仓库**无 `.gitmodules`**、两目录**磁盘上均无 `.git`**——子模块早已不存在，git 仍按子模块对待，其内容既不报 untracked 也不报 modified，**对版本控制完全隐形**。 |
+| 危害 | 两个目录从未被任何 commit 记录；`skill-forge` 是**一个完整技能**。磁盘损坏或误删即**永久丢失**，且因 `git status` 全绿而无人察觉。 |
+| 处置 | `git rm --cached -r` 解除两处 gitlink（**只动索引**，复查工作区 278 / 15 文件原地未动）→ `git add` 纳入内容 → `git add -f` 纳入两份第三方 `integrations/`（各 14 文件，被其自带 `.gitignore` 第 2 行 `integrations/` 挡住）＋两份 `GenAI_Agents-main/.gitignore`（被其自身第 166 行 `.gitignore` 规则挡住）。提交 **`59eb608`**（311 文件 / +76675），已推 `6899976..59eb608`。 |
+| 方法论教训 | **不能只看 `git status` 判断"是否全部入库"**。gitlink、嵌套仓库、sparse-checkout 都会让内容静默隐形。**可靠判据 = 磁盘文件集 − `git ls-files` − `git ls-files -o -i` 的差集必须为 0**。 |
+| 口径纠正（本轮自身踩坑） | 首次统计得出「482 未跟踪」**是错的**——`git ls-files` 默认 `core.quotePath=true`，对中文路径输出转义引用（形如 `"pd-suite/\345\267\245..."`），与磁盘路径无法直接比对，导致中文路径被误判为未跟踪。**改用 `-z` NUL 分隔或 `-c core.quotePath=false` 后**，真实未跟踪数为 **293**，且全部来自上述两处 gitlink。 |
+| 终态（实测） | 磁盘 **2024** ／ 已跟踪 **2008** ／ 已忽略 **16** ／ 未跟踪 **0** ／ gitlink 残留 **0**；磁盘 `SKILL.md` **190** 个，入库 **189** 个，唯一不入库者 = `transcript-asr-clean`（用户裁定）。 |
+| 仍被忽略的 16 项（四类，均属应有） | ① 工具运行时元数据：`*_migration.json` 3 ＋ `_skillhub_meta.json` 6；② 编译产物：`__pycache__` 1；③ 系统垃圾：`.DS_Store` 4；④ 用户裁定排除：`transcript-asr-clean` 3。 |
+| 状态 | ✅ 已修复并推送；差集判据已固化为本工程账实核对的唯一口径 |
+
 ### T-008 — S-006 / S-007 PROPRIETARY 许可风险：用户裁决=保持现状（2026-10-02 结清）
 
 | 项 | 内容 |

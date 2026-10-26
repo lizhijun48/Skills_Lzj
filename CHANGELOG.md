@@ -7,6 +7,18 @@
 
 ---
 
+## v1.6.29 — 2026-10-27
+
+**修复两处失效 gitlink：293 个文件从版本控制盲区回归**
+
+- **发现**：用户要求「除 `transcript-asr-clean` 外其他都要进 git」后做盘点，发现 `git status` 报 clean 的同时，磁盘有 **2024** 文件、`git ls-files` 仅 **1701**。
+- **根因**：索引存在两处 `mode 160000` gitlink（`agent-reference/agency-agents-zh` **278 文件**、`skill-forge` **15 文件含 SKILL.md**），但仓库无 `.gitmodules`、两目录磁盘上也无 `.git` —— 子模块早已消失，git 仍按子模块对待，内容完全隐形。`skill-forge` 是一个完整技能，**从未被任何 commit 记录**。
+- **处置**：`git rm --cached` 解除 gitlink（只动索引，工作区 278 / 15 文件零改动）→ 重新纳入 → `git add -f` 纳入两份第三方 `integrations/`（各 14 文件）与两份 `GenAI_Agents-main/.gitignore`。提交 **`59eb608`**（311 文件 / +76675），已推。
+- **终态（实测）**：磁盘 2024 ／ 跟踪 **2008** ／ 忽略 **16** ／ 未跟踪 **0** ／ gitlink **0**；`SKILL.md` 190 个中入库 **189**，唯一不入库者 = `transcript-asr-clean`（用户裁定）。
+- **口径纠正（本轮自身踩坑）**：首次统计的「482 未跟踪」**是错的**——`git ls-files` 默认转义中文路径，未配 `-z` 导致中文路径被误判。改正后真实值 **293**。
+- **固化判据**：**不能只看 `git status`**。账实核对唯一可靠口径 = 磁盘文件集 − `git ls-files` − `git ls-files -o -i` 差集必须为 **0**；取 `git ls-files` 一律配 `-z` 或 `-c core.quotePath=false`。
+- **原则八判定**：**符合**——修复版本控制盲区，无技能正文改动、无新建载体。
+
 ## v1.6.28 — 2026-10-27
 
 **`transcript-asr-clean` 裁决为不纳入 git 管理**
